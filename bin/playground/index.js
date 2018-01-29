@@ -448,7 +448,8 @@ $hxClasses["Playground"] = Playground;
 Playground.__name__ = ["Playground"];
 Playground.main = function() {
 	var __r = [];
-	__r.push(coconut_ui_tools_ViewCache.mk("TestView",null,TestView.__init,{ }));
+	var __ret = { };
+	__r.push(coconut_ui_tools_ViewCache.mk("TestView",null,TestView.__init,__ret));
 	var view = __r[0];
 	window.document.getElementById("app").appendChild(view.toElement());
 };
@@ -638,282 +639,366 @@ TestView.__super__ = coconut_ui_View;
 TestView.prototype = $extend(coconut_ui_View.prototype,{
 	render: function() {
 		var __r = [];
-		var attr = { className : vdom__$Attr_ClassName_$Impl_$.ofString("demo")};
+		var __ret = { className : vdom__$Attr_ClassName_$Impl_$.ofString("demo")};
 		var __r1 = [];
 		var __r2 = [];
 		__r2.push("Normal Buttons");
-		__r1.push(vdom_VDom.h("h1",{ },__r2));
+		var __ret1 = { };
+		__r1.push(vdom_VDom.h("h1",__ret1,__r2));
 		var __r3 = [];
-		var tmp = tink_state__$Observable_Observable_$Impl_$["const"]("Simple");
+		var __ret2 = tink_state__$Observable_Observable_$Impl_$["const"]("Simple");
 		var this1 = { f : function() {
 			return tink_core__$Callback_Callback_$Impl_$.fromNiladic(function() {
 				haxe_Log.trace("clicked",{ fileName : "Playground.hx", lineNumber : 31, className : "TestView", methodName : "render"});
 				return;
 			});
 		}};
-		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tmp, onclick : tink_state__$Observable_Observable_$Impl_$.auto(this1)}));
-		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Dense"), dense : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Compact"), compact : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Disabled"), disabled : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Unelevated"), unelevated : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Icon"), icon : tink_state__$Observable_Observable_$Impl_$["const"]("favorite")}));
-		__r1.push(vdom_VDom.h("div",{ },__r3));
+		var __ret3 = { label : __ret2, onclick : tink_state__$Observable_Observable_$Impl_$.auto(this1)};
+		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret3));
+		var __ret4 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Dense"), dense : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret4));
+		var __ret5 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Compact"), compact : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret5));
+		var __ret6 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Disabled"), disabled : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret6));
+		var __ret7 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Unelevated"), unelevated : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret7));
+		var __ret8 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Icon"), icon : tink_state__$Observable_Observable_$Impl_$["const"]("favorite")};
+		__r3.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret8));
+		var __ret9 = { };
+		__r1.push(vdom_VDom.h("div",__ret9,__r3));
 		var __r4 = [];
 		__r4.push("Raised Buttons");
-		__r1.push(vdom_VDom.h("h1",{ },__r4));
+		var __ret10 = { };
+		__r1.push(vdom_VDom.h("h1",__ret10,__r4));
 		var __r5 = [];
-		var tmp1 = tink_state__$Observable_Observable_$Impl_$["const"]("Simple");
-		var tmp2 = tink_state__$Observable_Observable_$Impl_$["const"](true);
+		var __ret11 = tink_state__$Observable_Observable_$Impl_$["const"]("Simple");
+		var __ret12 = tink_state__$Observable_Observable_$Impl_$["const"](true);
 		var this2 = { f : function() {
 			return tink_core__$Callback_Callback_$Impl_$.fromNiladic(function() {
 				haxe_Log.trace("clicked",{ fileName : "Playground.hx", lineNumber : 40, className : "TestView", methodName : "render"});
 				return;
 			});
 		}};
-		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tmp1, raised : tmp2, onclick : tink_state__$Observable_Observable_$Impl_$.auto(this2)}));
-		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Dense"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), dense : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Compact"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), compact : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Disabled"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), disabled : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Unelevated"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), unelevated : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,{ label : tink_state__$Observable_Observable_$Impl_$["const"]("Icon"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), icon : tink_state__$Observable_Observable_$Impl_$["const"]("favorite")}));
-		__r1.push(vdom_VDom.h("div",{ },__r5));
+		var __ret13 = { label : __ret11, raised : __ret12, onclick : tink_state__$Observable_Observable_$Impl_$.auto(this2)};
+		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret13));
+		var __ret14 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Dense"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), dense : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret14));
+		var __ret15 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Compact"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), compact : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret15));
+		var __ret16 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Disabled"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), disabled : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret16));
+		var __ret17 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Unelevated"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), unelevated : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret17));
+		var __ret18 = { label : tink_state__$Observable_Observable_$Impl_$["const"]("Icon"), raised : tink_state__$Observable_Observable_$Impl_$["const"](true), icon : tink_state__$Observable_Observable_$Impl_$["const"]("favorite")};
+		__r5.push(coconut_ui_tools_ViewCache.mk("mdc.Button",null,mdc_Button.__init,__ret18));
+		var __ret19 = { };
+		__r1.push(vdom_VDom.h("div",__ret19,__r5));
 		var __r6 = [];
 		__r6.push("TabBar");
-		__r1.push(vdom_VDom.h("h1",{ },__r6));
-		var attr1 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("flex-container")};
+		var __ret20 = { };
+		__r1.push(vdom_VDom.h("h1",__ret20,__r6));
+		var __ret21 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("flex-container")};
 		var __r7 = [];
-		var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
+		var __ret22 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
 		var __r8 = [];
 		var this3 = { f : function() {
 			var __r9 = [];
+			var __ret23 = { active : true};
 			var __r10 = [];
 			__r10.push("Tab1");
-			__r9.push(mdc_TabBar.tab({ active : true},__r10));
+			__r9.push(mdc_TabBar.tab(__ret23,__r10));
+			var __ret24 = { };
 			var __r11 = [];
 			__r11.push("Tab2");
-			__r9.push(mdc_TabBar.tab({ },__r11));
+			__r9.push(mdc_TabBar.tab(__ret24,__r11));
+			var __ret25 = { };
 			var __r12 = [];
 			__r12.push("Tab3");
-			__r9.push(mdc_TabBar.tab({ },__r12));
+			__r9.push(mdc_TabBar.tab(__ret25,__r12));
 			return __r9;
 		}};
-		__r8.push(coconut_ui_tools_ViewCache.mk("mdc.TabBar",null,mdc_TabBar.__init,{ children : tink_state__$Observable_Observable_$Impl_$.auto(this3)}));
-		__r7.push(vdom_VDom.h("div",attr2,__r8));
-		var attr3 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
+		var __ret26 = { children : tink_state__$Observable_Observable_$Impl_$.auto(this3)};
+		__r8.push(coconut_ui_tools_ViewCache.mk("mdc.TabBar",null,mdc_TabBar.__init,__ret26));
+		__r7.push(vdom_VDom.h("div",__ret22,__r8));
+		var __ret27 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
 		var __r13 = [];
 		var this4 = { f : function() {
 			return "mdc-tab-bar--icon-tab-bar";
 		}};
-		var tmp3 = tink_state__$Observable_Observable_$Impl_$.auto(this4);
+		var __ret28 = tink_state__$Observable_Observable_$Impl_$.auto(this4);
 		var this5 = { f : function() {
 			var __r14 = [];
-			__r14.push(mdc_TabBar.tab({ icon : "camera", active : true}));
-			__r14.push(mdc_TabBar.tab({ icon : "colorize"}));
-			__r14.push(mdc_TabBar.tab({ icon : "edit"}));
+			var __ret29 = { icon : "camera", active : true};
+			__r14.push(mdc_TabBar.tab(__ret29));
+			var __ret30 = { icon : "colorize"};
+			__r14.push(mdc_TabBar.tab(__ret30));
+			var __ret31 = { icon : "edit"};
+			__r14.push(mdc_TabBar.tab(__ret31));
 			return __r14;
 		}};
-		__r13.push(coconut_ui_tools_ViewCache.mk("mdc.TabBar",null,mdc_TabBar.__init,{ type : tmp3, children : tink_state__$Observable_Observable_$Impl_$.auto(this5)}));
-		__r7.push(vdom_VDom.h("div",attr3,__r13));
-		var attr4 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
+		var __ret32 = { type : __ret28, children : tink_state__$Observable_Observable_$Impl_$.auto(this5)};
+		__r13.push(coconut_ui_tools_ViewCache.mk("mdc.TabBar",null,mdc_TabBar.__init,__ret32));
+		__r7.push(vdom_VDom.h("div",__ret27,__r13));
+		var __ret33 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
 		var __r15 = [];
 		var this6 = { f : function() {
 			return "mdc-tab-bar--icons-with-text";
 		}};
-		var tmp4 = tink_state__$Observable_Observable_$Impl_$.auto(this6);
+		var __ret34 = tink_state__$Observable_Observable_$Impl_$.auto(this6);
 		var this7 = { f : function() {
 			var __r16 = [];
+			var __ret35 = { icon : "camera", active : true};
 			var __r17 = [];
 			__r17.push("Tab1");
-			__r16.push(mdc_TabBar.tab({ icon : "camera", active : true},__r17));
+			__r16.push(mdc_TabBar.tab(__ret35,__r17));
+			var __ret36 = { icon : "colorize"};
 			var __r18 = [];
 			__r18.push("Tab2");
-			__r16.push(mdc_TabBar.tab({ icon : "colorize"},__r18));
+			__r16.push(mdc_TabBar.tab(__ret36,__r18));
+			var __ret37 = { icon : "edit"};
 			var __r19 = [];
 			__r19.push("Tab3");
-			__r16.push(mdc_TabBar.tab({ icon : "edit"},__r19));
+			__r16.push(mdc_TabBar.tab(__ret37,__r19));
 			return __r16;
 		}};
-		__r15.push(coconut_ui_tools_ViewCache.mk("mdc.TabBar",null,mdc_TabBar.__init,{ type : tmp4, children : tink_state__$Observable_Observable_$Impl_$.auto(this7)}));
-		__r7.push(vdom_VDom.h("div",attr4,__r15));
-		__r1.push(vdom_VDom.h("div",attr1,__r7));
+		var __ret38 = { type : __ret34, children : tink_state__$Observable_Observable_$Impl_$.auto(this7)};
+		__r15.push(coconut_ui_tools_ViewCache.mk("mdc.TabBar",null,mdc_TabBar.__init,__ret38));
+		__r7.push(vdom_VDom.h("div",__ret33,__r15));
+		__r1.push(vdom_VDom.h("div",__ret21,__r7));
 		var __r20 = [];
 		__r20.push("List");
-		__r1.push(vdom_VDom.h("h1",{ },__r20));
-		var attr5 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("flex-container")};
+		var __ret39 = { };
+		__r1.push(vdom_VDom.h("h1",__ret39,__r20));
+		var __ret40 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("flex-container")};
 		var __r21 = [];
-		var attr6 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
+		var __ret41 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
 		var __r22 = [];
 		var __r23 = [];
 		__r23.push("Simple list");
-		__r22.push(vdom_VDom.h("h2",{ },__r23));
+		var __ret42 = { };
+		__r22.push(vdom_VDom.h("h2",__ret42,__r23));
 		var this8 = { f : function() {
 			var __r24 = [];
+			var __ret43 = { };
 			var __r25 = [];
 			__r25.push("Simple item 1");
-			__r24.push(mdc_List.listItem({ },__r25));
+			__r24.push(mdc_List.listItem(__ret43,__r25));
+			var __ret44 = { };
 			var __r26 = [];
 			__r26.push("Simple item 2");
-			__r24.push(mdc_List.listItem({ },__r26));
+			__r24.push(mdc_List.listItem(__ret44,__r26));
+			var __ret45 = { };
 			var __r27 = [];
 			__r27.push("Simple item 3");
-			__r24.push(mdc_List.listItem({ },__r27));
+			__r24.push(mdc_List.listItem(__ret45,__r27));
 			return __r24;
 		}};
-		__r22.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,{ children : tink_state__$Observable_Observable_$Impl_$.auto(this8)}));
-		__r21.push(vdom_VDom.h("div",attr6,__r22));
-		var attr7 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
+		var __ret46 = { children : tink_state__$Observable_Observable_$Impl_$.auto(this8)};
+		__r22.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,__ret46));
+		__r21.push(vdom_VDom.h("div",__ret41,__r22));
+		var __ret47 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
 		var __r28 = [];
 		var __r29 = [];
 		__r29.push("Dense list");
-		__r28.push(vdom_VDom.h("h2",{ },__r29));
+		var __ret48 = { };
+		__r28.push(vdom_VDom.h("h2",__ret48,__r29));
 		var this9 = { f : function() {
 			var __r30 = [];
+			var __ret49 = { };
 			var __r31 = [];
 			__r31.push("Dense item 1");
-			__r30.push(mdc_List.listItem({ },__r31));
+			__r30.push(mdc_List.listItem(__ret49,__r31));
+			var __ret50 = { };
 			var __r32 = [];
 			__r32.push("Dense item 2");
-			__r30.push(mdc_List.listItem({ },__r32));
+			__r30.push(mdc_List.listItem(__ret50,__r32));
+			var __ret51 = { };
 			var __r33 = [];
 			__r33.push("Dense item 3");
-			__r30.push(mdc_List.listItem({ },__r33));
+			__r30.push(mdc_List.listItem(__ret51,__r33));
 			return __r30;
 		}};
-		__r28.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,{ children : tink_state__$Observable_Observable_$Impl_$.auto(this9)}));
-		__r21.push(vdom_VDom.h("div",attr7,__r28));
-		var attr8 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
+		var __ret52 = { children : tink_state__$Observable_Observable_$Impl_$.auto(this9)};
+		__r28.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,__ret52));
+		__r21.push(vdom_VDom.h("div",__ret47,__r28));
+		var __ret53 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
 		var __r34 = [];
 		var __r35 = [];
 		__r35.push("Interactive list");
-		__r34.push(vdom_VDom.h("h2",{ },__r35));
-		var tmp5 = tink_state__$Observable_Observable_$Impl_$["const"](true);
+		var __ret54 = { };
+		__r34.push(vdom_VDom.h("h2",__ret54,__r35));
+		var __ret55 = tink_state__$Observable_Observable_$Impl_$["const"](true);
 		var this10 = { f : function() {
 			var __r36 = [];
+			var __ret56 = { };
 			var __r37 = [];
+			var __ret57 = { };
 			var __r38 = [];
 			__r38.push("folder");
-			__r37.push(mdc_List.listStartIcon({ },__r38));
+			__r37.push(mdc_List.listStartIcon(__ret57,__r38));
 			__r37.push("Link item with start icon 1");
-			__r36.push(mdc_List.listLinkItem({ },__r37));
+			__r36.push(mdc_List.listLinkItem(__ret56,__r37));
+			var __ret58 = { };
 			var __r39 = [];
+			var __ret59 = { };
 			var __r40 = [];
 			__r40.push("folder");
-			__r39.push(mdc_List.listStartIcon({ },__r40));
+			__r39.push(mdc_List.listStartIcon(__ret59,__r40));
 			__r39.push("Link item with start icon 2");
-			__r36.push(mdc_List.listLinkItem({ },__r39));
+			__r36.push(mdc_List.listLinkItem(__ret58,__r39));
+			var __ret60 = { };
 			var __r41 = [];
+			var __ret61 = { };
 			var __r42 = [];
 			__r42.push("folder");
-			__r41.push(mdc_List.listStartIcon({ },__r42));
+			__r41.push(mdc_List.listStartIcon(__ret61,__r42));
 			__r41.push("Link item with start icon 3");
-			__r36.push(mdc_List.listLinkItem({ },__r41));
+			__r36.push(mdc_List.listLinkItem(__ret60,__r41));
 			return __r36;
 		}};
-		__r34.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,{ interactive : tmp5, children : tink_state__$Observable_Observable_$Impl_$.auto(this10)}));
-		__r21.push(vdom_VDom.h("div",attr8,__r34));
-		var attr9 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
+		var __ret62 = { interactive : __ret55, children : tink_state__$Observable_Observable_$Impl_$.auto(this10)};
+		__r34.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,__ret62));
+		__r21.push(vdom_VDom.h("div",__ret53,__r34));
+		var __ret63 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
 		var __r43 = [];
 		var __r44 = [];
 		__r44.push("Avatar list (+divider)");
-		__r43.push(vdom_VDom.h("h2",{ },__r44));
-		var tmp6 = tink_state__$Observable_Observable_$Impl_$["const"](true);
-		var tmp7 = tink_state__$Observable_Observable_$Impl_$["const"](true);
+		var __ret64 = { };
+		__r43.push(vdom_VDom.h("h2",__ret64,__r44));
+		var __ret65 = tink_state__$Observable_Observable_$Impl_$["const"](true);
+		var __ret66 = tink_state__$Observable_Observable_$Impl_$["const"](true);
 		var this11 = { f : function() {
 			var __r45 = [];
+			var __ret67 = { };
 			var __r46 = [];
+			var __ret68 = { src : "https://randomuser.me/api/portraits/women/1.jpg"};
 			var __r47 = [];
 			__r47.push("folder");
-			__r46.push(mdc_List.listStartImage({ src : "https://randomuser.me/api/portraits/women/1.jpg"},__r47));
+			__r46.push(mdc_List.listStartImage(__ret68,__r47));
 			__r46.push("Item with start icon 1");
-			__r45.push(mdc_List.listItem({ },__r46));
+			__r45.push(mdc_List.listItem(__ret67,__r46));
+			var __ret69 = { };
 			var __r48 = [];
+			var __ret70 = { src : "https://randomuser.me/api/portraits/women/2.jpg"};
 			var __r49 = [];
 			__r49.push("folder");
-			__r48.push(mdc_List.listStartImage({ src : "https://randomuser.me/api/portraits/women/2.jpg"},__r49));
+			__r48.push(mdc_List.listStartImage(__ret70,__r49));
 			__r48.push("Item with start icon 2");
-			__r45.push(mdc_List.listItem({ },__r48));
-			__r45.push(mdc_List.listDivider({ }));
+			__r45.push(mdc_List.listItem(__ret69,__r48));
+			var __ret71 = { };
+			__r45.push(mdc_List.listDivider(__ret71));
+			var __ret72 = { };
 			var __r50 = [];
+			var __ret73 = { src : "https://randomuser.me/api/portraits/women/3.jpg"};
 			var __r51 = [];
 			__r51.push("folder");
-			__r50.push(mdc_List.listStartImage({ src : "https://randomuser.me/api/portraits/women/3.jpg"},__r51));
+			__r50.push(mdc_List.listStartImage(__ret73,__r51));
 			__r50.push("Item with start icon 3");
-			__r45.push(mdc_List.listItem({ },__r50));
+			__r45.push(mdc_List.listItem(__ret72,__r50));
 			return __r45;
 		}};
-		__r43.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,{ avatarList : tmp6, interactive : tmp7, children : tink_state__$Observable_Observable_$Impl_$.auto(this11)}));
-		__r21.push(vdom_VDom.h("div",attr9,__r43));
-		var attr10 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
+		var __ret74 = { avatarList : __ret65, interactive : __ret66, children : tink_state__$Observable_Observable_$Impl_$.auto(this11)};
+		__r43.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,__ret74));
+		__r21.push(vdom_VDom.h("div",__ret63,__r43));
+		var __ret75 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("float")};
 		var __r52 = [];
 		var __r53 = [];
 		__r53.push("Two line list (+inset divider)");
-		__r52.push(vdom_VDom.h("h2",{ },__r53));
-		var tmp8 = tink_state__$Observable_Observable_$Impl_$["const"](true);
-		var tmp9 = tink_state__$Observable_Observable_$Impl_$["const"](true);
-		var tmp10 = tink_state__$Observable_Observable_$Impl_$["const"](true);
+		var __ret76 = { };
+		__r52.push(vdom_VDom.h("h2",__ret76,__r53));
+		var __ret77 = tink_state__$Observable_Observable_$Impl_$["const"](true);
+		var __ret78 = tink_state__$Observable_Observable_$Impl_$["const"](true);
+		var __ret79 = tink_state__$Observable_Observable_$Impl_$["const"](true);
 		var this12 = { f : function() {
 			var __r54 = [];
+			var __ret80 = { };
 			var __r55 = [];
+			var __ret81 = { src : "https://randomuser.me/api/portraits/women/1.jpg"};
 			var __r56 = [];
 			__r56.push("folder");
-			__r55.push(mdc_List.listStartImage({ src : "https://randomuser.me/api/portraits/women/1.jpg"},__r56));
+			__r55.push(mdc_List.listStartImage(__ret81,__r56));
+			var __ret82 = { };
 			var __r57 = [];
 			__r57.push("Item title 1");
+			var __ret83 = { };
 			var __r58 = [];
 			__r58.push("Secondary text 1");
-			__r57.push(mdc_List.listTextSecondary({ },__r58));
-			__r55.push(mdc_List.listText({ },__r57));
+			__r57.push(mdc_List.listTextSecondary(__ret83,__r58));
+			__r55.push(mdc_List.listText(__ret82,__r57));
+			var __ret84 = { };
 			var __r59 = [];
 			__r59.push("info");
-			__r55.push(mdc_List.listEndIcon({ },__r59));
-			__r54.push(mdc_List.listItem({ },__r55));
+			__r55.push(mdc_List.listEndIcon(__ret84,__r59));
+			__r54.push(mdc_List.listItem(__ret80,__r55));
+			var __ret85 = { };
 			var __r60 = [];
+			var __ret86 = { src : "https://randomuser.me/api/portraits/women/2.jpg"};
 			var __r61 = [];
 			__r61.push("folder");
-			__r60.push(mdc_List.listStartImage({ src : "https://randomuser.me/api/portraits/women/2.jpg"},__r61));
+			__r60.push(mdc_List.listStartImage(__ret86,__r61));
+			var __ret87 = { };
 			var __r62 = [];
 			__r62.push("Item title 2");
+			var __ret88 = { };
 			var __r63 = [];
 			__r63.push("Secondary text 2");
-			__r62.push(mdc_List.listTextSecondary({ },__r63));
-			__r60.push(mdc_List.listText({ },__r62));
+			__r62.push(mdc_List.listTextSecondary(__ret88,__r63));
+			__r60.push(mdc_List.listText(__ret87,__r62));
+			var __ret89 = { };
 			var __r64 = [];
 			__r64.push("info");
-			__r60.push(mdc_List.listEndIcon({ },__r64));
-			__r54.push(mdc_List.listItem({ },__r60));
-			__r54.push(mdc_List.listDivider({ inset : true}));
+			__r60.push(mdc_List.listEndIcon(__ret89,__r64));
+			__r54.push(mdc_List.listItem(__ret85,__r60));
+			var __ret90 = { inset : true};
+			__r54.push(mdc_List.listDivider(__ret90));
+			var __ret91 = { };
 			var __r65 = [];
+			var __ret92 = { src : "https://randomuser.me/api/portraits/women/3.jpg"};
 			var __r66 = [];
 			__r66.push("folder");
-			__r65.push(mdc_List.listStartImage({ src : "https://randomuser.me/api/portraits/women/3.jpg"},__r66));
+			__r65.push(mdc_List.listStartImage(__ret92,__r66));
+			var __ret93 = { };
 			var __r67 = [];
 			__r67.push("Item title 3");
+			var __ret94 = { };
 			var __r68 = [];
 			__r68.push("Secondary text 3");
-			__r67.push(mdc_List.listTextSecondary({ },__r68));
-			__r65.push(mdc_List.listText({ },__r67));
+			__r67.push(mdc_List.listTextSecondary(__ret94,__r68));
+			__r65.push(mdc_List.listText(__ret93,__r67));
+			var __ret95 = { };
 			var __r69 = [];
 			__r69.push("info");
-			__r65.push(mdc_List.listEndIcon({ },__r69));
-			__r54.push(mdc_List.listItem({ },__r65));
+			__r65.push(mdc_List.listEndIcon(__ret95,__r69));
+			__r54.push(mdc_List.listItem(__ret91,__r65));
 			return __r54;
 		}};
-		__r52.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,{ avatarList : tmp8, interactive : tmp9, twoLine : tmp10, children : tink_state__$Observable_Observable_$Impl_$.auto(this12)}));
-		__r21.push(vdom_VDom.h("div",attr10,__r52));
-		__r1.push(vdom_VDom.h("div",attr5,__r21));
+		var __ret96 = { avatarList : __ret77, interactive : __ret78, twoLine : __ret79, children : tink_state__$Observable_Observable_$Impl_$.auto(this12)};
+		__r52.push(coconut_ui_tools_ViewCache.mk("mdc.List",null,mdc_List.__init,__ret96));
+		__r21.push(vdom_VDom.h("div",__ret75,__r52));
+		__r1.push(vdom_VDom.h("div",__ret40,__r21));
 		var __r70 = [];
 		__r70.push("TextField");
-		__r1.push(vdom_VDom.h("h1",{ },__r70));
+		var __ret97 = { };
+		__r1.push(vdom_VDom.h("h1",__ret97,__r70));
 		var __r71 = [];
-		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,{ caption : tink_state__$Observable_Observable_$Impl_$["const"]("Text input")}));
-		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,{ caption : tink_state__$Observable_Observable_$Impl_$["const"]("Boxed input"), box : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,{ caption : tink_state__$Observable_Observable_$Impl_$["const"]("Icon input"), box : tink_state__$Observable_Observable_$Impl_$["const"](true), icon : tink_state__$Observable_Observable_$Impl_$["const"]("list")}));
-		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,{ caption : tink_state__$Observable_Observable_$Impl_$["const"]("TextArea"), textArea : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r71.push(vdom_VDom.h("br",{ }));
-		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,{ caption : tink_state__$Observable_Observable_$Impl_$["const"]("Text input fullWidth"), fullWidth : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,{ caption : tink_state__$Observable_Observable_$Impl_$["const"]("TextArea fullWidth"), textArea : tink_state__$Observable_Observable_$Impl_$["const"](true), fullWidth : tink_state__$Observable_Observable_$Impl_$["const"](true)}));
-		__r1.push(vdom_VDom.h("div",{ },__r71));
-		__r.push(vdom_VDom.h("div",attr,__r1));
+		var __ret98 = { caption : tink_state__$Observable_Observable_$Impl_$["const"]("Text input")};
+		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,__ret98));
+		var __ret99 = { caption : tink_state__$Observable_Observable_$Impl_$["const"]("Boxed input"), box : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,__ret99));
+		var __ret100 = { caption : tink_state__$Observable_Observable_$Impl_$["const"]("Icon input"), box : tink_state__$Observable_Observable_$Impl_$["const"](true), icon : tink_state__$Observable_Observable_$Impl_$["const"]("list")};
+		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,__ret100));
+		var __ret101 = { caption : tink_state__$Observable_Observable_$Impl_$["const"]("TextArea"), textArea : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,__ret101));
+		var __ret102 = { };
+		__r71.push(vdom_VDom.h("br",__ret102));
+		var __ret103 = { caption : tink_state__$Observable_Observable_$Impl_$["const"]("Text input fullWidth"), fullWidth : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,__ret103));
+		var __ret104 = { caption : tink_state__$Observable_Observable_$Impl_$["const"]("TextArea fullWidth"), textArea : tink_state__$Observable_Observable_$Impl_$["const"](true), fullWidth : tink_state__$Observable_Observable_$Impl_$["const"](true)};
+		__r71.push(coconut_ui_tools_ViewCache.mk("mdc.TextField",null,mdc_TextField.__init,__ret104));
+		var __ret105 = { };
+		__r1.push(vdom_VDom.h("div",__ret105,__r71));
+		__r.push(vdom_VDom.h("div",__ret,__r1));
 		return __r[0];
 	}
 	,__tink_defaults8: null
@@ -4570,7 +4655,7 @@ mdc_Button.prototype = $extend(coconut_ui_View.prototype,{
 	,render: function() {
 		var _gthis = this;
 		var __r = [];
-		var attr = _gthis.get_className();
+		var __ret = _gthis.get_className();
 		var _g = new haxe_ds_StringMap();
 		if(__map_reserved["mdc-button"] != null) {
 			_g.setReserved("mdc-button",true);
@@ -4613,16 +4698,516 @@ mdc_Button.prototype = $extend(coconut_ui_View.prototype,{
 		} else {
 			_g.h["mdc-button--compact"] = value5;
 		}
-		var attr1 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), onclick : _gthis.get_onclick(), accessKey : this.get_accessKey(), accessKeyLabel : this.get_accessKeyLabel(), attributes : this.get_attributes(), autofocus : this.get_autofocus(), checked : this.get_checked(), dir : this.get_dir(), disabled : this.get_disabled(), draggable : this.get_draggable(), hidden : this.get_hidden(), id : this.get_id(), key : this.get_key(), lang : this.get_lang(), max : this.get_max(), maxlength : this.get_maxlength(), min : this.get_min(), name : this.get_name(), onabort : this.get_onabort(), onblur : this.get_onblur(), oncanplay : this.get_oncanplay(), oncanplaythrough : this.get_oncanplaythrough(), onchange : this.get_onchange(), oncontextmenu : this.get_oncontextmenu(), oncopy : this.get_oncopy(), oncut : this.get_oncut(), ondblclick : this.get_ondblclick(), ondrag : this.get_ondrag(), ondragend : this.get_ondragend(), ondragenter : this.get_ondragenter(), ondragleave : this.get_ondragleave(), ondragover : this.get_ondragover(), ondragstart : this.get_ondragstart(), ondrop : this.get_ondrop(), ondurationchange : this.get_ondurationchange(), onemptied : this.get_onemptied(), onended : this.get_onended(), onerror : this.get_onerror(), onfocus : this.get_onfocus(), onfullscreenchange : this.get_onfullscreenchange(), onfullscreenerror : this.get_onfullscreenerror(), ongotpointercapture : this.get_ongotpointercapture(), oninput : this.get_oninput(), oninvalid : this.get_oninvalid(), onkeydown : this.get_onkeydown(), onkeypress : this.get_onkeypress(), onkeyup : this.get_onkeyup(), onload : this.get_onload(), onloadeddata : this.get_onloadeddata(), onloadedmetadata : this.get_onloadedmetadata(), onloadstart : this.get_onloadstart(), onlostpointercapture : this.get_onlostpointercapture(), onmousedown : this.get_onmousedown(), onmouseenter : this.get_onmouseenter(), onmouseleave : this.get_onmouseleave(), onmousemove : this.get_onmousemove(), onmouseout : this.get_onmouseout(), onmouseover : this.get_onmouseover(), onmouseup : this.get_onmouseup(), onpaste : this.get_onpaste(), onpause : this.get_onpause(), onplay : this.get_onplay(), onplaying : this.get_onplaying(), onpointercancel : this.get_onpointercancel(), onpointerdown : this.get_onpointerdown(), onpointerenter : this.get_onpointerenter(), onpointerleave : this.get_onpointerleave(), onpointerlockchange : this.get_onpointerlockchange(), onpointerlockerror : this.get_onpointerlockerror(), onpointermove : this.get_onpointermove(), onpointerout : this.get_onpointerout(), onpointerover : this.get_onpointerover(), onpointerup : this.get_onpointerup(), onprogress : this.get_onprogress(), onratechange : this.get_onratechange(), onreset : this.get_onreset(), onresize : this.get_onresize(), onscroll : this.get_onscroll(), onseeked : this.get_onseeked(), onseeking : this.get_onseeking(), onselect : this.get_onselect(), onshow : this.get_onshow(), onstalled : this.get_onstalled(), onsubmit : this.get_onsubmit(), onsuspend : this.get_onsuspend(), ontimeupdate : this.get_ontimeupdate(), ontouchcancel : this.get_ontouchcancel(), ontouchend : this.get_ontouchend(), ontouchmove : this.get_ontouchmove(), ontouchstart : this.get_ontouchstart(), onvolumechange : this.get_onvolumechange(), onwaiting : this.get_onwaiting(), onwheel : this.get_onwheel(), placeholder : this.get_placeholder(), required : this.get_required(), spellcheck : this.get_spellcheck(), step : this.get_step(), style : this.get_style(), tabIndex : this.get_tabIndex(), title : this.get_title(), type : this.get_type(), value : this.get_value()};
+		var __ret1 = { className : vdom__$Attr_ClassName_$Impl_$.add(__ret,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), onclick : _gthis.get_onclick()};
+		var _g1 = this.get_accessKey();
+		if(_g1 != null) {
+			var v = _g1;
+			__ret1.accessKey = v;
+		}
+		var _g2 = this.get_accessKeyLabel();
+		if(_g2 != null) {
+			var v1 = _g2;
+			__ret1.accessKeyLabel = v1;
+		}
+		var _g3 = this.get_attributes();
+		if(_g3 != null) {
+			var v2 = _g3;
+			__ret1.attributes = v2;
+		}
+		var _g4 = this.get_autofocus();
+		if(_g4 != null) {
+			var v3 = _g4;
+			__ret1.autofocus = v3;
+		}
+		var _g5 = this.get_checked();
+		if(_g5 != null) {
+			var v4 = _g5;
+			__ret1.checked = v4;
+		}
+		var _g6 = this.get_dir();
+		if(_g6 != null) {
+			var v5 = _g6;
+			__ret1.dir = v5;
+		}
+		var _g7 = this.get_disabled();
+		if(_g7 != null) {
+			var v6 = _g7;
+			__ret1.disabled = v6;
+		}
+		var _g8 = this.get_draggable();
+		if(_g8 != null) {
+			var v7 = _g8;
+			__ret1.draggable = v7;
+		}
+		var _g9 = this.get_hidden();
+		if(_g9 != null) {
+			var v8 = _g9;
+			__ret1.hidden = v8;
+		}
+		var _g10 = this.get_id();
+		if(_g10 != null) {
+			var v9 = _g10;
+			__ret1.id = v9;
+		}
+		var _g11 = this.get_key();
+		if(_g11 != null) {
+			var v10 = _g11;
+			__ret1.key = v10;
+		}
+		var _g12 = this.get_lang();
+		if(_g12 != null) {
+			var v11 = _g12;
+			__ret1.lang = v11;
+		}
+		var _g13 = this.get_max();
+		if(_g13 != null) {
+			var v12 = _g13;
+			__ret1.max = v12;
+		}
+		var _g14 = this.get_maxlength();
+		if(_g14 != null) {
+			var v13 = _g14;
+			__ret1.maxlength = v13;
+		}
+		var _g15 = this.get_min();
+		if(_g15 != null) {
+			var v14 = _g15;
+			__ret1.min = v14;
+		}
+		var _g16 = this.get_name();
+		if(_g16 != null) {
+			var v15 = _g16;
+			__ret1.name = v15;
+		}
+		var _g17 = this.get_onabort();
+		if(_g17 != null) {
+			var v16 = _g17;
+			__ret1.onabort = v16;
+		}
+		var _g18 = this.get_onblur();
+		if(_g18 != null) {
+			var v17 = _g18;
+			__ret1.onblur = v17;
+		}
+		var _g19 = this.get_oncanplay();
+		if(_g19 != null) {
+			var v18 = _g19;
+			__ret1.oncanplay = v18;
+		}
+		var _g20 = this.get_oncanplaythrough();
+		if(_g20 != null) {
+			var v19 = _g20;
+			__ret1.oncanplaythrough = v19;
+		}
+		var _g21 = this.get_onchange();
+		if(_g21 != null) {
+			var v20 = _g21;
+			__ret1.onchange = v20;
+		}
+		var _g22 = this.get_oncontextmenu();
+		if(_g22 != null) {
+			var v21 = _g22;
+			__ret1.oncontextmenu = v21;
+		}
+		var _g23 = this.get_oncopy();
+		if(_g23 != null) {
+			var v22 = _g23;
+			__ret1.oncopy = v22;
+		}
+		var _g24 = this.get_oncut();
+		if(_g24 != null) {
+			var v23 = _g24;
+			__ret1.oncut = v23;
+		}
+		var _g25 = this.get_ondblclick();
+		if(_g25 != null) {
+			var v24 = _g25;
+			__ret1.ondblclick = v24;
+		}
+		var _g26 = this.get_ondrag();
+		if(_g26 != null) {
+			var v25 = _g26;
+			__ret1.ondrag = v25;
+		}
+		var _g27 = this.get_ondragend();
+		if(_g27 != null) {
+			var v26 = _g27;
+			__ret1.ondragend = v26;
+		}
+		var _g28 = this.get_ondragenter();
+		if(_g28 != null) {
+			var v27 = _g28;
+			__ret1.ondragenter = v27;
+		}
+		var _g29 = this.get_ondragleave();
+		if(_g29 != null) {
+			var v28 = _g29;
+			__ret1.ondragleave = v28;
+		}
+		var _g30 = this.get_ondragover();
+		if(_g30 != null) {
+			var v29 = _g30;
+			__ret1.ondragover = v29;
+		}
+		var _g31 = this.get_ondragstart();
+		if(_g31 != null) {
+			var v30 = _g31;
+			__ret1.ondragstart = v30;
+		}
+		var _g32 = this.get_ondrop();
+		if(_g32 != null) {
+			var v31 = _g32;
+			__ret1.ondrop = v31;
+		}
+		var _g33 = this.get_ondurationchange();
+		if(_g33 != null) {
+			var v32 = _g33;
+			__ret1.ondurationchange = v32;
+		}
+		var _g34 = this.get_onemptied();
+		if(_g34 != null) {
+			var v33 = _g34;
+			__ret1.onemptied = v33;
+		}
+		var _g35 = this.get_onended();
+		if(_g35 != null) {
+			var v34 = _g35;
+			__ret1.onended = v34;
+		}
+		var _g36 = this.get_onerror();
+		if(_g36 != null) {
+			var v35 = _g36;
+			__ret1.onerror = v35;
+		}
+		var _g37 = this.get_onfocus();
+		if(_g37 != null) {
+			var v36 = _g37;
+			__ret1.onfocus = v36;
+		}
+		var _g38 = this.get_onfullscreenchange();
+		if(_g38 != null) {
+			var v37 = _g38;
+			__ret1.onfullscreenchange = v37;
+		}
+		var _g39 = this.get_onfullscreenerror();
+		if(_g39 != null) {
+			var v38 = _g39;
+			__ret1.onfullscreenerror = v38;
+		}
+		var _g40 = this.get_ongotpointercapture();
+		if(_g40 != null) {
+			var v39 = _g40;
+			__ret1.ongotpointercapture = v39;
+		}
+		var _g41 = this.get_oninput();
+		if(_g41 != null) {
+			var v40 = _g41;
+			__ret1.oninput = v40;
+		}
+		var _g42 = this.get_oninvalid();
+		if(_g42 != null) {
+			var v41 = _g42;
+			__ret1.oninvalid = v41;
+		}
+		var _g43 = this.get_onkeydown();
+		if(_g43 != null) {
+			var v42 = _g43;
+			__ret1.onkeydown = v42;
+		}
+		var _g44 = this.get_onkeypress();
+		if(_g44 != null) {
+			var v43 = _g44;
+			__ret1.onkeypress = v43;
+		}
+		var _g45 = this.get_onkeyup();
+		if(_g45 != null) {
+			var v44 = _g45;
+			__ret1.onkeyup = v44;
+		}
+		var _g46 = this.get_onload();
+		if(_g46 != null) {
+			var v45 = _g46;
+			__ret1.onload = v45;
+		}
+		var _g47 = this.get_onloadeddata();
+		if(_g47 != null) {
+			var v46 = _g47;
+			__ret1.onloadeddata = v46;
+		}
+		var _g48 = this.get_onloadedmetadata();
+		if(_g48 != null) {
+			var v47 = _g48;
+			__ret1.onloadedmetadata = v47;
+		}
+		var _g49 = this.get_onloadstart();
+		if(_g49 != null) {
+			var v48 = _g49;
+			__ret1.onloadstart = v48;
+		}
+		var _g50 = this.get_onlostpointercapture();
+		if(_g50 != null) {
+			var v49 = _g50;
+			__ret1.onlostpointercapture = v49;
+		}
+		var _g51 = this.get_onmousedown();
+		if(_g51 != null) {
+			var v50 = _g51;
+			__ret1.onmousedown = v50;
+		}
+		var _g52 = this.get_onmouseenter();
+		if(_g52 != null) {
+			var v51 = _g52;
+			__ret1.onmouseenter = v51;
+		}
+		var _g53 = this.get_onmouseleave();
+		if(_g53 != null) {
+			var v52 = _g53;
+			__ret1.onmouseleave = v52;
+		}
+		var _g54 = this.get_onmousemove();
+		if(_g54 != null) {
+			var v53 = _g54;
+			__ret1.onmousemove = v53;
+		}
+		var _g55 = this.get_onmouseout();
+		if(_g55 != null) {
+			var v54 = _g55;
+			__ret1.onmouseout = v54;
+		}
+		var _g56 = this.get_onmouseover();
+		if(_g56 != null) {
+			var v55 = _g56;
+			__ret1.onmouseover = v55;
+		}
+		var _g57 = this.get_onmouseup();
+		if(_g57 != null) {
+			var v56 = _g57;
+			__ret1.onmouseup = v56;
+		}
+		var _g58 = this.get_onpaste();
+		if(_g58 != null) {
+			var v57 = _g58;
+			__ret1.onpaste = v57;
+		}
+		var _g59 = this.get_onpause();
+		if(_g59 != null) {
+			var v58 = _g59;
+			__ret1.onpause = v58;
+		}
+		var _g60 = this.get_onplay();
+		if(_g60 != null) {
+			var v59 = _g60;
+			__ret1.onplay = v59;
+		}
+		var _g61 = this.get_onplaying();
+		if(_g61 != null) {
+			var v60 = _g61;
+			__ret1.onplaying = v60;
+		}
+		var _g62 = this.get_onpointercancel();
+		if(_g62 != null) {
+			var v61 = _g62;
+			__ret1.onpointercancel = v61;
+		}
+		var _g63 = this.get_onpointerdown();
+		if(_g63 != null) {
+			var v62 = _g63;
+			__ret1.onpointerdown = v62;
+		}
+		var _g64 = this.get_onpointerenter();
+		if(_g64 != null) {
+			var v63 = _g64;
+			__ret1.onpointerenter = v63;
+		}
+		var _g65 = this.get_onpointerleave();
+		if(_g65 != null) {
+			var v64 = _g65;
+			__ret1.onpointerleave = v64;
+		}
+		var _g66 = this.get_onpointerlockchange();
+		if(_g66 != null) {
+			var v65 = _g66;
+			__ret1.onpointerlockchange = v65;
+		}
+		var _g67 = this.get_onpointerlockerror();
+		if(_g67 != null) {
+			var v66 = _g67;
+			__ret1.onpointerlockerror = v66;
+		}
+		var _g68 = this.get_onpointermove();
+		if(_g68 != null) {
+			var v67 = _g68;
+			__ret1.onpointermove = v67;
+		}
+		var _g69 = this.get_onpointerout();
+		if(_g69 != null) {
+			var v68 = _g69;
+			__ret1.onpointerout = v68;
+		}
+		var _g70 = this.get_onpointerover();
+		if(_g70 != null) {
+			var v69 = _g70;
+			__ret1.onpointerover = v69;
+		}
+		var _g71 = this.get_onpointerup();
+		if(_g71 != null) {
+			var v70 = _g71;
+			__ret1.onpointerup = v70;
+		}
+		var _g72 = this.get_onprogress();
+		if(_g72 != null) {
+			var v71 = _g72;
+			__ret1.onprogress = v71;
+		}
+		var _g73 = this.get_onratechange();
+		if(_g73 != null) {
+			var v72 = _g73;
+			__ret1.onratechange = v72;
+		}
+		var _g74 = this.get_onreset();
+		if(_g74 != null) {
+			var v73 = _g74;
+			__ret1.onreset = v73;
+		}
+		var _g75 = this.get_onresize();
+		if(_g75 != null) {
+			var v74 = _g75;
+			__ret1.onresize = v74;
+		}
+		var _g76 = this.get_onscroll();
+		if(_g76 != null) {
+			var v75 = _g76;
+			__ret1.onscroll = v75;
+		}
+		var _g77 = this.get_onseeked();
+		if(_g77 != null) {
+			var v76 = _g77;
+			__ret1.onseeked = v76;
+		}
+		var _g78 = this.get_onseeking();
+		if(_g78 != null) {
+			var v77 = _g78;
+			__ret1.onseeking = v77;
+		}
+		var _g79 = this.get_onselect();
+		if(_g79 != null) {
+			var v78 = _g79;
+			__ret1.onselect = v78;
+		}
+		var _g80 = this.get_onshow();
+		if(_g80 != null) {
+			var v79 = _g80;
+			__ret1.onshow = v79;
+		}
+		var _g81 = this.get_onstalled();
+		if(_g81 != null) {
+			var v80 = _g81;
+			__ret1.onstalled = v80;
+		}
+		var _g82 = this.get_onsubmit();
+		if(_g82 != null) {
+			var v81 = _g82;
+			__ret1.onsubmit = v81;
+		}
+		var _g83 = this.get_onsuspend();
+		if(_g83 != null) {
+			var v82 = _g83;
+			__ret1.onsuspend = v82;
+		}
+		var _g84 = this.get_ontimeupdate();
+		if(_g84 != null) {
+			var v83 = _g84;
+			__ret1.ontimeupdate = v83;
+		}
+		var _g85 = this.get_ontouchcancel();
+		if(_g85 != null) {
+			var v84 = _g85;
+			__ret1.ontouchcancel = v84;
+		}
+		var _g86 = this.get_ontouchend();
+		if(_g86 != null) {
+			var v85 = _g86;
+			__ret1.ontouchend = v85;
+		}
+		var _g87 = this.get_ontouchmove();
+		if(_g87 != null) {
+			var v86 = _g87;
+			__ret1.ontouchmove = v86;
+		}
+		var _g88 = this.get_ontouchstart();
+		if(_g88 != null) {
+			var v87 = _g88;
+			__ret1.ontouchstart = v87;
+		}
+		var _g89 = this.get_onvolumechange();
+		if(_g89 != null) {
+			var v88 = _g89;
+			__ret1.onvolumechange = v88;
+		}
+		var _g90 = this.get_onwaiting();
+		if(_g90 != null) {
+			var v89 = _g90;
+			__ret1.onwaiting = v89;
+		}
+		var _g91 = this.get_onwheel();
+		if(_g91 != null) {
+			var v90 = _g91;
+			__ret1.onwheel = v90;
+		}
+		var _g92 = this.get_placeholder();
+		if(_g92 != null) {
+			var v91 = _g92;
+			__ret1.placeholder = v91;
+		}
+		var _g93 = this.get_required();
+		if(_g93 != null) {
+			var v92 = _g93;
+			__ret1.required = v92;
+		}
+		var _g94 = this.get_spellcheck();
+		if(_g94 != null) {
+			var v93 = _g94;
+			__ret1.spellcheck = v93;
+		}
+		var _g95 = this.get_step();
+		if(_g95 != null) {
+			var v94 = _g95;
+			__ret1.step = v94;
+		}
+		var _g96 = this.get_style();
+		if(_g96 != null) {
+			var v95 = _g96;
+			__ret1.style = v95;
+		}
+		var _g97 = this.get_tabIndex();
+		if(_g97 != null) {
+			var v96 = _g97;
+			__ret1.tabIndex = v96;
+		}
+		var _g98 = this.get_title();
+		if(_g98 != null) {
+			var v97 = _g98;
+			__ret1.title = v97;
+		}
+		var _g99 = this.get_type();
+		if(_g99 != null) {
+			var v98 = _g99;
+			__ret1.type = v98;
+		}
+		var _g100 = this.get_value();
+		if(_g100 != null) {
+			var v99 = _g100;
+			__ret1.value = v99;
+		}
 		var __r1 = [];
 		if(this.get_icon() != null) {
-			var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-button__icon material-icons")};
+			var __ret2 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-button__icon material-icons")};
 			var __r2 = [];
 			__r2.push(this.get_icon());
-			__r1.push(vdom_VDom.h("i",attr2,__r2));
+			__r1.push(vdom_VDom.h("i",__ret2,__r2));
 		}
 		__r1.push(this.get_label());
-		__r.push(vdom_VDom.h("button",attr1,__r1));
+		__r.push(vdom_VDom.h("button",__ret1,__r1));
 		return __r[0];
 	}
 	,afterInit: function(elem) {
@@ -5324,12 +5909,453 @@ mdc_List.listItem = function(attr,children) {
 	} else {
 		_g.h["mdc-ripple-surface"] = value;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}, accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.dir;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.dir = v2;
+	}
+	var _g4 = attr.draggable;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.draggable = v3;
+	}
+	var _g5 = attr.hidden;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.hidden = v4;
+	}
+	var _g6 = attr.id;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.id = v5;
+	}
+	var _g7 = attr.key;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.key = v6;
+	}
+	var _g8 = attr.lang;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.lang = v7;
+	}
+	var _g9 = attr.onabort;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.onabort = v8;
+	}
+	var _g10 = attr.onblur;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onblur = v9;
+	}
+	var _g11 = attr.oncanplay;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.oncanplay = v10;
+	}
+	var _g12 = attr.oncanplaythrough;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplaythrough = v11;
+	}
+	var _g13 = attr.onchange;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.onchange = v12;
+	}
+	var _g14 = attr.onclick;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onclick = v13;
+	}
+	var _g15 = attr.oncontextmenu;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.oncontextmenu = v14;
+	}
+	var _g16 = attr.oncopy;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncopy = v15;
+	}
+	var _g17 = attr.oncut;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncut = v16;
+	}
+	var _g18 = attr.ondblclick;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.ondblclick = v17;
+	}
+	var _g19 = attr.ondrag;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondrag = v18;
+	}
+	var _g20 = attr.ondragend;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondragend = v19;
+	}
+	var _g21 = attr.ondragenter;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragenter = v20;
+	}
+	var _g22 = attr.ondragleave;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragleave = v21;
+	}
+	var _g23 = attr.ondragover;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragover = v22;
+	}
+	var _g24 = attr.ondragstart;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragstart = v23;
+	}
+	var _g25 = attr.ondrop;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondrop = v24;
+	}
+	var _g26 = attr.ondurationchange;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondurationchange = v25;
+	}
+	var _g27 = attr.onemptied;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.onemptied = v26;
+	}
+	var _g28 = attr.onended;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onended = v27;
+	}
+	var _g29 = attr.onerror;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onerror = v28;
+	}
+	var _g30 = attr.onfocus;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onfocus = v29;
+	}
+	var _g31 = attr.onfullscreenchange;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfullscreenchange = v30;
+	}
+	var _g32 = attr.onfullscreenerror;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenerror = v31;
+	}
+	var _g33 = attr.ongotpointercapture;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.ongotpointercapture = v32;
+	}
+	var _g34 = attr.oninput;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.oninput = v33;
+	}
+	var _g35 = attr.oninvalid;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninvalid = v34;
+	}
+	var _g36 = attr.onkeydown;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.onkeydown = v35;
+	}
+	var _g37 = attr.onkeypress;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeypress = v36;
+	}
+	var _g38 = attr.onkeyup;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeyup = v37;
+	}
+	var _g39 = attr.onload;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onload = v38;
+	}
+	var _g40 = attr.onloadeddata;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onloadeddata = v39;
+	}
+	var _g41 = attr.onloadedmetadata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadedmetadata = v40;
+	}
+	var _g42 = attr.onloadstart;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadstart = v41;
+	}
+	var _g43 = attr.onlostpointercapture;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onlostpointercapture = v42;
+	}
+	var _g44 = attr.onmousedown;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onmousedown = v43;
+	}
+	var _g45 = attr.onmouseenter;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmouseenter = v44;
+	}
+	var _g46 = attr.onmouseleave;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseleave = v45;
+	}
+	var _g47 = attr.onmousemove;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmousemove = v46;
+	}
+	var _g48 = attr.onmouseout;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmouseout = v47;
+	}
+	var _g49 = attr.onmouseover;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseover = v48;
+	}
+	var _g50 = attr.onmouseup;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseup = v49;
+	}
+	var _g51 = attr.onpaste;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onpaste = v50;
+	}
+	var _g52 = attr.onpause;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpause = v51;
+	}
+	var _g53 = attr.onplay;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onplay = v52;
+	}
+	var _g54 = attr.onplaying;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplaying = v53;
+	}
+	var _g55 = attr.onpointercancel;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onpointercancel = v54;
+	}
+	var _g56 = attr.onpointerdown;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointerdown = v55;
+	}
+	var _g57 = attr.onpointerenter;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerenter = v56;
+	}
+	var _g58 = attr.onpointerleave;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerleave = v57;
+	}
+	var _g59 = attr.onpointerlockchange;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerlockchange = v58;
+	}
+	var _g60 = attr.onpointerlockerror;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockerror = v59;
+	}
+	var _g61 = attr.onpointermove;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointermove = v60;
+	}
+	var _g62 = attr.onpointerout;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointerout = v61;
+	}
+	var _g63 = attr.onpointerover;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerover = v62;
+	}
+	var _g64 = attr.onpointerup;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerup = v63;
+	}
+	var _g65 = attr.onprogress;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onprogress = v64;
+	}
+	var _g66 = attr.onratechange;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onratechange = v65;
+	}
+	var _g67 = attr.onreset;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onreset = v66;
+	}
+	var _g68 = attr.onresize;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onresize = v67;
+	}
+	var _g69 = attr.onscroll;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onscroll = v68;
+	}
+	var _g70 = attr.onseeked;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onseeked = v69;
+	}
+	var _g71 = attr.onseeking;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeking = v70;
+	}
+	var _g72 = attr.onselect;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onselect = v71;
+	}
+	var _g73 = attr.onshow;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onshow = v72;
+	}
+	var _g74 = attr.onstalled;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onstalled = v73;
+	}
+	var _g75 = attr.onsubmit;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onsubmit = v74;
+	}
+	var _g76 = attr.onsuspend;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsuspend = v75;
+	}
+	var _g77 = attr.ontimeupdate;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.ontimeupdate = v76;
+	}
+	var _g78 = attr.ontouchcancel;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontouchcancel = v77;
+	}
+	var _g79 = attr.ontouchend;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchend = v78;
+	}
+	var _g80 = attr.ontouchmove;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchmove = v79;
+	}
+	var _g81 = attr.ontouchstart;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchstart = v80;
+	}
+	var _g82 = attr.onvolumechange;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.onvolumechange = v81;
+	}
+	var _g83 = attr.onwaiting;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onwaiting = v82;
+	}
+	var _g84 = attr.onwheel;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwheel = v83;
+	}
+	var _g85 = attr.spellcheck;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.spellcheck = v84;
+	}
+	var _g86 = attr.style;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.style = v85;
+	}
+	var _g87 = attr.tabIndex;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.tabIndex = v86;
+	}
+	var _g88 = attr.title;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.title = v87;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g89 = 0;
+	while(_g89 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g89];
+		++_g89;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("li",attr2,__r1));
@@ -5337,8 +6363,8 @@ mdc_List.listItem = function(attr,children) {
 };
 mdc_List.listLinkItem = function(attr,children) {
 	var __r = [];
-	var attr1 = attr.href != null ? attr.href : "#";
-	var attr2 = attr.className;
+	var __ret = attr.href != null ? attr.href : "#";
+	var attr1 = attr.className;
 	var _g = new haxe_ds_StringMap();
 	if(__map_reserved["mdc-list-item"] != null) {
 		_g.setReserved("mdc-list-item",true);
@@ -5351,15 +6377,461 @@ mdc_List.listLinkItem = function(attr,children) {
 	} else {
 		_g.h["mdc-ripple-surface"] = value;
 	}
-	var attr3 = { href : attr1, className : vdom__$Attr_ClassName_$Impl_$.add(attr2,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), onclick : attr.onclick, attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}, accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, target : attr.target, title : attr.title, type : attr.type};
+	var __ret1 = { href : __ret, className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), onclick : attr.onclick, attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret1.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret1.accessKeyLabel = v1;
+	}
+	var _g3 = attr.dir;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret1.dir = v2;
+	}
+	var _g4 = attr.draggable;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret1.draggable = v3;
+	}
+	var _g5 = attr.hidden;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret1.hidden = v4;
+	}
+	var _g6 = attr.id;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret1.id = v5;
+	}
+	var _g7 = attr.key;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret1.key = v6;
+	}
+	var _g8 = attr.lang;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret1.lang = v7;
+	}
+	var _g9 = attr.onabort;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret1.onabort = v8;
+	}
+	var _g10 = attr.onblur;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret1.onblur = v9;
+	}
+	var _g11 = attr.oncanplay;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret1.oncanplay = v10;
+	}
+	var _g12 = attr.oncanplaythrough;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret1.oncanplaythrough = v11;
+	}
+	var _g13 = attr.onchange;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret1.onchange = v12;
+	}
+	var _g14 = attr.oncontextmenu;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret1.oncontextmenu = v13;
+	}
+	var _g15 = attr.oncopy;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret1.oncopy = v14;
+	}
+	var _g16 = attr.oncut;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret1.oncut = v15;
+	}
+	var _g17 = attr.ondblclick;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret1.ondblclick = v16;
+	}
+	var _g18 = attr.ondrag;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret1.ondrag = v17;
+	}
+	var _g19 = attr.ondragend;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret1.ondragend = v18;
+	}
+	var _g20 = attr.ondragenter;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret1.ondragenter = v19;
+	}
+	var _g21 = attr.ondragleave;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret1.ondragleave = v20;
+	}
+	var _g22 = attr.ondragover;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret1.ondragover = v21;
+	}
+	var _g23 = attr.ondragstart;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret1.ondragstart = v22;
+	}
+	var _g24 = attr.ondrop;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret1.ondrop = v23;
+	}
+	var _g25 = attr.ondurationchange;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret1.ondurationchange = v24;
+	}
+	var _g26 = attr.onemptied;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret1.onemptied = v25;
+	}
+	var _g27 = attr.onended;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret1.onended = v26;
+	}
+	var _g28 = attr.onerror;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret1.onerror = v27;
+	}
+	var _g29 = attr.onfocus;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret1.onfocus = v28;
+	}
+	var _g30 = attr.onfullscreenchange;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret1.onfullscreenchange = v29;
+	}
+	var _g31 = attr.onfullscreenerror;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret1.onfullscreenerror = v30;
+	}
+	var _g32 = attr.ongotpointercapture;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret1.ongotpointercapture = v31;
+	}
+	var _g33 = attr.oninput;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret1.oninput = v32;
+	}
+	var _g34 = attr.oninvalid;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret1.oninvalid = v33;
+	}
+	var _g35 = attr.onkeydown;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret1.onkeydown = v34;
+	}
+	var _g36 = attr.onkeypress;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret1.onkeypress = v35;
+	}
+	var _g37 = attr.onkeyup;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret1.onkeyup = v36;
+	}
+	var _g38 = attr.onload;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret1.onload = v37;
+	}
+	var _g39 = attr.onloadeddata;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret1.onloadeddata = v38;
+	}
+	var _g40 = attr.onloadedmetadata;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret1.onloadedmetadata = v39;
+	}
+	var _g41 = attr.onloadstart;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret1.onloadstart = v40;
+	}
+	var _g42 = attr.onlostpointercapture;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret1.onlostpointercapture = v41;
+	}
+	var _g43 = attr.onmousedown;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret1.onmousedown = v42;
+	}
+	var _g44 = attr.onmouseenter;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret1.onmouseenter = v43;
+	}
+	var _g45 = attr.onmouseleave;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret1.onmouseleave = v44;
+	}
+	var _g46 = attr.onmousemove;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret1.onmousemove = v45;
+	}
+	var _g47 = attr.onmouseout;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret1.onmouseout = v46;
+	}
+	var _g48 = attr.onmouseover;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret1.onmouseover = v47;
+	}
+	var _g49 = attr.onmouseup;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret1.onmouseup = v48;
+	}
+	var _g50 = attr.onpaste;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret1.onpaste = v49;
+	}
+	var _g51 = attr.onpause;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret1.onpause = v50;
+	}
+	var _g52 = attr.onplay;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret1.onplay = v51;
+	}
+	var _g53 = attr.onplaying;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret1.onplaying = v52;
+	}
+	var _g54 = attr.onpointercancel;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret1.onpointercancel = v53;
+	}
+	var _g55 = attr.onpointerdown;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret1.onpointerdown = v54;
+	}
+	var _g56 = attr.onpointerenter;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret1.onpointerenter = v55;
+	}
+	var _g57 = attr.onpointerleave;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret1.onpointerleave = v56;
+	}
+	var _g58 = attr.onpointerlockchange;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret1.onpointerlockchange = v57;
+	}
+	var _g59 = attr.onpointerlockerror;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret1.onpointerlockerror = v58;
+	}
+	var _g60 = attr.onpointermove;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret1.onpointermove = v59;
+	}
+	var _g61 = attr.onpointerout;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret1.onpointerout = v60;
+	}
+	var _g62 = attr.onpointerover;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret1.onpointerover = v61;
+	}
+	var _g63 = attr.onpointerup;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret1.onpointerup = v62;
+	}
+	var _g64 = attr.onprogress;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret1.onprogress = v63;
+	}
+	var _g65 = attr.onratechange;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret1.onratechange = v64;
+	}
+	var _g66 = attr.onreset;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret1.onreset = v65;
+	}
+	var _g67 = attr.onresize;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret1.onresize = v66;
+	}
+	var _g68 = attr.onscroll;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret1.onscroll = v67;
+	}
+	var _g69 = attr.onseeked;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret1.onseeked = v68;
+	}
+	var _g70 = attr.onseeking;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret1.onseeking = v69;
+	}
+	var _g71 = attr.onselect;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret1.onselect = v70;
+	}
+	var _g72 = attr.onshow;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret1.onshow = v71;
+	}
+	var _g73 = attr.onstalled;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret1.onstalled = v72;
+	}
+	var _g74 = attr.onsubmit;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret1.onsubmit = v73;
+	}
+	var _g75 = attr.onsuspend;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret1.onsuspend = v74;
+	}
+	var _g76 = attr.ontimeupdate;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret1.ontimeupdate = v75;
+	}
+	var _g77 = attr.ontouchcancel;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret1.ontouchcancel = v76;
+	}
+	var _g78 = attr.ontouchend;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret1.ontouchend = v77;
+	}
+	var _g79 = attr.ontouchmove;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret1.ontouchmove = v78;
+	}
+	var _g80 = attr.ontouchstart;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret1.ontouchstart = v79;
+	}
+	var _g81 = attr.onvolumechange;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret1.onvolumechange = v80;
+	}
+	var _g82 = attr.onwaiting;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret1.onwaiting = v81;
+	}
+	var _g83 = attr.onwheel;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret1.onwheel = v82;
+	}
+	var _g84 = attr.spellcheck;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret1.spellcheck = v83;
+	}
+	var _g85 = attr.style;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret1.style = v84;
+	}
+	var _g86 = attr.tabIndex;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret1.tabIndex = v85;
+	}
+	var _g87 = attr.target;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret1.target = v86;
+	}
+	var _g88 = attr.title;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret1.title = v87;
+	}
+	var _g89 = attr.type;
+	if(_g89 != null) {
+		var v88 = _g89;
+		__ret1.type = v88;
+	}
+	var attr2 = __ret1;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g90 = 0;
+	while(_g90 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g90];
+		++_g90;
 		__r1.push(_0);
 	}
-	__r.push(vdom_VDom.h("a",attr3,__r1));
+	__r.push(vdom_VDom.h("a",attr2,__r1));
 	return __r[0];
 };
 mdc_List.listStartDetail = function(attr,children) {
@@ -5377,12 +6849,453 @@ mdc_List.listStartDetail = function(attr,children) {
 	} else {
 		_g.h["mdc-ripple-surface"] = value;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}, accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.dir;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.dir = v2;
+	}
+	var _g4 = attr.draggable;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.draggable = v3;
+	}
+	var _g5 = attr.hidden;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.hidden = v4;
+	}
+	var _g6 = attr.id;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.id = v5;
+	}
+	var _g7 = attr.key;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.key = v6;
+	}
+	var _g8 = attr.lang;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.lang = v7;
+	}
+	var _g9 = attr.onabort;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.onabort = v8;
+	}
+	var _g10 = attr.onblur;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onblur = v9;
+	}
+	var _g11 = attr.oncanplay;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.oncanplay = v10;
+	}
+	var _g12 = attr.oncanplaythrough;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplaythrough = v11;
+	}
+	var _g13 = attr.onchange;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.onchange = v12;
+	}
+	var _g14 = attr.onclick;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onclick = v13;
+	}
+	var _g15 = attr.oncontextmenu;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.oncontextmenu = v14;
+	}
+	var _g16 = attr.oncopy;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncopy = v15;
+	}
+	var _g17 = attr.oncut;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncut = v16;
+	}
+	var _g18 = attr.ondblclick;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.ondblclick = v17;
+	}
+	var _g19 = attr.ondrag;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondrag = v18;
+	}
+	var _g20 = attr.ondragend;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondragend = v19;
+	}
+	var _g21 = attr.ondragenter;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragenter = v20;
+	}
+	var _g22 = attr.ondragleave;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragleave = v21;
+	}
+	var _g23 = attr.ondragover;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragover = v22;
+	}
+	var _g24 = attr.ondragstart;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragstart = v23;
+	}
+	var _g25 = attr.ondrop;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondrop = v24;
+	}
+	var _g26 = attr.ondurationchange;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondurationchange = v25;
+	}
+	var _g27 = attr.onemptied;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.onemptied = v26;
+	}
+	var _g28 = attr.onended;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onended = v27;
+	}
+	var _g29 = attr.onerror;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onerror = v28;
+	}
+	var _g30 = attr.onfocus;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onfocus = v29;
+	}
+	var _g31 = attr.onfullscreenchange;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfullscreenchange = v30;
+	}
+	var _g32 = attr.onfullscreenerror;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenerror = v31;
+	}
+	var _g33 = attr.ongotpointercapture;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.ongotpointercapture = v32;
+	}
+	var _g34 = attr.oninput;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.oninput = v33;
+	}
+	var _g35 = attr.oninvalid;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninvalid = v34;
+	}
+	var _g36 = attr.onkeydown;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.onkeydown = v35;
+	}
+	var _g37 = attr.onkeypress;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeypress = v36;
+	}
+	var _g38 = attr.onkeyup;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeyup = v37;
+	}
+	var _g39 = attr.onload;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onload = v38;
+	}
+	var _g40 = attr.onloadeddata;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onloadeddata = v39;
+	}
+	var _g41 = attr.onloadedmetadata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadedmetadata = v40;
+	}
+	var _g42 = attr.onloadstart;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadstart = v41;
+	}
+	var _g43 = attr.onlostpointercapture;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onlostpointercapture = v42;
+	}
+	var _g44 = attr.onmousedown;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onmousedown = v43;
+	}
+	var _g45 = attr.onmouseenter;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmouseenter = v44;
+	}
+	var _g46 = attr.onmouseleave;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseleave = v45;
+	}
+	var _g47 = attr.onmousemove;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmousemove = v46;
+	}
+	var _g48 = attr.onmouseout;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmouseout = v47;
+	}
+	var _g49 = attr.onmouseover;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseover = v48;
+	}
+	var _g50 = attr.onmouseup;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseup = v49;
+	}
+	var _g51 = attr.onpaste;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onpaste = v50;
+	}
+	var _g52 = attr.onpause;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpause = v51;
+	}
+	var _g53 = attr.onplay;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onplay = v52;
+	}
+	var _g54 = attr.onplaying;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplaying = v53;
+	}
+	var _g55 = attr.onpointercancel;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onpointercancel = v54;
+	}
+	var _g56 = attr.onpointerdown;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointerdown = v55;
+	}
+	var _g57 = attr.onpointerenter;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerenter = v56;
+	}
+	var _g58 = attr.onpointerleave;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerleave = v57;
+	}
+	var _g59 = attr.onpointerlockchange;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerlockchange = v58;
+	}
+	var _g60 = attr.onpointerlockerror;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockerror = v59;
+	}
+	var _g61 = attr.onpointermove;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointermove = v60;
+	}
+	var _g62 = attr.onpointerout;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointerout = v61;
+	}
+	var _g63 = attr.onpointerover;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerover = v62;
+	}
+	var _g64 = attr.onpointerup;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerup = v63;
+	}
+	var _g65 = attr.onprogress;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onprogress = v64;
+	}
+	var _g66 = attr.onratechange;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onratechange = v65;
+	}
+	var _g67 = attr.onreset;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onreset = v66;
+	}
+	var _g68 = attr.onresize;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onresize = v67;
+	}
+	var _g69 = attr.onscroll;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onscroll = v68;
+	}
+	var _g70 = attr.onseeked;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onseeked = v69;
+	}
+	var _g71 = attr.onseeking;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeking = v70;
+	}
+	var _g72 = attr.onselect;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onselect = v71;
+	}
+	var _g73 = attr.onshow;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onshow = v72;
+	}
+	var _g74 = attr.onstalled;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onstalled = v73;
+	}
+	var _g75 = attr.onsubmit;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onsubmit = v74;
+	}
+	var _g76 = attr.onsuspend;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsuspend = v75;
+	}
+	var _g77 = attr.ontimeupdate;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.ontimeupdate = v76;
+	}
+	var _g78 = attr.ontouchcancel;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontouchcancel = v77;
+	}
+	var _g79 = attr.ontouchend;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchend = v78;
+	}
+	var _g80 = attr.ontouchmove;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchmove = v79;
+	}
+	var _g81 = attr.ontouchstart;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchstart = v80;
+	}
+	var _g82 = attr.onvolumechange;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.onvolumechange = v81;
+	}
+	var _g83 = attr.onwaiting;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onwaiting = v82;
+	}
+	var _g84 = attr.onwheel;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwheel = v83;
+	}
+	var _g85 = attr.spellcheck;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.spellcheck = v84;
+	}
+	var _g86 = attr.style;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.style = v85;
+	}
+	var _g87 = attr.tabIndex;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.tabIndex = v86;
+	}
+	var _g88 = attr.title;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.title = v87;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g89 = 0;
+	while(_g89 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g89];
+		++_g89;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("i",attr2,__r1));
@@ -5408,12 +7321,453 @@ mdc_List.listStartIcon = function(attr,children) {
 	} else {
 		_g.h["mdc-ripple-surface"] = value;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}, accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.dir;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.dir = v2;
+	}
+	var _g4 = attr.draggable;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.draggable = v3;
+	}
+	var _g5 = attr.hidden;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.hidden = v4;
+	}
+	var _g6 = attr.id;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.id = v5;
+	}
+	var _g7 = attr.key;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.key = v6;
+	}
+	var _g8 = attr.lang;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.lang = v7;
+	}
+	var _g9 = attr.onabort;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.onabort = v8;
+	}
+	var _g10 = attr.onblur;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onblur = v9;
+	}
+	var _g11 = attr.oncanplay;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.oncanplay = v10;
+	}
+	var _g12 = attr.oncanplaythrough;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplaythrough = v11;
+	}
+	var _g13 = attr.onchange;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.onchange = v12;
+	}
+	var _g14 = attr.onclick;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onclick = v13;
+	}
+	var _g15 = attr.oncontextmenu;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.oncontextmenu = v14;
+	}
+	var _g16 = attr.oncopy;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncopy = v15;
+	}
+	var _g17 = attr.oncut;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncut = v16;
+	}
+	var _g18 = attr.ondblclick;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.ondblclick = v17;
+	}
+	var _g19 = attr.ondrag;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondrag = v18;
+	}
+	var _g20 = attr.ondragend;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondragend = v19;
+	}
+	var _g21 = attr.ondragenter;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragenter = v20;
+	}
+	var _g22 = attr.ondragleave;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragleave = v21;
+	}
+	var _g23 = attr.ondragover;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragover = v22;
+	}
+	var _g24 = attr.ondragstart;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragstart = v23;
+	}
+	var _g25 = attr.ondrop;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondrop = v24;
+	}
+	var _g26 = attr.ondurationchange;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondurationchange = v25;
+	}
+	var _g27 = attr.onemptied;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.onemptied = v26;
+	}
+	var _g28 = attr.onended;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onended = v27;
+	}
+	var _g29 = attr.onerror;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onerror = v28;
+	}
+	var _g30 = attr.onfocus;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onfocus = v29;
+	}
+	var _g31 = attr.onfullscreenchange;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfullscreenchange = v30;
+	}
+	var _g32 = attr.onfullscreenerror;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenerror = v31;
+	}
+	var _g33 = attr.ongotpointercapture;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.ongotpointercapture = v32;
+	}
+	var _g34 = attr.oninput;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.oninput = v33;
+	}
+	var _g35 = attr.oninvalid;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninvalid = v34;
+	}
+	var _g36 = attr.onkeydown;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.onkeydown = v35;
+	}
+	var _g37 = attr.onkeypress;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeypress = v36;
+	}
+	var _g38 = attr.onkeyup;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeyup = v37;
+	}
+	var _g39 = attr.onload;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onload = v38;
+	}
+	var _g40 = attr.onloadeddata;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onloadeddata = v39;
+	}
+	var _g41 = attr.onloadedmetadata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadedmetadata = v40;
+	}
+	var _g42 = attr.onloadstart;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadstart = v41;
+	}
+	var _g43 = attr.onlostpointercapture;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onlostpointercapture = v42;
+	}
+	var _g44 = attr.onmousedown;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onmousedown = v43;
+	}
+	var _g45 = attr.onmouseenter;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmouseenter = v44;
+	}
+	var _g46 = attr.onmouseleave;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseleave = v45;
+	}
+	var _g47 = attr.onmousemove;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmousemove = v46;
+	}
+	var _g48 = attr.onmouseout;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmouseout = v47;
+	}
+	var _g49 = attr.onmouseover;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseover = v48;
+	}
+	var _g50 = attr.onmouseup;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseup = v49;
+	}
+	var _g51 = attr.onpaste;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onpaste = v50;
+	}
+	var _g52 = attr.onpause;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpause = v51;
+	}
+	var _g53 = attr.onplay;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onplay = v52;
+	}
+	var _g54 = attr.onplaying;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplaying = v53;
+	}
+	var _g55 = attr.onpointercancel;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onpointercancel = v54;
+	}
+	var _g56 = attr.onpointerdown;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointerdown = v55;
+	}
+	var _g57 = attr.onpointerenter;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerenter = v56;
+	}
+	var _g58 = attr.onpointerleave;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerleave = v57;
+	}
+	var _g59 = attr.onpointerlockchange;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerlockchange = v58;
+	}
+	var _g60 = attr.onpointerlockerror;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockerror = v59;
+	}
+	var _g61 = attr.onpointermove;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointermove = v60;
+	}
+	var _g62 = attr.onpointerout;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointerout = v61;
+	}
+	var _g63 = attr.onpointerover;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerover = v62;
+	}
+	var _g64 = attr.onpointerup;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerup = v63;
+	}
+	var _g65 = attr.onprogress;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onprogress = v64;
+	}
+	var _g66 = attr.onratechange;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onratechange = v65;
+	}
+	var _g67 = attr.onreset;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onreset = v66;
+	}
+	var _g68 = attr.onresize;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onresize = v67;
+	}
+	var _g69 = attr.onscroll;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onscroll = v68;
+	}
+	var _g70 = attr.onseeked;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onseeked = v69;
+	}
+	var _g71 = attr.onseeking;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeking = v70;
+	}
+	var _g72 = attr.onselect;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onselect = v71;
+	}
+	var _g73 = attr.onshow;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onshow = v72;
+	}
+	var _g74 = attr.onstalled;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onstalled = v73;
+	}
+	var _g75 = attr.onsubmit;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onsubmit = v74;
+	}
+	var _g76 = attr.onsuspend;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsuspend = v75;
+	}
+	var _g77 = attr.ontimeupdate;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.ontimeupdate = v76;
+	}
+	var _g78 = attr.ontouchcancel;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontouchcancel = v77;
+	}
+	var _g79 = attr.ontouchend;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchend = v78;
+	}
+	var _g80 = attr.ontouchmove;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchmove = v79;
+	}
+	var _g81 = attr.ontouchstart;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchstart = v80;
+	}
+	var _g82 = attr.onvolumechange;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.onvolumechange = v81;
+	}
+	var _g83 = attr.onwaiting;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onwaiting = v82;
+	}
+	var _g84 = attr.onwheel;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwheel = v83;
+	}
+	var _g85 = attr.spellcheck;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.spellcheck = v84;
+	}
+	var _g86 = attr.style;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.style = v85;
+	}
+	var _g87 = attr.tabIndex;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.tabIndex = v86;
+	}
+	var _g88 = attr.title;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.title = v87;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g89 = 0;
+	while(_g89 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g89];
+		++_g89;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("i",attr2,__r1));
@@ -5439,12 +7793,453 @@ mdc_List.listEndIcon = function(attr,children) {
 	} else {
 		_g.h["mdc-ripple-surface"] = value;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}, accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.dir;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.dir = v2;
+	}
+	var _g4 = attr.draggable;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.draggable = v3;
+	}
+	var _g5 = attr.hidden;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.hidden = v4;
+	}
+	var _g6 = attr.id;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.id = v5;
+	}
+	var _g7 = attr.key;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.key = v6;
+	}
+	var _g8 = attr.lang;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.lang = v7;
+	}
+	var _g9 = attr.onabort;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.onabort = v8;
+	}
+	var _g10 = attr.onblur;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onblur = v9;
+	}
+	var _g11 = attr.oncanplay;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.oncanplay = v10;
+	}
+	var _g12 = attr.oncanplaythrough;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplaythrough = v11;
+	}
+	var _g13 = attr.onchange;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.onchange = v12;
+	}
+	var _g14 = attr.onclick;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onclick = v13;
+	}
+	var _g15 = attr.oncontextmenu;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.oncontextmenu = v14;
+	}
+	var _g16 = attr.oncopy;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncopy = v15;
+	}
+	var _g17 = attr.oncut;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncut = v16;
+	}
+	var _g18 = attr.ondblclick;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.ondblclick = v17;
+	}
+	var _g19 = attr.ondrag;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondrag = v18;
+	}
+	var _g20 = attr.ondragend;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondragend = v19;
+	}
+	var _g21 = attr.ondragenter;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragenter = v20;
+	}
+	var _g22 = attr.ondragleave;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragleave = v21;
+	}
+	var _g23 = attr.ondragover;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragover = v22;
+	}
+	var _g24 = attr.ondragstart;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragstart = v23;
+	}
+	var _g25 = attr.ondrop;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondrop = v24;
+	}
+	var _g26 = attr.ondurationchange;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondurationchange = v25;
+	}
+	var _g27 = attr.onemptied;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.onemptied = v26;
+	}
+	var _g28 = attr.onended;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onended = v27;
+	}
+	var _g29 = attr.onerror;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onerror = v28;
+	}
+	var _g30 = attr.onfocus;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onfocus = v29;
+	}
+	var _g31 = attr.onfullscreenchange;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfullscreenchange = v30;
+	}
+	var _g32 = attr.onfullscreenerror;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenerror = v31;
+	}
+	var _g33 = attr.ongotpointercapture;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.ongotpointercapture = v32;
+	}
+	var _g34 = attr.oninput;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.oninput = v33;
+	}
+	var _g35 = attr.oninvalid;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninvalid = v34;
+	}
+	var _g36 = attr.onkeydown;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.onkeydown = v35;
+	}
+	var _g37 = attr.onkeypress;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeypress = v36;
+	}
+	var _g38 = attr.onkeyup;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeyup = v37;
+	}
+	var _g39 = attr.onload;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onload = v38;
+	}
+	var _g40 = attr.onloadeddata;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onloadeddata = v39;
+	}
+	var _g41 = attr.onloadedmetadata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadedmetadata = v40;
+	}
+	var _g42 = attr.onloadstart;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadstart = v41;
+	}
+	var _g43 = attr.onlostpointercapture;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onlostpointercapture = v42;
+	}
+	var _g44 = attr.onmousedown;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onmousedown = v43;
+	}
+	var _g45 = attr.onmouseenter;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmouseenter = v44;
+	}
+	var _g46 = attr.onmouseleave;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseleave = v45;
+	}
+	var _g47 = attr.onmousemove;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmousemove = v46;
+	}
+	var _g48 = attr.onmouseout;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmouseout = v47;
+	}
+	var _g49 = attr.onmouseover;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseover = v48;
+	}
+	var _g50 = attr.onmouseup;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseup = v49;
+	}
+	var _g51 = attr.onpaste;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onpaste = v50;
+	}
+	var _g52 = attr.onpause;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpause = v51;
+	}
+	var _g53 = attr.onplay;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onplay = v52;
+	}
+	var _g54 = attr.onplaying;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplaying = v53;
+	}
+	var _g55 = attr.onpointercancel;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onpointercancel = v54;
+	}
+	var _g56 = attr.onpointerdown;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointerdown = v55;
+	}
+	var _g57 = attr.onpointerenter;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerenter = v56;
+	}
+	var _g58 = attr.onpointerleave;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerleave = v57;
+	}
+	var _g59 = attr.onpointerlockchange;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerlockchange = v58;
+	}
+	var _g60 = attr.onpointerlockerror;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockerror = v59;
+	}
+	var _g61 = attr.onpointermove;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointermove = v60;
+	}
+	var _g62 = attr.onpointerout;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointerout = v61;
+	}
+	var _g63 = attr.onpointerover;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerover = v62;
+	}
+	var _g64 = attr.onpointerup;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerup = v63;
+	}
+	var _g65 = attr.onprogress;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onprogress = v64;
+	}
+	var _g66 = attr.onratechange;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onratechange = v65;
+	}
+	var _g67 = attr.onreset;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onreset = v66;
+	}
+	var _g68 = attr.onresize;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onresize = v67;
+	}
+	var _g69 = attr.onscroll;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onscroll = v68;
+	}
+	var _g70 = attr.onseeked;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onseeked = v69;
+	}
+	var _g71 = attr.onseeking;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeking = v70;
+	}
+	var _g72 = attr.onselect;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onselect = v71;
+	}
+	var _g73 = attr.onshow;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onshow = v72;
+	}
+	var _g74 = attr.onstalled;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onstalled = v73;
+	}
+	var _g75 = attr.onsubmit;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onsubmit = v74;
+	}
+	var _g76 = attr.onsuspend;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsuspend = v75;
+	}
+	var _g77 = attr.ontimeupdate;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.ontimeupdate = v76;
+	}
+	var _g78 = attr.ontouchcancel;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontouchcancel = v77;
+	}
+	var _g79 = attr.ontouchend;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchend = v78;
+	}
+	var _g80 = attr.ontouchmove;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchmove = v79;
+	}
+	var _g81 = attr.ontouchstart;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchstart = v80;
+	}
+	var _g82 = attr.onvolumechange;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.onvolumechange = v81;
+	}
+	var _g83 = attr.onwaiting;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onwaiting = v82;
+	}
+	var _g84 = attr.onwheel;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwheel = v83;
+	}
+	var _g85 = attr.spellcheck;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.spellcheck = v84;
+	}
+	var _g86 = attr.style;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.style = v85;
+	}
+	var _g87 = attr.tabIndex;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.tabIndex = v86;
+	}
+	var _g88 = attr.title;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.title = v87;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g89 = 0;
+	while(_g89 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g89];
+		++_g89;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("i",attr2,__r1));
@@ -5465,7 +8260,463 @@ mdc_List.listStartImage = function(attr,children) {
 	} else {
 		_g.h["mdc-ripple-surface"] = value;
 	}
-	__r.push(vdom_VDom.h("img",{ className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}, accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, dir : attr.dir, draggable : attr.draggable, height : attr.height, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, src : attr.src, style : attr.style, tabIndex : attr.tabIndex, title : attr.title, width : attr.width}));
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.dir;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.dir = v2;
+	}
+	var _g4 = attr.draggable;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.draggable = v3;
+	}
+	var _g5 = attr.height;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.height = v4;
+	}
+	var _g6 = attr.hidden;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.hidden = v5;
+	}
+	var _g7 = attr.id;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.id = v6;
+	}
+	var _g8 = attr.key;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.key = v7;
+	}
+	var _g9 = attr.lang;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.lang = v8;
+	}
+	var _g10 = attr.onabort;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onabort = v9;
+	}
+	var _g11 = attr.onblur;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.onblur = v10;
+	}
+	var _g12 = attr.oncanplay;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplay = v11;
+	}
+	var _g13 = attr.oncanplaythrough;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.oncanplaythrough = v12;
+	}
+	var _g14 = attr.onchange;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onchange = v13;
+	}
+	var _g15 = attr.onclick;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.onclick = v14;
+	}
+	var _g16 = attr.oncontextmenu;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncontextmenu = v15;
+	}
+	var _g17 = attr.oncopy;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncopy = v16;
+	}
+	var _g18 = attr.oncut;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.oncut = v17;
+	}
+	var _g19 = attr.ondblclick;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondblclick = v18;
+	}
+	var _g20 = attr.ondrag;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondrag = v19;
+	}
+	var _g21 = attr.ondragend;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragend = v20;
+	}
+	var _g22 = attr.ondragenter;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragenter = v21;
+	}
+	var _g23 = attr.ondragleave;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragleave = v22;
+	}
+	var _g24 = attr.ondragover;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragover = v23;
+	}
+	var _g25 = attr.ondragstart;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondragstart = v24;
+	}
+	var _g26 = attr.ondrop;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondrop = v25;
+	}
+	var _g27 = attr.ondurationchange;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.ondurationchange = v26;
+	}
+	var _g28 = attr.onemptied;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onemptied = v27;
+	}
+	var _g29 = attr.onended;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onended = v28;
+	}
+	var _g30 = attr.onerror;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onerror = v29;
+	}
+	var _g31 = attr.onfocus;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfocus = v30;
+	}
+	var _g32 = attr.onfullscreenchange;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenchange = v31;
+	}
+	var _g33 = attr.onfullscreenerror;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.onfullscreenerror = v32;
+	}
+	var _g34 = attr.ongotpointercapture;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.ongotpointercapture = v33;
+	}
+	var _g35 = attr.oninput;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninput = v34;
+	}
+	var _g36 = attr.oninvalid;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.oninvalid = v35;
+	}
+	var _g37 = attr.onkeydown;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeydown = v36;
+	}
+	var _g38 = attr.onkeypress;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeypress = v37;
+	}
+	var _g39 = attr.onkeyup;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onkeyup = v38;
+	}
+	var _g40 = attr.onload;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onload = v39;
+	}
+	var _g41 = attr.onloadeddata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadeddata = v40;
+	}
+	var _g42 = attr.onloadedmetadata;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadedmetadata = v41;
+	}
+	var _g43 = attr.onloadstart;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onloadstart = v42;
+	}
+	var _g44 = attr.onlostpointercapture;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onlostpointercapture = v43;
+	}
+	var _g45 = attr.onmousedown;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmousedown = v44;
+	}
+	var _g46 = attr.onmouseenter;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseenter = v45;
+	}
+	var _g47 = attr.onmouseleave;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmouseleave = v46;
+	}
+	var _g48 = attr.onmousemove;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmousemove = v47;
+	}
+	var _g49 = attr.onmouseout;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseout = v48;
+	}
+	var _g50 = attr.onmouseover;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseover = v49;
+	}
+	var _g51 = attr.onmouseup;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onmouseup = v50;
+	}
+	var _g52 = attr.onpaste;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpaste = v51;
+	}
+	var _g53 = attr.onpause;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onpause = v52;
+	}
+	var _g54 = attr.onplay;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplay = v53;
+	}
+	var _g55 = attr.onplaying;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onplaying = v54;
+	}
+	var _g56 = attr.onpointercancel;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointercancel = v55;
+	}
+	var _g57 = attr.onpointerdown;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerdown = v56;
+	}
+	var _g58 = attr.onpointerenter;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerenter = v57;
+	}
+	var _g59 = attr.onpointerleave;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerleave = v58;
+	}
+	var _g60 = attr.onpointerlockchange;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockchange = v59;
+	}
+	var _g61 = attr.onpointerlockerror;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointerlockerror = v60;
+	}
+	var _g62 = attr.onpointermove;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointermove = v61;
+	}
+	var _g63 = attr.onpointerout;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerout = v62;
+	}
+	var _g64 = attr.onpointerover;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerover = v63;
+	}
+	var _g65 = attr.onpointerup;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onpointerup = v64;
+	}
+	var _g66 = attr.onprogress;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onprogress = v65;
+	}
+	var _g67 = attr.onratechange;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onratechange = v66;
+	}
+	var _g68 = attr.onreset;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onreset = v67;
+	}
+	var _g69 = attr.onresize;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onresize = v68;
+	}
+	var _g70 = attr.onscroll;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onscroll = v69;
+	}
+	var _g71 = attr.onseeked;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeked = v70;
+	}
+	var _g72 = attr.onseeking;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onseeking = v71;
+	}
+	var _g73 = attr.onselect;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onselect = v72;
+	}
+	var _g74 = attr.onshow;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onshow = v73;
+	}
+	var _g75 = attr.onstalled;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onstalled = v74;
+	}
+	var _g76 = attr.onsubmit;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsubmit = v75;
+	}
+	var _g77 = attr.onsuspend;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.onsuspend = v76;
+	}
+	var _g78 = attr.ontimeupdate;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontimeupdate = v77;
+	}
+	var _g79 = attr.ontouchcancel;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchcancel = v78;
+	}
+	var _g80 = attr.ontouchend;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchend = v79;
+	}
+	var _g81 = attr.ontouchmove;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchmove = v80;
+	}
+	var _g82 = attr.ontouchstart;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.ontouchstart = v81;
+	}
+	var _g83 = attr.onvolumechange;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onvolumechange = v82;
+	}
+	var _g84 = attr.onwaiting;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwaiting = v83;
+	}
+	var _g85 = attr.onwheel;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.onwheel = v84;
+	}
+	var _g86 = attr.spellcheck;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.spellcheck = v85;
+	}
+	var _g87 = attr.src;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.src = v86;
+	}
+	var _g88 = attr.style;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.style = v87;
+	}
+	var _g89 = attr.tabIndex;
+	if(_g89 != null) {
+		var v88 = _g89;
+		__ret.tabIndex = v88;
+	}
+	var _g90 = attr.title;
+	if(_g90 != null) {
+		var v89 = _g90;
+		__ret.title = v89;
+	}
+	var _g91 = attr.width;
+	if(_g91 != null) {
+		var v90 = _g91;
+		__ret.width = v90;
+	}
+	__r.push(vdom_VDom.h("img",__ret));
 	return __r[0];
 };
 mdc_List.listEndDetail = function(attr,children) {
@@ -5483,12 +8734,453 @@ mdc_List.listEndDetail = function(attr,children) {
 	} else {
 		_g.h["mdc-ripple-surface"] = value;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}, accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), attributes : { 'data-mdc-ripple-is-unbounded' : attr.unboundedRipple ? "" : undefined}};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.dir;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.dir = v2;
+	}
+	var _g4 = attr.draggable;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.draggable = v3;
+	}
+	var _g5 = attr.hidden;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.hidden = v4;
+	}
+	var _g6 = attr.id;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.id = v5;
+	}
+	var _g7 = attr.key;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.key = v6;
+	}
+	var _g8 = attr.lang;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.lang = v7;
+	}
+	var _g9 = attr.onabort;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.onabort = v8;
+	}
+	var _g10 = attr.onblur;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onblur = v9;
+	}
+	var _g11 = attr.oncanplay;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.oncanplay = v10;
+	}
+	var _g12 = attr.oncanplaythrough;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplaythrough = v11;
+	}
+	var _g13 = attr.onchange;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.onchange = v12;
+	}
+	var _g14 = attr.onclick;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onclick = v13;
+	}
+	var _g15 = attr.oncontextmenu;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.oncontextmenu = v14;
+	}
+	var _g16 = attr.oncopy;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncopy = v15;
+	}
+	var _g17 = attr.oncut;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncut = v16;
+	}
+	var _g18 = attr.ondblclick;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.ondblclick = v17;
+	}
+	var _g19 = attr.ondrag;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondrag = v18;
+	}
+	var _g20 = attr.ondragend;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondragend = v19;
+	}
+	var _g21 = attr.ondragenter;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragenter = v20;
+	}
+	var _g22 = attr.ondragleave;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragleave = v21;
+	}
+	var _g23 = attr.ondragover;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragover = v22;
+	}
+	var _g24 = attr.ondragstart;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragstart = v23;
+	}
+	var _g25 = attr.ondrop;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondrop = v24;
+	}
+	var _g26 = attr.ondurationchange;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondurationchange = v25;
+	}
+	var _g27 = attr.onemptied;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.onemptied = v26;
+	}
+	var _g28 = attr.onended;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onended = v27;
+	}
+	var _g29 = attr.onerror;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onerror = v28;
+	}
+	var _g30 = attr.onfocus;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onfocus = v29;
+	}
+	var _g31 = attr.onfullscreenchange;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfullscreenchange = v30;
+	}
+	var _g32 = attr.onfullscreenerror;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenerror = v31;
+	}
+	var _g33 = attr.ongotpointercapture;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.ongotpointercapture = v32;
+	}
+	var _g34 = attr.oninput;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.oninput = v33;
+	}
+	var _g35 = attr.oninvalid;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninvalid = v34;
+	}
+	var _g36 = attr.onkeydown;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.onkeydown = v35;
+	}
+	var _g37 = attr.onkeypress;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeypress = v36;
+	}
+	var _g38 = attr.onkeyup;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeyup = v37;
+	}
+	var _g39 = attr.onload;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onload = v38;
+	}
+	var _g40 = attr.onloadeddata;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onloadeddata = v39;
+	}
+	var _g41 = attr.onloadedmetadata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadedmetadata = v40;
+	}
+	var _g42 = attr.onloadstart;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadstart = v41;
+	}
+	var _g43 = attr.onlostpointercapture;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onlostpointercapture = v42;
+	}
+	var _g44 = attr.onmousedown;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onmousedown = v43;
+	}
+	var _g45 = attr.onmouseenter;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmouseenter = v44;
+	}
+	var _g46 = attr.onmouseleave;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseleave = v45;
+	}
+	var _g47 = attr.onmousemove;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmousemove = v46;
+	}
+	var _g48 = attr.onmouseout;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmouseout = v47;
+	}
+	var _g49 = attr.onmouseover;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseover = v48;
+	}
+	var _g50 = attr.onmouseup;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseup = v49;
+	}
+	var _g51 = attr.onpaste;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onpaste = v50;
+	}
+	var _g52 = attr.onpause;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpause = v51;
+	}
+	var _g53 = attr.onplay;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onplay = v52;
+	}
+	var _g54 = attr.onplaying;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplaying = v53;
+	}
+	var _g55 = attr.onpointercancel;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onpointercancel = v54;
+	}
+	var _g56 = attr.onpointerdown;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointerdown = v55;
+	}
+	var _g57 = attr.onpointerenter;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerenter = v56;
+	}
+	var _g58 = attr.onpointerleave;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerleave = v57;
+	}
+	var _g59 = attr.onpointerlockchange;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerlockchange = v58;
+	}
+	var _g60 = attr.onpointerlockerror;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockerror = v59;
+	}
+	var _g61 = attr.onpointermove;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointermove = v60;
+	}
+	var _g62 = attr.onpointerout;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointerout = v61;
+	}
+	var _g63 = attr.onpointerover;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerover = v62;
+	}
+	var _g64 = attr.onpointerup;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerup = v63;
+	}
+	var _g65 = attr.onprogress;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onprogress = v64;
+	}
+	var _g66 = attr.onratechange;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onratechange = v65;
+	}
+	var _g67 = attr.onreset;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onreset = v66;
+	}
+	var _g68 = attr.onresize;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onresize = v67;
+	}
+	var _g69 = attr.onscroll;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onscroll = v68;
+	}
+	var _g70 = attr.onseeked;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onseeked = v69;
+	}
+	var _g71 = attr.onseeking;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeking = v70;
+	}
+	var _g72 = attr.onselect;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onselect = v71;
+	}
+	var _g73 = attr.onshow;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onshow = v72;
+	}
+	var _g74 = attr.onstalled;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onstalled = v73;
+	}
+	var _g75 = attr.onsubmit;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onsubmit = v74;
+	}
+	var _g76 = attr.onsuspend;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsuspend = v75;
+	}
+	var _g77 = attr.ontimeupdate;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.ontimeupdate = v76;
+	}
+	var _g78 = attr.ontouchcancel;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontouchcancel = v77;
+	}
+	var _g79 = attr.ontouchend;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchend = v78;
+	}
+	var _g80 = attr.ontouchmove;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchmove = v79;
+	}
+	var _g81 = attr.ontouchstart;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchstart = v80;
+	}
+	var _g82 = attr.onvolumechange;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.onvolumechange = v81;
+	}
+	var _g83 = attr.onwaiting;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onwaiting = v82;
+	}
+	var _g84 = attr.onwheel;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwheel = v83;
+	}
+	var _g85 = attr.spellcheck;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.spellcheck = v84;
+	}
+	var _g86 = attr.style;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.style = v85;
+	}
+	var _g87 = attr.tabIndex;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.tabIndex = v86;
+	}
+	var _g88 = attr.title;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.title = v87;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g89 = 0;
+	while(_g89 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g89];
+		++_g89;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("span",attr2,__r1));
@@ -5503,12 +9195,458 @@ mdc_List.listText = function(attr,children) {
 	} else {
 		_g.h["mdc-list-item__text"] = true;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, attributes : attr.attributes, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g))};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.attributes;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.attributes = v2;
+	}
+	var _g4 = attr.dir;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.dir = v3;
+	}
+	var _g5 = attr.draggable;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.draggable = v4;
+	}
+	var _g6 = attr.hidden;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.hidden = v5;
+	}
+	var _g7 = attr.id;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.id = v6;
+	}
+	var _g8 = attr.key;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.key = v7;
+	}
+	var _g9 = attr.lang;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.lang = v8;
+	}
+	var _g10 = attr.onabort;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onabort = v9;
+	}
+	var _g11 = attr.onblur;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.onblur = v10;
+	}
+	var _g12 = attr.oncanplay;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplay = v11;
+	}
+	var _g13 = attr.oncanplaythrough;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.oncanplaythrough = v12;
+	}
+	var _g14 = attr.onchange;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onchange = v13;
+	}
+	var _g15 = attr.onclick;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.onclick = v14;
+	}
+	var _g16 = attr.oncontextmenu;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncontextmenu = v15;
+	}
+	var _g17 = attr.oncopy;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncopy = v16;
+	}
+	var _g18 = attr.oncut;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.oncut = v17;
+	}
+	var _g19 = attr.ondblclick;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondblclick = v18;
+	}
+	var _g20 = attr.ondrag;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondrag = v19;
+	}
+	var _g21 = attr.ondragend;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragend = v20;
+	}
+	var _g22 = attr.ondragenter;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragenter = v21;
+	}
+	var _g23 = attr.ondragleave;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragleave = v22;
+	}
+	var _g24 = attr.ondragover;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragover = v23;
+	}
+	var _g25 = attr.ondragstart;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondragstart = v24;
+	}
+	var _g26 = attr.ondrop;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondrop = v25;
+	}
+	var _g27 = attr.ondurationchange;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.ondurationchange = v26;
+	}
+	var _g28 = attr.onemptied;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onemptied = v27;
+	}
+	var _g29 = attr.onended;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onended = v28;
+	}
+	var _g30 = attr.onerror;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onerror = v29;
+	}
+	var _g31 = attr.onfocus;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfocus = v30;
+	}
+	var _g32 = attr.onfullscreenchange;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenchange = v31;
+	}
+	var _g33 = attr.onfullscreenerror;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.onfullscreenerror = v32;
+	}
+	var _g34 = attr.ongotpointercapture;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.ongotpointercapture = v33;
+	}
+	var _g35 = attr.oninput;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninput = v34;
+	}
+	var _g36 = attr.oninvalid;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.oninvalid = v35;
+	}
+	var _g37 = attr.onkeydown;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeydown = v36;
+	}
+	var _g38 = attr.onkeypress;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeypress = v37;
+	}
+	var _g39 = attr.onkeyup;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onkeyup = v38;
+	}
+	var _g40 = attr.onload;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onload = v39;
+	}
+	var _g41 = attr.onloadeddata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadeddata = v40;
+	}
+	var _g42 = attr.onloadedmetadata;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadedmetadata = v41;
+	}
+	var _g43 = attr.onloadstart;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onloadstart = v42;
+	}
+	var _g44 = attr.onlostpointercapture;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onlostpointercapture = v43;
+	}
+	var _g45 = attr.onmousedown;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmousedown = v44;
+	}
+	var _g46 = attr.onmouseenter;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseenter = v45;
+	}
+	var _g47 = attr.onmouseleave;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmouseleave = v46;
+	}
+	var _g48 = attr.onmousemove;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmousemove = v47;
+	}
+	var _g49 = attr.onmouseout;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseout = v48;
+	}
+	var _g50 = attr.onmouseover;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseover = v49;
+	}
+	var _g51 = attr.onmouseup;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onmouseup = v50;
+	}
+	var _g52 = attr.onpaste;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpaste = v51;
+	}
+	var _g53 = attr.onpause;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onpause = v52;
+	}
+	var _g54 = attr.onplay;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplay = v53;
+	}
+	var _g55 = attr.onplaying;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onplaying = v54;
+	}
+	var _g56 = attr.onpointercancel;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointercancel = v55;
+	}
+	var _g57 = attr.onpointerdown;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerdown = v56;
+	}
+	var _g58 = attr.onpointerenter;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerenter = v57;
+	}
+	var _g59 = attr.onpointerleave;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerleave = v58;
+	}
+	var _g60 = attr.onpointerlockchange;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockchange = v59;
+	}
+	var _g61 = attr.onpointerlockerror;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointerlockerror = v60;
+	}
+	var _g62 = attr.onpointermove;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointermove = v61;
+	}
+	var _g63 = attr.onpointerout;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerout = v62;
+	}
+	var _g64 = attr.onpointerover;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerover = v63;
+	}
+	var _g65 = attr.onpointerup;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onpointerup = v64;
+	}
+	var _g66 = attr.onprogress;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onprogress = v65;
+	}
+	var _g67 = attr.onratechange;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onratechange = v66;
+	}
+	var _g68 = attr.onreset;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onreset = v67;
+	}
+	var _g69 = attr.onresize;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onresize = v68;
+	}
+	var _g70 = attr.onscroll;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onscroll = v69;
+	}
+	var _g71 = attr.onseeked;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeked = v70;
+	}
+	var _g72 = attr.onseeking;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onseeking = v71;
+	}
+	var _g73 = attr.onselect;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onselect = v72;
+	}
+	var _g74 = attr.onshow;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onshow = v73;
+	}
+	var _g75 = attr.onstalled;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onstalled = v74;
+	}
+	var _g76 = attr.onsubmit;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsubmit = v75;
+	}
+	var _g77 = attr.onsuspend;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.onsuspend = v76;
+	}
+	var _g78 = attr.ontimeupdate;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontimeupdate = v77;
+	}
+	var _g79 = attr.ontouchcancel;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchcancel = v78;
+	}
+	var _g80 = attr.ontouchend;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchend = v79;
+	}
+	var _g81 = attr.ontouchmove;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchmove = v80;
+	}
+	var _g82 = attr.ontouchstart;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.ontouchstart = v81;
+	}
+	var _g83 = attr.onvolumechange;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onvolumechange = v82;
+	}
+	var _g84 = attr.onwaiting;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwaiting = v83;
+	}
+	var _g85 = attr.onwheel;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.onwheel = v84;
+	}
+	var _g86 = attr.spellcheck;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.spellcheck = v85;
+	}
+	var _g87 = attr.style;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.style = v86;
+	}
+	var _g88 = attr.tabIndex;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.tabIndex = v87;
+	}
+	var _g89 = attr.title;
+	if(_g89 != null) {
+		var v88 = _g89;
+		__ret.title = v88;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g90 = 0;
+	while(_g90 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g90];
+		++_g90;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("span",attr2,__r1));
@@ -5523,12 +9661,458 @@ mdc_List.listTextSecondary = function(attr,children) {
 	} else {
 		_g.h["mdc-list-item__text__secondary"] = true;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, attributes : attr.attributes, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g))};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.attributes;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.attributes = v2;
+	}
+	var _g4 = attr.dir;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.dir = v3;
+	}
+	var _g5 = attr.draggable;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.draggable = v4;
+	}
+	var _g6 = attr.hidden;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.hidden = v5;
+	}
+	var _g7 = attr.id;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.id = v6;
+	}
+	var _g8 = attr.key;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.key = v7;
+	}
+	var _g9 = attr.lang;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.lang = v8;
+	}
+	var _g10 = attr.onabort;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onabort = v9;
+	}
+	var _g11 = attr.onblur;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.onblur = v10;
+	}
+	var _g12 = attr.oncanplay;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplay = v11;
+	}
+	var _g13 = attr.oncanplaythrough;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.oncanplaythrough = v12;
+	}
+	var _g14 = attr.onchange;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onchange = v13;
+	}
+	var _g15 = attr.onclick;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.onclick = v14;
+	}
+	var _g16 = attr.oncontextmenu;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncontextmenu = v15;
+	}
+	var _g17 = attr.oncopy;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncopy = v16;
+	}
+	var _g18 = attr.oncut;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.oncut = v17;
+	}
+	var _g19 = attr.ondblclick;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondblclick = v18;
+	}
+	var _g20 = attr.ondrag;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondrag = v19;
+	}
+	var _g21 = attr.ondragend;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragend = v20;
+	}
+	var _g22 = attr.ondragenter;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragenter = v21;
+	}
+	var _g23 = attr.ondragleave;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragleave = v22;
+	}
+	var _g24 = attr.ondragover;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragover = v23;
+	}
+	var _g25 = attr.ondragstart;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondragstart = v24;
+	}
+	var _g26 = attr.ondrop;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondrop = v25;
+	}
+	var _g27 = attr.ondurationchange;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.ondurationchange = v26;
+	}
+	var _g28 = attr.onemptied;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onemptied = v27;
+	}
+	var _g29 = attr.onended;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onended = v28;
+	}
+	var _g30 = attr.onerror;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onerror = v29;
+	}
+	var _g31 = attr.onfocus;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfocus = v30;
+	}
+	var _g32 = attr.onfullscreenchange;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenchange = v31;
+	}
+	var _g33 = attr.onfullscreenerror;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.onfullscreenerror = v32;
+	}
+	var _g34 = attr.ongotpointercapture;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.ongotpointercapture = v33;
+	}
+	var _g35 = attr.oninput;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninput = v34;
+	}
+	var _g36 = attr.oninvalid;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.oninvalid = v35;
+	}
+	var _g37 = attr.onkeydown;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeydown = v36;
+	}
+	var _g38 = attr.onkeypress;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeypress = v37;
+	}
+	var _g39 = attr.onkeyup;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onkeyup = v38;
+	}
+	var _g40 = attr.onload;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onload = v39;
+	}
+	var _g41 = attr.onloadeddata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadeddata = v40;
+	}
+	var _g42 = attr.onloadedmetadata;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadedmetadata = v41;
+	}
+	var _g43 = attr.onloadstart;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onloadstart = v42;
+	}
+	var _g44 = attr.onlostpointercapture;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onlostpointercapture = v43;
+	}
+	var _g45 = attr.onmousedown;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmousedown = v44;
+	}
+	var _g46 = attr.onmouseenter;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseenter = v45;
+	}
+	var _g47 = attr.onmouseleave;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmouseleave = v46;
+	}
+	var _g48 = attr.onmousemove;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmousemove = v47;
+	}
+	var _g49 = attr.onmouseout;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseout = v48;
+	}
+	var _g50 = attr.onmouseover;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseover = v49;
+	}
+	var _g51 = attr.onmouseup;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onmouseup = v50;
+	}
+	var _g52 = attr.onpaste;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpaste = v51;
+	}
+	var _g53 = attr.onpause;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onpause = v52;
+	}
+	var _g54 = attr.onplay;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplay = v53;
+	}
+	var _g55 = attr.onplaying;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onplaying = v54;
+	}
+	var _g56 = attr.onpointercancel;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointercancel = v55;
+	}
+	var _g57 = attr.onpointerdown;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerdown = v56;
+	}
+	var _g58 = attr.onpointerenter;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerenter = v57;
+	}
+	var _g59 = attr.onpointerleave;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerleave = v58;
+	}
+	var _g60 = attr.onpointerlockchange;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockchange = v59;
+	}
+	var _g61 = attr.onpointerlockerror;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointerlockerror = v60;
+	}
+	var _g62 = attr.onpointermove;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointermove = v61;
+	}
+	var _g63 = attr.onpointerout;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerout = v62;
+	}
+	var _g64 = attr.onpointerover;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerover = v63;
+	}
+	var _g65 = attr.onpointerup;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onpointerup = v64;
+	}
+	var _g66 = attr.onprogress;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onprogress = v65;
+	}
+	var _g67 = attr.onratechange;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onratechange = v66;
+	}
+	var _g68 = attr.onreset;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onreset = v67;
+	}
+	var _g69 = attr.onresize;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onresize = v68;
+	}
+	var _g70 = attr.onscroll;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onscroll = v69;
+	}
+	var _g71 = attr.onseeked;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeked = v70;
+	}
+	var _g72 = attr.onseeking;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onseeking = v71;
+	}
+	var _g73 = attr.onselect;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onselect = v72;
+	}
+	var _g74 = attr.onshow;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onshow = v73;
+	}
+	var _g75 = attr.onstalled;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onstalled = v74;
+	}
+	var _g76 = attr.onsubmit;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsubmit = v75;
+	}
+	var _g77 = attr.onsuspend;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.onsuspend = v76;
+	}
+	var _g78 = attr.ontimeupdate;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontimeupdate = v77;
+	}
+	var _g79 = attr.ontouchcancel;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchcancel = v78;
+	}
+	var _g80 = attr.ontouchend;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchend = v79;
+	}
+	var _g81 = attr.ontouchmove;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchmove = v80;
+	}
+	var _g82 = attr.ontouchstart;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.ontouchstart = v81;
+	}
+	var _g83 = attr.onvolumechange;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onvolumechange = v82;
+	}
+	var _g84 = attr.onwaiting;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwaiting = v83;
+	}
+	var _g85 = attr.onwheel;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.onwheel = v84;
+	}
+	var _g86 = attr.spellcheck;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.spellcheck = v85;
+	}
+	var _g87 = attr.style;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.style = v86;
+	}
+	var _g88 = attr.tabIndex;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.tabIndex = v87;
+	}
+	var _g89 = attr.title;
+	if(_g89 != null) {
+		var v88 = _g89;
+		__ret.title = v88;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g90 = 0;
+	while(_g90 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g90];
+		++_g90;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("span",attr2,__r1));
@@ -5549,12 +10133,458 @@ mdc_List.listDivider = function(attr,children) {
 	} else {
 		_g.h["mdc-list-divider--inset"] = value;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, attributes : attr.attributes, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g))};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.attributes;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.attributes = v2;
+	}
+	var _g4 = attr.dir;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.dir = v3;
+	}
+	var _g5 = attr.draggable;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.draggable = v4;
+	}
+	var _g6 = attr.hidden;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.hidden = v5;
+	}
+	var _g7 = attr.id;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.id = v6;
+	}
+	var _g8 = attr.key;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.key = v7;
+	}
+	var _g9 = attr.lang;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.lang = v8;
+	}
+	var _g10 = attr.onabort;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onabort = v9;
+	}
+	var _g11 = attr.onblur;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.onblur = v10;
+	}
+	var _g12 = attr.oncanplay;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplay = v11;
+	}
+	var _g13 = attr.oncanplaythrough;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.oncanplaythrough = v12;
+	}
+	var _g14 = attr.onchange;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onchange = v13;
+	}
+	var _g15 = attr.onclick;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.onclick = v14;
+	}
+	var _g16 = attr.oncontextmenu;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncontextmenu = v15;
+	}
+	var _g17 = attr.oncopy;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncopy = v16;
+	}
+	var _g18 = attr.oncut;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.oncut = v17;
+	}
+	var _g19 = attr.ondblclick;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondblclick = v18;
+	}
+	var _g20 = attr.ondrag;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondrag = v19;
+	}
+	var _g21 = attr.ondragend;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragend = v20;
+	}
+	var _g22 = attr.ondragenter;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragenter = v21;
+	}
+	var _g23 = attr.ondragleave;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragleave = v22;
+	}
+	var _g24 = attr.ondragover;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragover = v23;
+	}
+	var _g25 = attr.ondragstart;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondragstart = v24;
+	}
+	var _g26 = attr.ondrop;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondrop = v25;
+	}
+	var _g27 = attr.ondurationchange;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.ondurationchange = v26;
+	}
+	var _g28 = attr.onemptied;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onemptied = v27;
+	}
+	var _g29 = attr.onended;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onended = v28;
+	}
+	var _g30 = attr.onerror;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onerror = v29;
+	}
+	var _g31 = attr.onfocus;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfocus = v30;
+	}
+	var _g32 = attr.onfullscreenchange;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenchange = v31;
+	}
+	var _g33 = attr.onfullscreenerror;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.onfullscreenerror = v32;
+	}
+	var _g34 = attr.ongotpointercapture;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.ongotpointercapture = v33;
+	}
+	var _g35 = attr.oninput;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninput = v34;
+	}
+	var _g36 = attr.oninvalid;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.oninvalid = v35;
+	}
+	var _g37 = attr.onkeydown;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeydown = v36;
+	}
+	var _g38 = attr.onkeypress;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeypress = v37;
+	}
+	var _g39 = attr.onkeyup;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onkeyup = v38;
+	}
+	var _g40 = attr.onload;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onload = v39;
+	}
+	var _g41 = attr.onloadeddata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadeddata = v40;
+	}
+	var _g42 = attr.onloadedmetadata;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadedmetadata = v41;
+	}
+	var _g43 = attr.onloadstart;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onloadstart = v42;
+	}
+	var _g44 = attr.onlostpointercapture;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onlostpointercapture = v43;
+	}
+	var _g45 = attr.onmousedown;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmousedown = v44;
+	}
+	var _g46 = attr.onmouseenter;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseenter = v45;
+	}
+	var _g47 = attr.onmouseleave;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmouseleave = v46;
+	}
+	var _g48 = attr.onmousemove;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmousemove = v47;
+	}
+	var _g49 = attr.onmouseout;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseout = v48;
+	}
+	var _g50 = attr.onmouseover;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseover = v49;
+	}
+	var _g51 = attr.onmouseup;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onmouseup = v50;
+	}
+	var _g52 = attr.onpaste;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpaste = v51;
+	}
+	var _g53 = attr.onpause;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onpause = v52;
+	}
+	var _g54 = attr.onplay;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplay = v53;
+	}
+	var _g55 = attr.onplaying;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onplaying = v54;
+	}
+	var _g56 = attr.onpointercancel;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointercancel = v55;
+	}
+	var _g57 = attr.onpointerdown;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerdown = v56;
+	}
+	var _g58 = attr.onpointerenter;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerenter = v57;
+	}
+	var _g59 = attr.onpointerleave;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerleave = v58;
+	}
+	var _g60 = attr.onpointerlockchange;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockchange = v59;
+	}
+	var _g61 = attr.onpointerlockerror;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointerlockerror = v60;
+	}
+	var _g62 = attr.onpointermove;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointermove = v61;
+	}
+	var _g63 = attr.onpointerout;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerout = v62;
+	}
+	var _g64 = attr.onpointerover;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerover = v63;
+	}
+	var _g65 = attr.onpointerup;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onpointerup = v64;
+	}
+	var _g66 = attr.onprogress;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onprogress = v65;
+	}
+	var _g67 = attr.onratechange;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onratechange = v66;
+	}
+	var _g68 = attr.onreset;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onreset = v67;
+	}
+	var _g69 = attr.onresize;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onresize = v68;
+	}
+	var _g70 = attr.onscroll;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onscroll = v69;
+	}
+	var _g71 = attr.onseeked;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeked = v70;
+	}
+	var _g72 = attr.onseeking;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onseeking = v71;
+	}
+	var _g73 = attr.onselect;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onselect = v72;
+	}
+	var _g74 = attr.onshow;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onshow = v73;
+	}
+	var _g75 = attr.onstalled;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onstalled = v74;
+	}
+	var _g76 = attr.onsubmit;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsubmit = v75;
+	}
+	var _g77 = attr.onsuspend;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.onsuspend = v76;
+	}
+	var _g78 = attr.ontimeupdate;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontimeupdate = v77;
+	}
+	var _g79 = attr.ontouchcancel;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchcancel = v78;
+	}
+	var _g80 = attr.ontouchend;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchend = v79;
+	}
+	var _g81 = attr.ontouchmove;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchmove = v80;
+	}
+	var _g82 = attr.ontouchstart;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.ontouchstart = v81;
+	}
+	var _g83 = attr.onvolumechange;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onvolumechange = v82;
+	}
+	var _g84 = attr.onwaiting;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwaiting = v83;
+	}
+	var _g85 = attr.onwheel;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.onwheel = v84;
+	}
+	var _g86 = attr.spellcheck;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.spellcheck = v85;
+	}
+	var _g87 = attr.style;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.style = v86;
+	}
+	var _g88 = attr.tabIndex;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.tabIndex = v87;
+	}
+	var _g89 = attr.title;
+	if(_g89 != null) {
+		var v88 = _g89;
+		__ret.title = v88;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g90 = 0;
+	while(_g90 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g90];
+		++_g90;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("li",attr2,__r1));
@@ -5604,26 +10634,918 @@ mdc_List.prototype = $extend(coconut_ui_View.prototype,{
 		var className1 = vdom__$Attr_ClassName_$Impl_$.add(className,vdom__$Attr_ClassName_$Impl_$.ofMap(_g));
 		if(this.get_interactive()) {
 			var __r = [];
-			var attr = { className : className1, accessKey : this.get_accessKey(), accessKeyLabel : this.get_accessKeyLabel(), attributes : this.get_attributes(), dir : this.get_dir(), draggable : this.get_draggable(), hidden : this.get_hidden(), id : this.get_id(), key : this.get_key(), lang : this.get_lang(), onabort : this.get_onabort(), onblur : this.get_onblur(), oncanplay : this.get_oncanplay(), oncanplaythrough : this.get_oncanplaythrough(), onchange : this.get_onchange(), onclick : this.get_onclick(), oncontextmenu : this.get_oncontextmenu(), oncopy : this.get_oncopy(), oncut : this.get_oncut(), ondblclick : this.get_ondblclick(), ondrag : this.get_ondrag(), ondragend : this.get_ondragend(), ondragenter : this.get_ondragenter(), ondragleave : this.get_ondragleave(), ondragover : this.get_ondragover(), ondragstart : this.get_ondragstart(), ondrop : this.get_ondrop(), ondurationchange : this.get_ondurationchange(), onemptied : this.get_onemptied(), onended : this.get_onended(), onerror : this.get_onerror(), onfocus : this.get_onfocus(), onfullscreenchange : this.get_onfullscreenchange(), onfullscreenerror : this.get_onfullscreenerror(), ongotpointercapture : this.get_ongotpointercapture(), oninput : this.get_oninput(), oninvalid : this.get_oninvalid(), onkeydown : this.get_onkeydown(), onkeypress : this.get_onkeypress(), onkeyup : this.get_onkeyup(), onload : this.get_onload(), onloadeddata : this.get_onloadeddata(), onloadedmetadata : this.get_onloadedmetadata(), onloadstart : this.get_onloadstart(), onlostpointercapture : this.get_onlostpointercapture(), onmousedown : this.get_onmousedown(), onmouseenter : this.get_onmouseenter(), onmouseleave : this.get_onmouseleave(), onmousemove : this.get_onmousemove(), onmouseout : this.get_onmouseout(), onmouseover : this.get_onmouseover(), onmouseup : this.get_onmouseup(), onpaste : this.get_onpaste(), onpause : this.get_onpause(), onplay : this.get_onplay(), onplaying : this.get_onplaying(), onpointercancel : this.get_onpointercancel(), onpointerdown : this.get_onpointerdown(), onpointerenter : this.get_onpointerenter(), onpointerleave : this.get_onpointerleave(), onpointerlockchange : this.get_onpointerlockchange(), onpointerlockerror : this.get_onpointerlockerror(), onpointermove : this.get_onpointermove(), onpointerout : this.get_onpointerout(), onpointerover : this.get_onpointerover(), onpointerup : this.get_onpointerup(), onprogress : this.get_onprogress(), onratechange : this.get_onratechange(), onreset : this.get_onreset(), onresize : this.get_onresize(), onscroll : this.get_onscroll(), onseeked : this.get_onseeked(), onseeking : this.get_onseeking(), onselect : this.get_onselect(), onshow : this.get_onshow(), onstalled : this.get_onstalled(), onsubmit : this.get_onsubmit(), onsuspend : this.get_onsuspend(), ontimeupdate : this.get_ontimeupdate(), ontouchcancel : this.get_ontouchcancel(), ontouchend : this.get_ontouchend(), ontouchmove : this.get_ontouchmove(), ontouchstart : this.get_ontouchstart(), onvolumechange : this.get_onvolumechange(), onwaiting : this.get_onwaiting(), onwheel : this.get_onwheel(), spellcheck : this.get_spellcheck(), style : this.get_style(), tabIndex : this.get_tabIndex(), title : this.get_title()};
+			var __ret = { className : className1};
+			var _g1 = this.get_accessKey();
+			if(_g1 != null) {
+				var v = _g1;
+				__ret.accessKey = v;
+			}
+			var _g2 = this.get_accessKeyLabel();
+			if(_g2 != null) {
+				var v1 = _g2;
+				__ret.accessKeyLabel = v1;
+			}
+			var _g3 = this.get_attributes();
+			if(_g3 != null) {
+				var v2 = _g3;
+				__ret.attributes = v2;
+			}
+			var _g4 = this.get_dir();
+			if(_g4 != null) {
+				var v3 = _g4;
+				__ret.dir = v3;
+			}
+			var _g5 = this.get_draggable();
+			if(_g5 != null) {
+				var v4 = _g5;
+				__ret.draggable = v4;
+			}
+			var _g6 = this.get_hidden();
+			if(_g6 != null) {
+				var v5 = _g6;
+				__ret.hidden = v5;
+			}
+			var _g7 = this.get_id();
+			if(_g7 != null) {
+				var v6 = _g7;
+				__ret.id = v6;
+			}
+			var _g8 = this.get_key();
+			if(_g8 != null) {
+				var v7 = _g8;
+				__ret.key = v7;
+			}
+			var _g9 = this.get_lang();
+			if(_g9 != null) {
+				var v8 = _g9;
+				__ret.lang = v8;
+			}
+			var _g10 = this.get_onabort();
+			if(_g10 != null) {
+				var v9 = _g10;
+				__ret.onabort = v9;
+			}
+			var _g11 = this.get_onblur();
+			if(_g11 != null) {
+				var v10 = _g11;
+				__ret.onblur = v10;
+			}
+			var _g12 = this.get_oncanplay();
+			if(_g12 != null) {
+				var v11 = _g12;
+				__ret.oncanplay = v11;
+			}
+			var _g13 = this.get_oncanplaythrough();
+			if(_g13 != null) {
+				var v12 = _g13;
+				__ret.oncanplaythrough = v12;
+			}
+			var _g14 = this.get_onchange();
+			if(_g14 != null) {
+				var v13 = _g14;
+				__ret.onchange = v13;
+			}
+			var _g15 = this.get_onclick();
+			if(_g15 != null) {
+				var v14 = _g15;
+				__ret.onclick = v14;
+			}
+			var _g16 = this.get_oncontextmenu();
+			if(_g16 != null) {
+				var v15 = _g16;
+				__ret.oncontextmenu = v15;
+			}
+			var _g17 = this.get_oncopy();
+			if(_g17 != null) {
+				var v16 = _g17;
+				__ret.oncopy = v16;
+			}
+			var _g18 = this.get_oncut();
+			if(_g18 != null) {
+				var v17 = _g18;
+				__ret.oncut = v17;
+			}
+			var _g19 = this.get_ondblclick();
+			if(_g19 != null) {
+				var v18 = _g19;
+				__ret.ondblclick = v18;
+			}
+			var _g20 = this.get_ondrag();
+			if(_g20 != null) {
+				var v19 = _g20;
+				__ret.ondrag = v19;
+			}
+			var _g21 = this.get_ondragend();
+			if(_g21 != null) {
+				var v20 = _g21;
+				__ret.ondragend = v20;
+			}
+			var _g22 = this.get_ondragenter();
+			if(_g22 != null) {
+				var v21 = _g22;
+				__ret.ondragenter = v21;
+			}
+			var _g23 = this.get_ondragleave();
+			if(_g23 != null) {
+				var v22 = _g23;
+				__ret.ondragleave = v22;
+			}
+			var _g24 = this.get_ondragover();
+			if(_g24 != null) {
+				var v23 = _g24;
+				__ret.ondragover = v23;
+			}
+			var _g25 = this.get_ondragstart();
+			if(_g25 != null) {
+				var v24 = _g25;
+				__ret.ondragstart = v24;
+			}
+			var _g26 = this.get_ondrop();
+			if(_g26 != null) {
+				var v25 = _g26;
+				__ret.ondrop = v25;
+			}
+			var _g27 = this.get_ondurationchange();
+			if(_g27 != null) {
+				var v26 = _g27;
+				__ret.ondurationchange = v26;
+			}
+			var _g28 = this.get_onemptied();
+			if(_g28 != null) {
+				var v27 = _g28;
+				__ret.onemptied = v27;
+			}
+			var _g29 = this.get_onended();
+			if(_g29 != null) {
+				var v28 = _g29;
+				__ret.onended = v28;
+			}
+			var _g30 = this.get_onerror();
+			if(_g30 != null) {
+				var v29 = _g30;
+				__ret.onerror = v29;
+			}
+			var _g31 = this.get_onfocus();
+			if(_g31 != null) {
+				var v30 = _g31;
+				__ret.onfocus = v30;
+			}
+			var _g32 = this.get_onfullscreenchange();
+			if(_g32 != null) {
+				var v31 = _g32;
+				__ret.onfullscreenchange = v31;
+			}
+			var _g33 = this.get_onfullscreenerror();
+			if(_g33 != null) {
+				var v32 = _g33;
+				__ret.onfullscreenerror = v32;
+			}
+			var _g34 = this.get_ongotpointercapture();
+			if(_g34 != null) {
+				var v33 = _g34;
+				__ret.ongotpointercapture = v33;
+			}
+			var _g35 = this.get_oninput();
+			if(_g35 != null) {
+				var v34 = _g35;
+				__ret.oninput = v34;
+			}
+			var _g36 = this.get_oninvalid();
+			if(_g36 != null) {
+				var v35 = _g36;
+				__ret.oninvalid = v35;
+			}
+			var _g37 = this.get_onkeydown();
+			if(_g37 != null) {
+				var v36 = _g37;
+				__ret.onkeydown = v36;
+			}
+			var _g38 = this.get_onkeypress();
+			if(_g38 != null) {
+				var v37 = _g38;
+				__ret.onkeypress = v37;
+			}
+			var _g39 = this.get_onkeyup();
+			if(_g39 != null) {
+				var v38 = _g39;
+				__ret.onkeyup = v38;
+			}
+			var _g40 = this.get_onload();
+			if(_g40 != null) {
+				var v39 = _g40;
+				__ret.onload = v39;
+			}
+			var _g41 = this.get_onloadeddata();
+			if(_g41 != null) {
+				var v40 = _g41;
+				__ret.onloadeddata = v40;
+			}
+			var _g42 = this.get_onloadedmetadata();
+			if(_g42 != null) {
+				var v41 = _g42;
+				__ret.onloadedmetadata = v41;
+			}
+			var _g43 = this.get_onloadstart();
+			if(_g43 != null) {
+				var v42 = _g43;
+				__ret.onloadstart = v42;
+			}
+			var _g44 = this.get_onlostpointercapture();
+			if(_g44 != null) {
+				var v43 = _g44;
+				__ret.onlostpointercapture = v43;
+			}
+			var _g45 = this.get_onmousedown();
+			if(_g45 != null) {
+				var v44 = _g45;
+				__ret.onmousedown = v44;
+			}
+			var _g46 = this.get_onmouseenter();
+			if(_g46 != null) {
+				var v45 = _g46;
+				__ret.onmouseenter = v45;
+			}
+			var _g47 = this.get_onmouseleave();
+			if(_g47 != null) {
+				var v46 = _g47;
+				__ret.onmouseleave = v46;
+			}
+			var _g48 = this.get_onmousemove();
+			if(_g48 != null) {
+				var v47 = _g48;
+				__ret.onmousemove = v47;
+			}
+			var _g49 = this.get_onmouseout();
+			if(_g49 != null) {
+				var v48 = _g49;
+				__ret.onmouseout = v48;
+			}
+			var _g50 = this.get_onmouseover();
+			if(_g50 != null) {
+				var v49 = _g50;
+				__ret.onmouseover = v49;
+			}
+			var _g51 = this.get_onmouseup();
+			if(_g51 != null) {
+				var v50 = _g51;
+				__ret.onmouseup = v50;
+			}
+			var _g52 = this.get_onpaste();
+			if(_g52 != null) {
+				var v51 = _g52;
+				__ret.onpaste = v51;
+			}
+			var _g53 = this.get_onpause();
+			if(_g53 != null) {
+				var v52 = _g53;
+				__ret.onpause = v52;
+			}
+			var _g54 = this.get_onplay();
+			if(_g54 != null) {
+				var v53 = _g54;
+				__ret.onplay = v53;
+			}
+			var _g55 = this.get_onplaying();
+			if(_g55 != null) {
+				var v54 = _g55;
+				__ret.onplaying = v54;
+			}
+			var _g56 = this.get_onpointercancel();
+			if(_g56 != null) {
+				var v55 = _g56;
+				__ret.onpointercancel = v55;
+			}
+			var _g57 = this.get_onpointerdown();
+			if(_g57 != null) {
+				var v56 = _g57;
+				__ret.onpointerdown = v56;
+			}
+			var _g58 = this.get_onpointerenter();
+			if(_g58 != null) {
+				var v57 = _g58;
+				__ret.onpointerenter = v57;
+			}
+			var _g59 = this.get_onpointerleave();
+			if(_g59 != null) {
+				var v58 = _g59;
+				__ret.onpointerleave = v58;
+			}
+			var _g60 = this.get_onpointerlockchange();
+			if(_g60 != null) {
+				var v59 = _g60;
+				__ret.onpointerlockchange = v59;
+			}
+			var _g61 = this.get_onpointerlockerror();
+			if(_g61 != null) {
+				var v60 = _g61;
+				__ret.onpointerlockerror = v60;
+			}
+			var _g62 = this.get_onpointermove();
+			if(_g62 != null) {
+				var v61 = _g62;
+				__ret.onpointermove = v61;
+			}
+			var _g63 = this.get_onpointerout();
+			if(_g63 != null) {
+				var v62 = _g63;
+				__ret.onpointerout = v62;
+			}
+			var _g64 = this.get_onpointerover();
+			if(_g64 != null) {
+				var v63 = _g64;
+				__ret.onpointerover = v63;
+			}
+			var _g65 = this.get_onpointerup();
+			if(_g65 != null) {
+				var v64 = _g65;
+				__ret.onpointerup = v64;
+			}
+			var _g66 = this.get_onprogress();
+			if(_g66 != null) {
+				var v65 = _g66;
+				__ret.onprogress = v65;
+			}
+			var _g67 = this.get_onratechange();
+			if(_g67 != null) {
+				var v66 = _g67;
+				__ret.onratechange = v66;
+			}
+			var _g68 = this.get_onreset();
+			if(_g68 != null) {
+				var v67 = _g68;
+				__ret.onreset = v67;
+			}
+			var _g69 = this.get_onresize();
+			if(_g69 != null) {
+				var v68 = _g69;
+				__ret.onresize = v68;
+			}
+			var _g70 = this.get_onscroll();
+			if(_g70 != null) {
+				var v69 = _g70;
+				__ret.onscroll = v69;
+			}
+			var _g71 = this.get_onseeked();
+			if(_g71 != null) {
+				var v70 = _g71;
+				__ret.onseeked = v70;
+			}
+			var _g72 = this.get_onseeking();
+			if(_g72 != null) {
+				var v71 = _g72;
+				__ret.onseeking = v71;
+			}
+			var _g73 = this.get_onselect();
+			if(_g73 != null) {
+				var v72 = _g73;
+				__ret.onselect = v72;
+			}
+			var _g74 = this.get_onshow();
+			if(_g74 != null) {
+				var v73 = _g74;
+				__ret.onshow = v73;
+			}
+			var _g75 = this.get_onstalled();
+			if(_g75 != null) {
+				var v74 = _g75;
+				__ret.onstalled = v74;
+			}
+			var _g76 = this.get_onsubmit();
+			if(_g76 != null) {
+				var v75 = _g76;
+				__ret.onsubmit = v75;
+			}
+			var _g77 = this.get_onsuspend();
+			if(_g77 != null) {
+				var v76 = _g77;
+				__ret.onsuspend = v76;
+			}
+			var _g78 = this.get_ontimeupdate();
+			if(_g78 != null) {
+				var v77 = _g78;
+				__ret.ontimeupdate = v77;
+			}
+			var _g79 = this.get_ontouchcancel();
+			if(_g79 != null) {
+				var v78 = _g79;
+				__ret.ontouchcancel = v78;
+			}
+			var _g80 = this.get_ontouchend();
+			if(_g80 != null) {
+				var v79 = _g80;
+				__ret.ontouchend = v79;
+			}
+			var _g81 = this.get_ontouchmove();
+			if(_g81 != null) {
+				var v80 = _g81;
+				__ret.ontouchmove = v80;
+			}
+			var _g82 = this.get_ontouchstart();
+			if(_g82 != null) {
+				var v81 = _g82;
+				__ret.ontouchstart = v81;
+			}
+			var _g83 = this.get_onvolumechange();
+			if(_g83 != null) {
+				var v82 = _g83;
+				__ret.onvolumechange = v82;
+			}
+			var _g84 = this.get_onwaiting();
+			if(_g84 != null) {
+				var v83 = _g84;
+				__ret.onwaiting = v83;
+			}
+			var _g85 = this.get_onwheel();
+			if(_g85 != null) {
+				var v84 = _g85;
+				__ret.onwheel = v84;
+			}
+			var _g86 = this.get_spellcheck();
+			if(_g86 != null) {
+				var v85 = _g86;
+				__ret.spellcheck = v85;
+			}
+			var _g87 = this.get_style();
+			if(_g87 != null) {
+				var v86 = _g87;
+				__ret.style = v86;
+			}
+			var _g88 = this.get_tabIndex();
+			if(_g88 != null) {
+				var v87 = _g88;
+				__ret.tabIndex = v87;
+			}
+			var _g89 = this.get_title();
+			if(_g89 != null) {
+				var v88 = _g89;
+				__ret.title = v88;
+			}
+			var attr = __ret;
 			var __r1 = [];
-			var _g1 = 0;
-			var _g2 = this.get_children();
-			while(_g1 < (_g2 == null ? 0 : _g2.length)) {
-				var _0 = _g2 == null ? null : _g2[_g1];
-				++_g1;
+			var _g110 = 0;
+			var _g210 = this.get_children();
+			while(_g110 < (_g210 == null ? 0 : _g210.length)) {
+				var _0 = _g210 == null ? null : _g210[_g110];
+				++_g110;
 				__r1.push(_0);
 			}
 			__r.push(vdom_VDom.h("nav",attr,__r1));
 			return __r[0];
 		} else {
 			var __r2 = [];
-			var attr1 = { className : className1, accessKey : this.get_accessKey(), accessKeyLabel : this.get_accessKeyLabel(), attributes : this.get_attributes(), dir : this.get_dir(), draggable : this.get_draggable(), hidden : this.get_hidden(), id : this.get_id(), key : this.get_key(), lang : this.get_lang(), onabort : this.get_onabort(), onblur : this.get_onblur(), oncanplay : this.get_oncanplay(), oncanplaythrough : this.get_oncanplaythrough(), onchange : this.get_onchange(), onclick : this.get_onclick(), oncontextmenu : this.get_oncontextmenu(), oncopy : this.get_oncopy(), oncut : this.get_oncut(), ondblclick : this.get_ondblclick(), ondrag : this.get_ondrag(), ondragend : this.get_ondragend(), ondragenter : this.get_ondragenter(), ondragleave : this.get_ondragleave(), ondragover : this.get_ondragover(), ondragstart : this.get_ondragstart(), ondrop : this.get_ondrop(), ondurationchange : this.get_ondurationchange(), onemptied : this.get_onemptied(), onended : this.get_onended(), onerror : this.get_onerror(), onfocus : this.get_onfocus(), onfullscreenchange : this.get_onfullscreenchange(), onfullscreenerror : this.get_onfullscreenerror(), ongotpointercapture : this.get_ongotpointercapture(), oninput : this.get_oninput(), oninvalid : this.get_oninvalid(), onkeydown : this.get_onkeydown(), onkeypress : this.get_onkeypress(), onkeyup : this.get_onkeyup(), onload : this.get_onload(), onloadeddata : this.get_onloadeddata(), onloadedmetadata : this.get_onloadedmetadata(), onloadstart : this.get_onloadstart(), onlostpointercapture : this.get_onlostpointercapture(), onmousedown : this.get_onmousedown(), onmouseenter : this.get_onmouseenter(), onmouseleave : this.get_onmouseleave(), onmousemove : this.get_onmousemove(), onmouseout : this.get_onmouseout(), onmouseover : this.get_onmouseover(), onmouseup : this.get_onmouseup(), onpaste : this.get_onpaste(), onpause : this.get_onpause(), onplay : this.get_onplay(), onplaying : this.get_onplaying(), onpointercancel : this.get_onpointercancel(), onpointerdown : this.get_onpointerdown(), onpointerenter : this.get_onpointerenter(), onpointerleave : this.get_onpointerleave(), onpointerlockchange : this.get_onpointerlockchange(), onpointerlockerror : this.get_onpointerlockerror(), onpointermove : this.get_onpointermove(), onpointerout : this.get_onpointerout(), onpointerover : this.get_onpointerover(), onpointerup : this.get_onpointerup(), onprogress : this.get_onprogress(), onratechange : this.get_onratechange(), onreset : this.get_onreset(), onresize : this.get_onresize(), onscroll : this.get_onscroll(), onseeked : this.get_onseeked(), onseeking : this.get_onseeking(), onselect : this.get_onselect(), onshow : this.get_onshow(), onstalled : this.get_onstalled(), onsubmit : this.get_onsubmit(), onsuspend : this.get_onsuspend(), ontimeupdate : this.get_ontimeupdate(), ontouchcancel : this.get_ontouchcancel(), ontouchend : this.get_ontouchend(), ontouchmove : this.get_ontouchmove(), ontouchstart : this.get_ontouchstart(), onvolumechange : this.get_onvolumechange(), onwaiting : this.get_onwaiting(), onwheel : this.get_onwheel(), spellcheck : this.get_spellcheck(), style : this.get_style(), tabIndex : this.get_tabIndex(), title : this.get_title()};
+			var __ret1 = { className : className1};
+			var _g111 = this.get_accessKey();
+			if(_g111 != null) {
+				var v89 = _g111;
+				__ret1.accessKey = v89;
+			}
+			var _g211 = this.get_accessKeyLabel();
+			if(_g211 != null) {
+				var v90 = _g211;
+				__ret1.accessKeyLabel = v90;
+			}
+			var _g310 = this.get_attributes();
+			if(_g310 != null) {
+				var v91 = _g310;
+				__ret1.attributes = v91;
+			}
+			var _g410 = this.get_dir();
+			if(_g410 != null) {
+				var v92 = _g410;
+				__ret1.dir = v92;
+			}
+			var _g510 = this.get_draggable();
+			if(_g510 != null) {
+				var v93 = _g510;
+				__ret1.draggable = v93;
+			}
+			var _g610 = this.get_hidden();
+			if(_g610 != null) {
+				var v94 = _g610;
+				__ret1.hidden = v94;
+			}
+			var _g710 = this.get_id();
+			if(_g710 != null) {
+				var v95 = _g710;
+				__ret1.id = v95;
+			}
+			var _g810 = this.get_key();
+			if(_g810 != null) {
+				var v96 = _g810;
+				__ret1.key = v96;
+			}
+			var _g91 = this.get_lang();
+			if(_g91 != null) {
+				var v97 = _g91;
+				__ret1.lang = v97;
+			}
+			var _g101 = this.get_onabort();
+			if(_g101 != null) {
+				var v98 = _g101;
+				__ret1.onabort = v98;
+			}
+			var _g112 = this.get_onblur();
+			if(_g112 != null) {
+				var v99 = _g112;
+				__ret1.onblur = v99;
+			}
+			var _g121 = this.get_oncanplay();
+			if(_g121 != null) {
+				var v100 = _g121;
+				__ret1.oncanplay = v100;
+			}
+			var _g131 = this.get_oncanplaythrough();
+			if(_g131 != null) {
+				var v101 = _g131;
+				__ret1.oncanplaythrough = v101;
+			}
+			var _g141 = this.get_onchange();
+			if(_g141 != null) {
+				var v102 = _g141;
+				__ret1.onchange = v102;
+			}
+			var _g151 = this.get_onclick();
+			if(_g151 != null) {
+				var v103 = _g151;
+				__ret1.onclick = v103;
+			}
+			var _g161 = this.get_oncontextmenu();
+			if(_g161 != null) {
+				var v104 = _g161;
+				__ret1.oncontextmenu = v104;
+			}
+			var _g171 = this.get_oncopy();
+			if(_g171 != null) {
+				var v105 = _g171;
+				__ret1.oncopy = v105;
+			}
+			var _g181 = this.get_oncut();
+			if(_g181 != null) {
+				var v106 = _g181;
+				__ret1.oncut = v106;
+			}
+			var _g191 = this.get_ondblclick();
+			if(_g191 != null) {
+				var v107 = _g191;
+				__ret1.ondblclick = v107;
+			}
+			var _g201 = this.get_ondrag();
+			if(_g201 != null) {
+				var v108 = _g201;
+				__ret1.ondrag = v108;
+			}
+			var _g212 = this.get_ondragend();
+			if(_g212 != null) {
+				var v109 = _g212;
+				__ret1.ondragend = v109;
+			}
+			var _g221 = this.get_ondragenter();
+			if(_g221 != null) {
+				var v110 = _g221;
+				__ret1.ondragenter = v110;
+			}
+			var _g231 = this.get_ondragleave();
+			if(_g231 != null) {
+				var v111 = _g231;
+				__ret1.ondragleave = v111;
+			}
+			var _g241 = this.get_ondragover();
+			if(_g241 != null) {
+				var v112 = _g241;
+				__ret1.ondragover = v112;
+			}
+			var _g251 = this.get_ondragstart();
+			if(_g251 != null) {
+				var v113 = _g251;
+				__ret1.ondragstart = v113;
+			}
+			var _g261 = this.get_ondrop();
+			if(_g261 != null) {
+				var v114 = _g261;
+				__ret1.ondrop = v114;
+			}
+			var _g271 = this.get_ondurationchange();
+			if(_g271 != null) {
+				var v115 = _g271;
+				__ret1.ondurationchange = v115;
+			}
+			var _g281 = this.get_onemptied();
+			if(_g281 != null) {
+				var v116 = _g281;
+				__ret1.onemptied = v116;
+			}
+			var _g291 = this.get_onended();
+			if(_g291 != null) {
+				var v117 = _g291;
+				__ret1.onended = v117;
+			}
+			var _g301 = this.get_onerror();
+			if(_g301 != null) {
+				var v118 = _g301;
+				__ret1.onerror = v118;
+			}
+			var _g311 = this.get_onfocus();
+			if(_g311 != null) {
+				var v119 = _g311;
+				__ret1.onfocus = v119;
+			}
+			var _g321 = this.get_onfullscreenchange();
+			if(_g321 != null) {
+				var v120 = _g321;
+				__ret1.onfullscreenchange = v120;
+			}
+			var _g331 = this.get_onfullscreenerror();
+			if(_g331 != null) {
+				var v121 = _g331;
+				__ret1.onfullscreenerror = v121;
+			}
+			var _g341 = this.get_ongotpointercapture();
+			if(_g341 != null) {
+				var v122 = _g341;
+				__ret1.ongotpointercapture = v122;
+			}
+			var _g351 = this.get_oninput();
+			if(_g351 != null) {
+				var v123 = _g351;
+				__ret1.oninput = v123;
+			}
+			var _g361 = this.get_oninvalid();
+			if(_g361 != null) {
+				var v124 = _g361;
+				__ret1.oninvalid = v124;
+			}
+			var _g371 = this.get_onkeydown();
+			if(_g371 != null) {
+				var v125 = _g371;
+				__ret1.onkeydown = v125;
+			}
+			var _g381 = this.get_onkeypress();
+			if(_g381 != null) {
+				var v126 = _g381;
+				__ret1.onkeypress = v126;
+			}
+			var _g391 = this.get_onkeyup();
+			if(_g391 != null) {
+				var v127 = _g391;
+				__ret1.onkeyup = v127;
+			}
+			var _g401 = this.get_onload();
+			if(_g401 != null) {
+				var v128 = _g401;
+				__ret1.onload = v128;
+			}
+			var _g411 = this.get_onloadeddata();
+			if(_g411 != null) {
+				var v129 = _g411;
+				__ret1.onloadeddata = v129;
+			}
+			var _g421 = this.get_onloadedmetadata();
+			if(_g421 != null) {
+				var v130 = _g421;
+				__ret1.onloadedmetadata = v130;
+			}
+			var _g431 = this.get_onloadstart();
+			if(_g431 != null) {
+				var v131 = _g431;
+				__ret1.onloadstart = v131;
+			}
+			var _g441 = this.get_onlostpointercapture();
+			if(_g441 != null) {
+				var v132 = _g441;
+				__ret1.onlostpointercapture = v132;
+			}
+			var _g451 = this.get_onmousedown();
+			if(_g451 != null) {
+				var v133 = _g451;
+				__ret1.onmousedown = v133;
+			}
+			var _g461 = this.get_onmouseenter();
+			if(_g461 != null) {
+				var v134 = _g461;
+				__ret1.onmouseenter = v134;
+			}
+			var _g471 = this.get_onmouseleave();
+			if(_g471 != null) {
+				var v135 = _g471;
+				__ret1.onmouseleave = v135;
+			}
+			var _g481 = this.get_onmousemove();
+			if(_g481 != null) {
+				var v136 = _g481;
+				__ret1.onmousemove = v136;
+			}
+			var _g491 = this.get_onmouseout();
+			if(_g491 != null) {
+				var v137 = _g491;
+				__ret1.onmouseout = v137;
+			}
+			var _g501 = this.get_onmouseover();
+			if(_g501 != null) {
+				var v138 = _g501;
+				__ret1.onmouseover = v138;
+			}
+			var _g511 = this.get_onmouseup();
+			if(_g511 != null) {
+				var v139 = _g511;
+				__ret1.onmouseup = v139;
+			}
+			var _g521 = this.get_onpaste();
+			if(_g521 != null) {
+				var v140 = _g521;
+				__ret1.onpaste = v140;
+			}
+			var _g531 = this.get_onpause();
+			if(_g531 != null) {
+				var v141 = _g531;
+				__ret1.onpause = v141;
+			}
+			var _g541 = this.get_onplay();
+			if(_g541 != null) {
+				var v142 = _g541;
+				__ret1.onplay = v142;
+			}
+			var _g551 = this.get_onplaying();
+			if(_g551 != null) {
+				var v143 = _g551;
+				__ret1.onplaying = v143;
+			}
+			var _g561 = this.get_onpointercancel();
+			if(_g561 != null) {
+				var v144 = _g561;
+				__ret1.onpointercancel = v144;
+			}
+			var _g571 = this.get_onpointerdown();
+			if(_g571 != null) {
+				var v145 = _g571;
+				__ret1.onpointerdown = v145;
+			}
+			var _g581 = this.get_onpointerenter();
+			if(_g581 != null) {
+				var v146 = _g581;
+				__ret1.onpointerenter = v146;
+			}
+			var _g591 = this.get_onpointerleave();
+			if(_g591 != null) {
+				var v147 = _g591;
+				__ret1.onpointerleave = v147;
+			}
+			var _g601 = this.get_onpointerlockchange();
+			if(_g601 != null) {
+				var v148 = _g601;
+				__ret1.onpointerlockchange = v148;
+			}
+			var _g611 = this.get_onpointerlockerror();
+			if(_g611 != null) {
+				var v149 = _g611;
+				__ret1.onpointerlockerror = v149;
+			}
+			var _g621 = this.get_onpointermove();
+			if(_g621 != null) {
+				var v150 = _g621;
+				__ret1.onpointermove = v150;
+			}
+			var _g631 = this.get_onpointerout();
+			if(_g631 != null) {
+				var v151 = _g631;
+				__ret1.onpointerout = v151;
+			}
+			var _g641 = this.get_onpointerover();
+			if(_g641 != null) {
+				var v152 = _g641;
+				__ret1.onpointerover = v152;
+			}
+			var _g651 = this.get_onpointerup();
+			if(_g651 != null) {
+				var v153 = _g651;
+				__ret1.onpointerup = v153;
+			}
+			var _g661 = this.get_onprogress();
+			if(_g661 != null) {
+				var v154 = _g661;
+				__ret1.onprogress = v154;
+			}
+			var _g671 = this.get_onratechange();
+			if(_g671 != null) {
+				var v155 = _g671;
+				__ret1.onratechange = v155;
+			}
+			var _g681 = this.get_onreset();
+			if(_g681 != null) {
+				var v156 = _g681;
+				__ret1.onreset = v156;
+			}
+			var _g691 = this.get_onresize();
+			if(_g691 != null) {
+				var v157 = _g691;
+				__ret1.onresize = v157;
+			}
+			var _g701 = this.get_onscroll();
+			if(_g701 != null) {
+				var v158 = _g701;
+				__ret1.onscroll = v158;
+			}
+			var _g711 = this.get_onseeked();
+			if(_g711 != null) {
+				var v159 = _g711;
+				__ret1.onseeked = v159;
+			}
+			var _g721 = this.get_onseeking();
+			if(_g721 != null) {
+				var v160 = _g721;
+				__ret1.onseeking = v160;
+			}
+			var _g731 = this.get_onselect();
+			if(_g731 != null) {
+				var v161 = _g731;
+				__ret1.onselect = v161;
+			}
+			var _g741 = this.get_onshow();
+			if(_g741 != null) {
+				var v162 = _g741;
+				__ret1.onshow = v162;
+			}
+			var _g751 = this.get_onstalled();
+			if(_g751 != null) {
+				var v163 = _g751;
+				__ret1.onstalled = v163;
+			}
+			var _g761 = this.get_onsubmit();
+			if(_g761 != null) {
+				var v164 = _g761;
+				__ret1.onsubmit = v164;
+			}
+			var _g771 = this.get_onsuspend();
+			if(_g771 != null) {
+				var v165 = _g771;
+				__ret1.onsuspend = v165;
+			}
+			var _g781 = this.get_ontimeupdate();
+			if(_g781 != null) {
+				var v166 = _g781;
+				__ret1.ontimeupdate = v166;
+			}
+			var _g791 = this.get_ontouchcancel();
+			if(_g791 != null) {
+				var v167 = _g791;
+				__ret1.ontouchcancel = v167;
+			}
+			var _g801 = this.get_ontouchend();
+			if(_g801 != null) {
+				var v168 = _g801;
+				__ret1.ontouchend = v168;
+			}
+			var _g811 = this.get_ontouchmove();
+			if(_g811 != null) {
+				var v169 = _g811;
+				__ret1.ontouchmove = v169;
+			}
+			var _g821 = this.get_ontouchstart();
+			if(_g821 != null) {
+				var v170 = _g821;
+				__ret1.ontouchstart = v170;
+			}
+			var _g831 = this.get_onvolumechange();
+			if(_g831 != null) {
+				var v171 = _g831;
+				__ret1.onvolumechange = v171;
+			}
+			var _g841 = this.get_onwaiting();
+			if(_g841 != null) {
+				var v172 = _g841;
+				__ret1.onwaiting = v172;
+			}
+			var _g851 = this.get_onwheel();
+			if(_g851 != null) {
+				var v173 = _g851;
+				__ret1.onwheel = v173;
+			}
+			var _g861 = this.get_spellcheck();
+			if(_g861 != null) {
+				var v174 = _g861;
+				__ret1.spellcheck = v174;
+			}
+			var _g871 = this.get_style();
+			if(_g871 != null) {
+				var v175 = _g871;
+				__ret1.style = v175;
+			}
+			var _g881 = this.get_tabIndex();
+			if(_g881 != null) {
+				var v176 = _g881;
+				__ret1.tabIndex = v176;
+			}
+			var _g891 = this.get_title();
+			if(_g891 != null) {
+				var v177 = _g891;
+				__ret1.title = v177;
+			}
+			var attr1 = __ret1;
 			var __r3 = [];
-			var _g11 = 0;
-			var _g21 = this.get_children();
-			while(_g11 < (_g21 == null ? 0 : _g21.length)) {
-				var _01 = _g21 == null ? null : _g21[_g11];
-				++_g11;
+			var _g113 = 0;
+			var _g213 = this.get_children();
+			while(_g113 < (_g213 == null ? 0 : _g213.length)) {
+				var _01 = _g213 == null ? null : _g213[_g113];
+				++_g113;
 				__r3.push(_01);
 			}
 			__r2.push(vdom_VDom.h("ul",attr1,__r3));
@@ -6208,7 +12130,7 @@ var mdc_MDC = function() { };
 $hxClasses["mdc.MDC"] = mdc_MDC;
 mdc_MDC.__name__ = ["mdc","MDC"];
 mdc_MDC.registerAll = function(node,className,handler,ref) {
-	var el = js_Boot.__cast(node , Element);
+	var el = node;
 	if(el.classList.contains(className)) {
 		if(Reflect.getProperty(el,ref) == null) {
 			var handler1 = Type.createInstance(handler,[el]);
@@ -6234,7 +12156,7 @@ mdc_MDC.register = function(node,className,handler,ref) {
 	Reflect.setProperty(node,ref,handler1);
 };
 mdc_MDC.unregisterAll = function(node,className,ref) {
-	var el = js_Boot.__cast(node , Element);
+	var el = node;
 	if(el.classList.contains(className)) {
 		var handler = Reflect.getProperty(el,ref);
 		if(handler != null) {
@@ -6292,22 +12214,485 @@ mdc_TabBar.tab = function(attr,children) {
 	} else {
 		_g.h["mdc-tab--active"] = value;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, attributes : attr.attributes, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, href : attr.href, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, target : attr.target, title : attr.title, type : attr.type};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g))};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.attributes;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.attributes = v2;
+	}
+	var _g4 = attr.dir;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.dir = v3;
+	}
+	var _g5 = attr.draggable;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.draggable = v4;
+	}
+	var _g6 = attr.hidden;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.hidden = v5;
+	}
+	var _g7 = attr.href;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.href = v6;
+	}
+	var _g8 = attr.id;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.id = v7;
+	}
+	var _g9 = attr.key;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.key = v8;
+	}
+	var _g10 = attr.lang;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.lang = v9;
+	}
+	var _g11 = attr.onabort;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.onabort = v10;
+	}
+	var _g12 = attr.onblur;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.onblur = v11;
+	}
+	var _g13 = attr.oncanplay;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.oncanplay = v12;
+	}
+	var _g14 = attr.oncanplaythrough;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.oncanplaythrough = v13;
+	}
+	var _g15 = attr.onchange;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.onchange = v14;
+	}
+	var _g16 = attr.onclick;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.onclick = v15;
+	}
+	var _g17 = attr.oncontextmenu;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncontextmenu = v16;
+	}
+	var _g18 = attr.oncopy;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.oncopy = v17;
+	}
+	var _g19 = attr.oncut;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.oncut = v18;
+	}
+	var _g20 = attr.ondblclick;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondblclick = v19;
+	}
+	var _g21 = attr.ondrag;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondrag = v20;
+	}
+	var _g22 = attr.ondragend;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragend = v21;
+	}
+	var _g23 = attr.ondragenter;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragenter = v22;
+	}
+	var _g24 = attr.ondragleave;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragleave = v23;
+	}
+	var _g25 = attr.ondragover;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondragover = v24;
+	}
+	var _g26 = attr.ondragstart;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondragstart = v25;
+	}
+	var _g27 = attr.ondrop;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.ondrop = v26;
+	}
+	var _g28 = attr.ondurationchange;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.ondurationchange = v27;
+	}
+	var _g29 = attr.onemptied;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onemptied = v28;
+	}
+	var _g30 = attr.onended;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onended = v29;
+	}
+	var _g31 = attr.onerror;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onerror = v30;
+	}
+	var _g32 = attr.onfocus;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfocus = v31;
+	}
+	var _g33 = attr.onfullscreenchange;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.onfullscreenchange = v32;
+	}
+	var _g34 = attr.onfullscreenerror;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.onfullscreenerror = v33;
+	}
+	var _g35 = attr.ongotpointercapture;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.ongotpointercapture = v34;
+	}
+	var _g36 = attr.oninput;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.oninput = v35;
+	}
+	var _g37 = attr.oninvalid;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.oninvalid = v36;
+	}
+	var _g38 = attr.onkeydown;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeydown = v37;
+	}
+	var _g39 = attr.onkeypress;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onkeypress = v38;
+	}
+	var _g40 = attr.onkeyup;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onkeyup = v39;
+	}
+	var _g41 = attr.onload;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onload = v40;
+	}
+	var _g42 = attr.onloadeddata;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadeddata = v41;
+	}
+	var _g43 = attr.onloadedmetadata;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onloadedmetadata = v42;
+	}
+	var _g44 = attr.onloadstart;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onloadstart = v43;
+	}
+	var _g45 = attr.onlostpointercapture;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onlostpointercapture = v44;
+	}
+	var _g46 = attr.onmousedown;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmousedown = v45;
+	}
+	var _g47 = attr.onmouseenter;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmouseenter = v46;
+	}
+	var _g48 = attr.onmouseleave;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmouseleave = v47;
+	}
+	var _g49 = attr.onmousemove;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmousemove = v48;
+	}
+	var _g50 = attr.onmouseout;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseout = v49;
+	}
+	var _g51 = attr.onmouseover;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onmouseover = v50;
+	}
+	var _g52 = attr.onmouseup;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onmouseup = v51;
+	}
+	var _g53 = attr.onpaste;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onpaste = v52;
+	}
+	var _g54 = attr.onpause;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onpause = v53;
+	}
+	var _g55 = attr.onplay;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onplay = v54;
+	}
+	var _g56 = attr.onplaying;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onplaying = v55;
+	}
+	var _g57 = attr.onpointercancel;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointercancel = v56;
+	}
+	var _g58 = attr.onpointerdown;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerdown = v57;
+	}
+	var _g59 = attr.onpointerenter;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerenter = v58;
+	}
+	var _g60 = attr.onpointerleave;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerleave = v59;
+	}
+	var _g61 = attr.onpointerlockchange;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointerlockchange = v60;
+	}
+	var _g62 = attr.onpointerlockerror;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointerlockerror = v61;
+	}
+	var _g63 = attr.onpointermove;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointermove = v62;
+	}
+	var _g64 = attr.onpointerout;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerout = v63;
+	}
+	var _g65 = attr.onpointerover;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onpointerover = v64;
+	}
+	var _g66 = attr.onpointerup;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onpointerup = v65;
+	}
+	var _g67 = attr.onprogress;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onprogress = v66;
+	}
+	var _g68 = attr.onratechange;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onratechange = v67;
+	}
+	var _g69 = attr.onreset;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onreset = v68;
+	}
+	var _g70 = attr.onresize;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onresize = v69;
+	}
+	var _g71 = attr.onscroll;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onscroll = v70;
+	}
+	var _g72 = attr.onseeked;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onseeked = v71;
+	}
+	var _g73 = attr.onseeking;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onseeking = v72;
+	}
+	var _g74 = attr.onselect;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onselect = v73;
+	}
+	var _g75 = attr.onshow;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onshow = v74;
+	}
+	var _g76 = attr.onstalled;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onstalled = v75;
+	}
+	var _g77 = attr.onsubmit;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.onsubmit = v76;
+	}
+	var _g78 = attr.onsuspend;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.onsuspend = v77;
+	}
+	var _g79 = attr.ontimeupdate;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontimeupdate = v78;
+	}
+	var _g80 = attr.ontouchcancel;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchcancel = v79;
+	}
+	var _g81 = attr.ontouchend;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchend = v80;
+	}
+	var _g82 = attr.ontouchmove;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.ontouchmove = v81;
+	}
+	var _g83 = attr.ontouchstart;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.ontouchstart = v82;
+	}
+	var _g84 = attr.onvolumechange;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onvolumechange = v83;
+	}
+	var _g85 = attr.onwaiting;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.onwaiting = v84;
+	}
+	var _g86 = attr.onwheel;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.onwheel = v85;
+	}
+	var _g87 = attr.spellcheck;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.spellcheck = v86;
+	}
+	var _g88 = attr.style;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.style = v87;
+	}
+	var _g89 = attr.tabIndex;
+	if(_g89 != null) {
+		var v88 = _g89;
+		__ret.tabIndex = v88;
+	}
+	var _g90 = attr.target;
+	if(_g90 != null) {
+		var v89 = _g90;
+		__ret.target = v89;
+	}
+	var _g91 = attr.title;
+	if(_g91 != null) {
+		var v90 = _g91;
+		__ret.title = v90;
+	}
+	var _g92 = attr.type;
+	if(_g92 != null) {
+		var v91 = _g92;
+		__ret.type = v91;
+	}
+	var attr2 = __ret;
 	var __r1 = [];
 	if(attr.icon != null) {
+		var __ret1 = { };
 		var __r2 = [];
 		__r2.push(attr.icon);
-		__r1.push(mdc_TabBar.tabIcon({ },__r2[0]));
+		__r1.push(mdc_TabBar.tabIcon(__ret1,__r2[0]));
 	}
 	if(attr.text != null) {
+		var __ret2 = { };
 		var __r3 = [];
 		__r3.push(attr.text);
-		__r1.push(mdc_TabBar.tabText({ },__r3[0]));
+		__r1.push(mdc_TabBar.tabText(__ret2,__r3[0]));
 	}
-	var _g1 = 0;
-	while(_g1 < (children == null ? 0 : children.length)) {
-		var _0 = children == null ? null : children[_g1];
-		++_g1;
+	var _g93 = 0;
+	while(_g93 < (children == null ? 0 : children.length)) {
+		var _0 = children == null ? null : children[_g93];
+		++_g93;
 		__r1.push(_0);
 	}
 	__r.push(vdom_VDom.h("a",attr2,__r1));
@@ -6327,10 +12712,455 @@ mdc_TabBar.tabIcon = function(attr,children) {
 	} else {
 		_g.h["material-icons"] = true;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, attributes : attr.attributes, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g))};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.attributes;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.attributes = v2;
+	}
+	var _g4 = attr.dir;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.dir = v3;
+	}
+	var _g5 = attr.draggable;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.draggable = v4;
+	}
+	var _g6 = attr.hidden;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.hidden = v5;
+	}
+	var _g7 = attr.id;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.id = v6;
+	}
+	var _g8 = attr.key;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.key = v7;
+	}
+	var _g9 = attr.lang;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.lang = v8;
+	}
+	var _g10 = attr.onabort;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onabort = v9;
+	}
+	var _g11 = attr.onblur;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.onblur = v10;
+	}
+	var _g12 = attr.oncanplay;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplay = v11;
+	}
+	var _g13 = attr.oncanplaythrough;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.oncanplaythrough = v12;
+	}
+	var _g14 = attr.onchange;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onchange = v13;
+	}
+	var _g15 = attr.onclick;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.onclick = v14;
+	}
+	var _g16 = attr.oncontextmenu;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncontextmenu = v15;
+	}
+	var _g17 = attr.oncopy;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncopy = v16;
+	}
+	var _g18 = attr.oncut;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.oncut = v17;
+	}
+	var _g19 = attr.ondblclick;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondblclick = v18;
+	}
+	var _g20 = attr.ondrag;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondrag = v19;
+	}
+	var _g21 = attr.ondragend;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragend = v20;
+	}
+	var _g22 = attr.ondragenter;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragenter = v21;
+	}
+	var _g23 = attr.ondragleave;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragleave = v22;
+	}
+	var _g24 = attr.ondragover;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragover = v23;
+	}
+	var _g25 = attr.ondragstart;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondragstart = v24;
+	}
+	var _g26 = attr.ondrop;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondrop = v25;
+	}
+	var _g27 = attr.ondurationchange;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.ondurationchange = v26;
+	}
+	var _g28 = attr.onemptied;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onemptied = v27;
+	}
+	var _g29 = attr.onended;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onended = v28;
+	}
+	var _g30 = attr.onerror;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onerror = v29;
+	}
+	var _g31 = attr.onfocus;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfocus = v30;
+	}
+	var _g32 = attr.onfullscreenchange;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenchange = v31;
+	}
+	var _g33 = attr.onfullscreenerror;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.onfullscreenerror = v32;
+	}
+	var _g34 = attr.ongotpointercapture;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.ongotpointercapture = v33;
+	}
+	var _g35 = attr.oninput;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninput = v34;
+	}
+	var _g36 = attr.oninvalid;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.oninvalid = v35;
+	}
+	var _g37 = attr.onkeydown;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeydown = v36;
+	}
+	var _g38 = attr.onkeypress;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeypress = v37;
+	}
+	var _g39 = attr.onkeyup;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onkeyup = v38;
+	}
+	var _g40 = attr.onload;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onload = v39;
+	}
+	var _g41 = attr.onloadeddata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadeddata = v40;
+	}
+	var _g42 = attr.onloadedmetadata;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadedmetadata = v41;
+	}
+	var _g43 = attr.onloadstart;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onloadstart = v42;
+	}
+	var _g44 = attr.onlostpointercapture;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onlostpointercapture = v43;
+	}
+	var _g45 = attr.onmousedown;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmousedown = v44;
+	}
+	var _g46 = attr.onmouseenter;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseenter = v45;
+	}
+	var _g47 = attr.onmouseleave;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmouseleave = v46;
+	}
+	var _g48 = attr.onmousemove;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmousemove = v47;
+	}
+	var _g49 = attr.onmouseout;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseout = v48;
+	}
+	var _g50 = attr.onmouseover;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseover = v49;
+	}
+	var _g51 = attr.onmouseup;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onmouseup = v50;
+	}
+	var _g52 = attr.onpaste;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpaste = v51;
+	}
+	var _g53 = attr.onpause;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onpause = v52;
+	}
+	var _g54 = attr.onplay;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplay = v53;
+	}
+	var _g55 = attr.onplaying;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onplaying = v54;
+	}
+	var _g56 = attr.onpointercancel;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointercancel = v55;
+	}
+	var _g57 = attr.onpointerdown;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerdown = v56;
+	}
+	var _g58 = attr.onpointerenter;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerenter = v57;
+	}
+	var _g59 = attr.onpointerleave;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerleave = v58;
+	}
+	var _g60 = attr.onpointerlockchange;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockchange = v59;
+	}
+	var _g61 = attr.onpointerlockerror;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointerlockerror = v60;
+	}
+	var _g62 = attr.onpointermove;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointermove = v61;
+	}
+	var _g63 = attr.onpointerout;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerout = v62;
+	}
+	var _g64 = attr.onpointerover;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerover = v63;
+	}
+	var _g65 = attr.onpointerup;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onpointerup = v64;
+	}
+	var _g66 = attr.onprogress;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onprogress = v65;
+	}
+	var _g67 = attr.onratechange;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onratechange = v66;
+	}
+	var _g68 = attr.onreset;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onreset = v67;
+	}
+	var _g69 = attr.onresize;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onresize = v68;
+	}
+	var _g70 = attr.onscroll;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onscroll = v69;
+	}
+	var _g71 = attr.onseeked;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeked = v70;
+	}
+	var _g72 = attr.onseeking;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onseeking = v71;
+	}
+	var _g73 = attr.onselect;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onselect = v72;
+	}
+	var _g74 = attr.onshow;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onshow = v73;
+	}
+	var _g75 = attr.onstalled;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onstalled = v74;
+	}
+	var _g76 = attr.onsubmit;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsubmit = v75;
+	}
+	var _g77 = attr.onsuspend;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.onsuspend = v76;
+	}
+	var _g78 = attr.ontimeupdate;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontimeupdate = v77;
+	}
+	var _g79 = attr.ontouchcancel;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchcancel = v78;
+	}
+	var _g80 = attr.ontouchend;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchend = v79;
+	}
+	var _g81 = attr.ontouchmove;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchmove = v80;
+	}
+	var _g82 = attr.ontouchstart;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.ontouchstart = v81;
+	}
+	var _g83 = attr.onvolumechange;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onvolumechange = v82;
+	}
+	var _g84 = attr.onwaiting;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwaiting = v83;
+	}
+	var _g85 = attr.onwheel;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.onwheel = v84;
+	}
+	var _g86 = attr.spellcheck;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.spellcheck = v85;
+	}
+	var _g87 = attr.style;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.style = v86;
+	}
+	var _g88 = attr.tabIndex;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.tabIndex = v87;
+	}
+	var _g89 = attr.title;
+	if(_g89 != null) {
+		var v88 = _g89;
+		__ret.title = v88;
+	}
 	var __r1 = [];
 	__r1.push(children);
-	__r.push(vdom_VDom.h("i",attr2,__r1));
+	__r.push(vdom_VDom.h("i",__ret,__r1));
 	return __r[0];
 };
 mdc_TabBar.tabText = function(attr,children) {
@@ -6342,10 +13172,455 @@ mdc_TabBar.tabText = function(attr,children) {
 	} else {
 		_g.h["mdc-tab__icon-text"] = true;
 	}
-	var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), accessKey : attr.accessKey, accessKeyLabel : attr.accessKeyLabel, attributes : attr.attributes, dir : attr.dir, draggable : attr.draggable, hidden : attr.hidden, id : attr.id, key : attr.key, lang : attr.lang, onabort : attr.onabort, onblur : attr.onblur, oncanplay : attr.oncanplay, oncanplaythrough : attr.oncanplaythrough, onchange : attr.onchange, onclick : attr.onclick, oncontextmenu : attr.oncontextmenu, oncopy : attr.oncopy, oncut : attr.oncut, ondblclick : attr.ondblclick, ondrag : attr.ondrag, ondragend : attr.ondragend, ondragenter : attr.ondragenter, ondragleave : attr.ondragleave, ondragover : attr.ondragover, ondragstart : attr.ondragstart, ondrop : attr.ondrop, ondurationchange : attr.ondurationchange, onemptied : attr.onemptied, onended : attr.onended, onerror : attr.onerror, onfocus : attr.onfocus, onfullscreenchange : attr.onfullscreenchange, onfullscreenerror : attr.onfullscreenerror, ongotpointercapture : attr.ongotpointercapture, oninput : attr.oninput, oninvalid : attr.oninvalid, onkeydown : attr.onkeydown, onkeypress : attr.onkeypress, onkeyup : attr.onkeyup, onload : attr.onload, onloadeddata : attr.onloadeddata, onloadedmetadata : attr.onloadedmetadata, onloadstart : attr.onloadstart, onlostpointercapture : attr.onlostpointercapture, onmousedown : attr.onmousedown, onmouseenter : attr.onmouseenter, onmouseleave : attr.onmouseleave, onmousemove : attr.onmousemove, onmouseout : attr.onmouseout, onmouseover : attr.onmouseover, onmouseup : attr.onmouseup, onpaste : attr.onpaste, onpause : attr.onpause, onplay : attr.onplay, onplaying : attr.onplaying, onpointercancel : attr.onpointercancel, onpointerdown : attr.onpointerdown, onpointerenter : attr.onpointerenter, onpointerleave : attr.onpointerleave, onpointerlockchange : attr.onpointerlockchange, onpointerlockerror : attr.onpointerlockerror, onpointermove : attr.onpointermove, onpointerout : attr.onpointerout, onpointerover : attr.onpointerover, onpointerup : attr.onpointerup, onprogress : attr.onprogress, onratechange : attr.onratechange, onreset : attr.onreset, onresize : attr.onresize, onscroll : attr.onscroll, onseeked : attr.onseeked, onseeking : attr.onseeking, onselect : attr.onselect, onshow : attr.onshow, onstalled : attr.onstalled, onsubmit : attr.onsubmit, onsuspend : attr.onsuspend, ontimeupdate : attr.ontimeupdate, ontouchcancel : attr.ontouchcancel, ontouchend : attr.ontouchend, ontouchmove : attr.ontouchmove, ontouchstart : attr.ontouchstart, onvolumechange : attr.onvolumechange, onwaiting : attr.onwaiting, onwheel : attr.onwheel, spellcheck : attr.spellcheck, style : attr.style, tabIndex : attr.tabIndex, title : attr.title};
+	var __ret = { className : vdom__$Attr_ClassName_$Impl_$.add(attr1,vdom__$Attr_ClassName_$Impl_$.ofMap(_g))};
+	var _g1 = attr.accessKey;
+	if(_g1 != null) {
+		var v = _g1;
+		__ret.accessKey = v;
+	}
+	var _g2 = attr.accessKeyLabel;
+	if(_g2 != null) {
+		var v1 = _g2;
+		__ret.accessKeyLabel = v1;
+	}
+	var _g3 = attr.attributes;
+	if(_g3 != null) {
+		var v2 = _g3;
+		__ret.attributes = v2;
+	}
+	var _g4 = attr.dir;
+	if(_g4 != null) {
+		var v3 = _g4;
+		__ret.dir = v3;
+	}
+	var _g5 = attr.draggable;
+	if(_g5 != null) {
+		var v4 = _g5;
+		__ret.draggable = v4;
+	}
+	var _g6 = attr.hidden;
+	if(_g6 != null) {
+		var v5 = _g6;
+		__ret.hidden = v5;
+	}
+	var _g7 = attr.id;
+	if(_g7 != null) {
+		var v6 = _g7;
+		__ret.id = v6;
+	}
+	var _g8 = attr.key;
+	if(_g8 != null) {
+		var v7 = _g8;
+		__ret.key = v7;
+	}
+	var _g9 = attr.lang;
+	if(_g9 != null) {
+		var v8 = _g9;
+		__ret.lang = v8;
+	}
+	var _g10 = attr.onabort;
+	if(_g10 != null) {
+		var v9 = _g10;
+		__ret.onabort = v9;
+	}
+	var _g11 = attr.onblur;
+	if(_g11 != null) {
+		var v10 = _g11;
+		__ret.onblur = v10;
+	}
+	var _g12 = attr.oncanplay;
+	if(_g12 != null) {
+		var v11 = _g12;
+		__ret.oncanplay = v11;
+	}
+	var _g13 = attr.oncanplaythrough;
+	if(_g13 != null) {
+		var v12 = _g13;
+		__ret.oncanplaythrough = v12;
+	}
+	var _g14 = attr.onchange;
+	if(_g14 != null) {
+		var v13 = _g14;
+		__ret.onchange = v13;
+	}
+	var _g15 = attr.onclick;
+	if(_g15 != null) {
+		var v14 = _g15;
+		__ret.onclick = v14;
+	}
+	var _g16 = attr.oncontextmenu;
+	if(_g16 != null) {
+		var v15 = _g16;
+		__ret.oncontextmenu = v15;
+	}
+	var _g17 = attr.oncopy;
+	if(_g17 != null) {
+		var v16 = _g17;
+		__ret.oncopy = v16;
+	}
+	var _g18 = attr.oncut;
+	if(_g18 != null) {
+		var v17 = _g18;
+		__ret.oncut = v17;
+	}
+	var _g19 = attr.ondblclick;
+	if(_g19 != null) {
+		var v18 = _g19;
+		__ret.ondblclick = v18;
+	}
+	var _g20 = attr.ondrag;
+	if(_g20 != null) {
+		var v19 = _g20;
+		__ret.ondrag = v19;
+	}
+	var _g21 = attr.ondragend;
+	if(_g21 != null) {
+		var v20 = _g21;
+		__ret.ondragend = v20;
+	}
+	var _g22 = attr.ondragenter;
+	if(_g22 != null) {
+		var v21 = _g22;
+		__ret.ondragenter = v21;
+	}
+	var _g23 = attr.ondragleave;
+	if(_g23 != null) {
+		var v22 = _g23;
+		__ret.ondragleave = v22;
+	}
+	var _g24 = attr.ondragover;
+	if(_g24 != null) {
+		var v23 = _g24;
+		__ret.ondragover = v23;
+	}
+	var _g25 = attr.ondragstart;
+	if(_g25 != null) {
+		var v24 = _g25;
+		__ret.ondragstart = v24;
+	}
+	var _g26 = attr.ondrop;
+	if(_g26 != null) {
+		var v25 = _g26;
+		__ret.ondrop = v25;
+	}
+	var _g27 = attr.ondurationchange;
+	if(_g27 != null) {
+		var v26 = _g27;
+		__ret.ondurationchange = v26;
+	}
+	var _g28 = attr.onemptied;
+	if(_g28 != null) {
+		var v27 = _g28;
+		__ret.onemptied = v27;
+	}
+	var _g29 = attr.onended;
+	if(_g29 != null) {
+		var v28 = _g29;
+		__ret.onended = v28;
+	}
+	var _g30 = attr.onerror;
+	if(_g30 != null) {
+		var v29 = _g30;
+		__ret.onerror = v29;
+	}
+	var _g31 = attr.onfocus;
+	if(_g31 != null) {
+		var v30 = _g31;
+		__ret.onfocus = v30;
+	}
+	var _g32 = attr.onfullscreenchange;
+	if(_g32 != null) {
+		var v31 = _g32;
+		__ret.onfullscreenchange = v31;
+	}
+	var _g33 = attr.onfullscreenerror;
+	if(_g33 != null) {
+		var v32 = _g33;
+		__ret.onfullscreenerror = v32;
+	}
+	var _g34 = attr.ongotpointercapture;
+	if(_g34 != null) {
+		var v33 = _g34;
+		__ret.ongotpointercapture = v33;
+	}
+	var _g35 = attr.oninput;
+	if(_g35 != null) {
+		var v34 = _g35;
+		__ret.oninput = v34;
+	}
+	var _g36 = attr.oninvalid;
+	if(_g36 != null) {
+		var v35 = _g36;
+		__ret.oninvalid = v35;
+	}
+	var _g37 = attr.onkeydown;
+	if(_g37 != null) {
+		var v36 = _g37;
+		__ret.onkeydown = v36;
+	}
+	var _g38 = attr.onkeypress;
+	if(_g38 != null) {
+		var v37 = _g38;
+		__ret.onkeypress = v37;
+	}
+	var _g39 = attr.onkeyup;
+	if(_g39 != null) {
+		var v38 = _g39;
+		__ret.onkeyup = v38;
+	}
+	var _g40 = attr.onload;
+	if(_g40 != null) {
+		var v39 = _g40;
+		__ret.onload = v39;
+	}
+	var _g41 = attr.onloadeddata;
+	if(_g41 != null) {
+		var v40 = _g41;
+		__ret.onloadeddata = v40;
+	}
+	var _g42 = attr.onloadedmetadata;
+	if(_g42 != null) {
+		var v41 = _g42;
+		__ret.onloadedmetadata = v41;
+	}
+	var _g43 = attr.onloadstart;
+	if(_g43 != null) {
+		var v42 = _g43;
+		__ret.onloadstart = v42;
+	}
+	var _g44 = attr.onlostpointercapture;
+	if(_g44 != null) {
+		var v43 = _g44;
+		__ret.onlostpointercapture = v43;
+	}
+	var _g45 = attr.onmousedown;
+	if(_g45 != null) {
+		var v44 = _g45;
+		__ret.onmousedown = v44;
+	}
+	var _g46 = attr.onmouseenter;
+	if(_g46 != null) {
+		var v45 = _g46;
+		__ret.onmouseenter = v45;
+	}
+	var _g47 = attr.onmouseleave;
+	if(_g47 != null) {
+		var v46 = _g47;
+		__ret.onmouseleave = v46;
+	}
+	var _g48 = attr.onmousemove;
+	if(_g48 != null) {
+		var v47 = _g48;
+		__ret.onmousemove = v47;
+	}
+	var _g49 = attr.onmouseout;
+	if(_g49 != null) {
+		var v48 = _g49;
+		__ret.onmouseout = v48;
+	}
+	var _g50 = attr.onmouseover;
+	if(_g50 != null) {
+		var v49 = _g50;
+		__ret.onmouseover = v49;
+	}
+	var _g51 = attr.onmouseup;
+	if(_g51 != null) {
+		var v50 = _g51;
+		__ret.onmouseup = v50;
+	}
+	var _g52 = attr.onpaste;
+	if(_g52 != null) {
+		var v51 = _g52;
+		__ret.onpaste = v51;
+	}
+	var _g53 = attr.onpause;
+	if(_g53 != null) {
+		var v52 = _g53;
+		__ret.onpause = v52;
+	}
+	var _g54 = attr.onplay;
+	if(_g54 != null) {
+		var v53 = _g54;
+		__ret.onplay = v53;
+	}
+	var _g55 = attr.onplaying;
+	if(_g55 != null) {
+		var v54 = _g55;
+		__ret.onplaying = v54;
+	}
+	var _g56 = attr.onpointercancel;
+	if(_g56 != null) {
+		var v55 = _g56;
+		__ret.onpointercancel = v55;
+	}
+	var _g57 = attr.onpointerdown;
+	if(_g57 != null) {
+		var v56 = _g57;
+		__ret.onpointerdown = v56;
+	}
+	var _g58 = attr.onpointerenter;
+	if(_g58 != null) {
+		var v57 = _g58;
+		__ret.onpointerenter = v57;
+	}
+	var _g59 = attr.onpointerleave;
+	if(_g59 != null) {
+		var v58 = _g59;
+		__ret.onpointerleave = v58;
+	}
+	var _g60 = attr.onpointerlockchange;
+	if(_g60 != null) {
+		var v59 = _g60;
+		__ret.onpointerlockchange = v59;
+	}
+	var _g61 = attr.onpointerlockerror;
+	if(_g61 != null) {
+		var v60 = _g61;
+		__ret.onpointerlockerror = v60;
+	}
+	var _g62 = attr.onpointermove;
+	if(_g62 != null) {
+		var v61 = _g62;
+		__ret.onpointermove = v61;
+	}
+	var _g63 = attr.onpointerout;
+	if(_g63 != null) {
+		var v62 = _g63;
+		__ret.onpointerout = v62;
+	}
+	var _g64 = attr.onpointerover;
+	if(_g64 != null) {
+		var v63 = _g64;
+		__ret.onpointerover = v63;
+	}
+	var _g65 = attr.onpointerup;
+	if(_g65 != null) {
+		var v64 = _g65;
+		__ret.onpointerup = v64;
+	}
+	var _g66 = attr.onprogress;
+	if(_g66 != null) {
+		var v65 = _g66;
+		__ret.onprogress = v65;
+	}
+	var _g67 = attr.onratechange;
+	if(_g67 != null) {
+		var v66 = _g67;
+		__ret.onratechange = v66;
+	}
+	var _g68 = attr.onreset;
+	if(_g68 != null) {
+		var v67 = _g68;
+		__ret.onreset = v67;
+	}
+	var _g69 = attr.onresize;
+	if(_g69 != null) {
+		var v68 = _g69;
+		__ret.onresize = v68;
+	}
+	var _g70 = attr.onscroll;
+	if(_g70 != null) {
+		var v69 = _g70;
+		__ret.onscroll = v69;
+	}
+	var _g71 = attr.onseeked;
+	if(_g71 != null) {
+		var v70 = _g71;
+		__ret.onseeked = v70;
+	}
+	var _g72 = attr.onseeking;
+	if(_g72 != null) {
+		var v71 = _g72;
+		__ret.onseeking = v71;
+	}
+	var _g73 = attr.onselect;
+	if(_g73 != null) {
+		var v72 = _g73;
+		__ret.onselect = v72;
+	}
+	var _g74 = attr.onshow;
+	if(_g74 != null) {
+		var v73 = _g74;
+		__ret.onshow = v73;
+	}
+	var _g75 = attr.onstalled;
+	if(_g75 != null) {
+		var v74 = _g75;
+		__ret.onstalled = v74;
+	}
+	var _g76 = attr.onsubmit;
+	if(_g76 != null) {
+		var v75 = _g76;
+		__ret.onsubmit = v75;
+	}
+	var _g77 = attr.onsuspend;
+	if(_g77 != null) {
+		var v76 = _g77;
+		__ret.onsuspend = v76;
+	}
+	var _g78 = attr.ontimeupdate;
+	if(_g78 != null) {
+		var v77 = _g78;
+		__ret.ontimeupdate = v77;
+	}
+	var _g79 = attr.ontouchcancel;
+	if(_g79 != null) {
+		var v78 = _g79;
+		__ret.ontouchcancel = v78;
+	}
+	var _g80 = attr.ontouchend;
+	if(_g80 != null) {
+		var v79 = _g80;
+		__ret.ontouchend = v79;
+	}
+	var _g81 = attr.ontouchmove;
+	if(_g81 != null) {
+		var v80 = _g81;
+		__ret.ontouchmove = v80;
+	}
+	var _g82 = attr.ontouchstart;
+	if(_g82 != null) {
+		var v81 = _g82;
+		__ret.ontouchstart = v81;
+	}
+	var _g83 = attr.onvolumechange;
+	if(_g83 != null) {
+		var v82 = _g83;
+		__ret.onvolumechange = v82;
+	}
+	var _g84 = attr.onwaiting;
+	if(_g84 != null) {
+		var v83 = _g84;
+		__ret.onwaiting = v83;
+	}
+	var _g85 = attr.onwheel;
+	if(_g85 != null) {
+		var v84 = _g85;
+		__ret.onwheel = v84;
+	}
+	var _g86 = attr.spellcheck;
+	if(_g86 != null) {
+		var v85 = _g86;
+		__ret.spellcheck = v85;
+	}
+	var _g87 = attr.style;
+	if(_g87 != null) {
+		var v86 = _g87;
+		__ret.style = v86;
+	}
+	var _g88 = attr.tabIndex;
+	if(_g88 != null) {
+		var v87 = _g88;
+		__ret.tabIndex = v87;
+	}
+	var _g89 = attr.title;
+	if(_g89 != null) {
+		var v88 = _g89;
+		__ret.title = v88;
+	}
 	var __r1 = [];
 	__r1.push(children);
-	__r.push(vdom_VDom.h("span",attr2,__r1));
+	__r.push(vdom_VDom.h("span",__ret,__r1));
 	return __r[0];
 };
 mdc_TabBar.__init = function(attributes,inst) {
@@ -6365,7 +13640,7 @@ mdc_TabBar.prototype = $extend(coconut_ui_View.prototype,{
 	,render: function() {
 		var _gthis = this;
 		var __r = [];
-		var attr = _gthis.get_className();
+		var __ret = _gthis.get_className();
 		var _g = new haxe_ds_StringMap();
 		if(__map_reserved["mdc-tab-bar"] != null) {
 			_g.setReserved("mdc-tab-bar",true);
@@ -6378,18 +13653,465 @@ mdc_TabBar.prototype = $extend(coconut_ui_View.prototype,{
 		} else {
 			_g.h[key] = true;
 		}
-		var attr1 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), accessKey : this.get_accessKey(), accessKeyLabel : this.get_accessKeyLabel(), attributes : this.get_attributes(), dir : this.get_dir(), draggable : this.get_draggable(), hidden : this.get_hidden(), id : this.get_id(), key : this.get_key(), lang : this.get_lang(), onabort : this.get_onabort(), onblur : this.get_onblur(), oncanplay : this.get_oncanplay(), oncanplaythrough : this.get_oncanplaythrough(), onchange : this.get_onchange(), onclick : this.get_onclick(), oncontextmenu : this.get_oncontextmenu(), oncopy : this.get_oncopy(), oncut : this.get_oncut(), ondblclick : this.get_ondblclick(), ondrag : this.get_ondrag(), ondragend : this.get_ondragend(), ondragenter : this.get_ondragenter(), ondragleave : this.get_ondragleave(), ondragover : this.get_ondragover(), ondragstart : this.get_ondragstart(), ondrop : this.get_ondrop(), ondurationchange : this.get_ondurationchange(), onemptied : this.get_onemptied(), onended : this.get_onended(), onerror : this.get_onerror(), onfocus : this.get_onfocus(), onfullscreenchange : this.get_onfullscreenchange(), onfullscreenerror : this.get_onfullscreenerror(), ongotpointercapture : this.get_ongotpointercapture(), oninput : this.get_oninput(), oninvalid : this.get_oninvalid(), onkeydown : this.get_onkeydown(), onkeypress : this.get_onkeypress(), onkeyup : this.get_onkeyup(), onload : this.get_onload(), onloadeddata : this.get_onloadeddata(), onloadedmetadata : this.get_onloadedmetadata(), onloadstart : this.get_onloadstart(), onlostpointercapture : this.get_onlostpointercapture(), onmousedown : this.get_onmousedown(), onmouseenter : this.get_onmouseenter(), onmouseleave : this.get_onmouseleave(), onmousemove : this.get_onmousemove(), onmouseout : this.get_onmouseout(), onmouseover : this.get_onmouseover(), onmouseup : this.get_onmouseup(), onpaste : this.get_onpaste(), onpause : this.get_onpause(), onplay : this.get_onplay(), onplaying : this.get_onplaying(), onpointercancel : this.get_onpointercancel(), onpointerdown : this.get_onpointerdown(), onpointerenter : this.get_onpointerenter(), onpointerleave : this.get_onpointerleave(), onpointerlockchange : this.get_onpointerlockchange(), onpointerlockerror : this.get_onpointerlockerror(), onpointermove : this.get_onpointermove(), onpointerout : this.get_onpointerout(), onpointerover : this.get_onpointerover(), onpointerup : this.get_onpointerup(), onprogress : this.get_onprogress(), onratechange : this.get_onratechange(), onreset : this.get_onreset(), onresize : this.get_onresize(), onscroll : this.get_onscroll(), onseeked : this.get_onseeked(), onseeking : this.get_onseeking(), onselect : this.get_onselect(), onshow : this.get_onshow(), onstalled : this.get_onstalled(), onsubmit : this.get_onsubmit(), onsuspend : this.get_onsuspend(), ontimeupdate : this.get_ontimeupdate(), ontouchcancel : this.get_ontouchcancel(), ontouchend : this.get_ontouchend(), ontouchmove : this.get_ontouchmove(), ontouchstart : this.get_ontouchstart(), onvolumechange : this.get_onvolumechange(), onwaiting : this.get_onwaiting(), onwheel : this.get_onwheel(), spellcheck : this.get_spellcheck(), style : this.get_style(), tabIndex : this.get_tabIndex(), title : this.get_title()};
+		var __ret1 = { className : vdom__$Attr_ClassName_$Impl_$.add(__ret,vdom__$Attr_ClassName_$Impl_$.ofMap(_g))};
+		var _g1 = this.get_accessKey();
+		if(_g1 != null) {
+			var v = _g1;
+			__ret1.accessKey = v;
+		}
+		var _g2 = this.get_accessKeyLabel();
+		if(_g2 != null) {
+			var v1 = _g2;
+			__ret1.accessKeyLabel = v1;
+		}
+		var _g3 = this.get_attributes();
+		if(_g3 != null) {
+			var v2 = _g3;
+			__ret1.attributes = v2;
+		}
+		var _g4 = this.get_dir();
+		if(_g4 != null) {
+			var v3 = _g4;
+			__ret1.dir = v3;
+		}
+		var _g5 = this.get_draggable();
+		if(_g5 != null) {
+			var v4 = _g5;
+			__ret1.draggable = v4;
+		}
+		var _g6 = this.get_hidden();
+		if(_g6 != null) {
+			var v5 = _g6;
+			__ret1.hidden = v5;
+		}
+		var _g7 = this.get_id();
+		if(_g7 != null) {
+			var v6 = _g7;
+			__ret1.id = v6;
+		}
+		var _g8 = this.get_key();
+		if(_g8 != null) {
+			var v7 = _g8;
+			__ret1.key = v7;
+		}
+		var _g9 = this.get_lang();
+		if(_g9 != null) {
+			var v8 = _g9;
+			__ret1.lang = v8;
+		}
+		var _g10 = this.get_onabort();
+		if(_g10 != null) {
+			var v9 = _g10;
+			__ret1.onabort = v9;
+		}
+		var _g11 = this.get_onblur();
+		if(_g11 != null) {
+			var v10 = _g11;
+			__ret1.onblur = v10;
+		}
+		var _g12 = this.get_oncanplay();
+		if(_g12 != null) {
+			var v11 = _g12;
+			__ret1.oncanplay = v11;
+		}
+		var _g13 = this.get_oncanplaythrough();
+		if(_g13 != null) {
+			var v12 = _g13;
+			__ret1.oncanplaythrough = v12;
+		}
+		var _g14 = this.get_onchange();
+		if(_g14 != null) {
+			var v13 = _g14;
+			__ret1.onchange = v13;
+		}
+		var _g15 = this.get_onclick();
+		if(_g15 != null) {
+			var v14 = _g15;
+			__ret1.onclick = v14;
+		}
+		var _g16 = this.get_oncontextmenu();
+		if(_g16 != null) {
+			var v15 = _g16;
+			__ret1.oncontextmenu = v15;
+		}
+		var _g17 = this.get_oncopy();
+		if(_g17 != null) {
+			var v16 = _g17;
+			__ret1.oncopy = v16;
+		}
+		var _g18 = this.get_oncut();
+		if(_g18 != null) {
+			var v17 = _g18;
+			__ret1.oncut = v17;
+		}
+		var _g19 = this.get_ondblclick();
+		if(_g19 != null) {
+			var v18 = _g19;
+			__ret1.ondblclick = v18;
+		}
+		var _g20 = this.get_ondrag();
+		if(_g20 != null) {
+			var v19 = _g20;
+			__ret1.ondrag = v19;
+		}
+		var _g21 = this.get_ondragend();
+		if(_g21 != null) {
+			var v20 = _g21;
+			__ret1.ondragend = v20;
+		}
+		var _g22 = this.get_ondragenter();
+		if(_g22 != null) {
+			var v21 = _g22;
+			__ret1.ondragenter = v21;
+		}
+		var _g23 = this.get_ondragleave();
+		if(_g23 != null) {
+			var v22 = _g23;
+			__ret1.ondragleave = v22;
+		}
+		var _g24 = this.get_ondragover();
+		if(_g24 != null) {
+			var v23 = _g24;
+			__ret1.ondragover = v23;
+		}
+		var _g25 = this.get_ondragstart();
+		if(_g25 != null) {
+			var v24 = _g25;
+			__ret1.ondragstart = v24;
+		}
+		var _g26 = this.get_ondrop();
+		if(_g26 != null) {
+			var v25 = _g26;
+			__ret1.ondrop = v25;
+		}
+		var _g27 = this.get_ondurationchange();
+		if(_g27 != null) {
+			var v26 = _g27;
+			__ret1.ondurationchange = v26;
+		}
+		var _g28 = this.get_onemptied();
+		if(_g28 != null) {
+			var v27 = _g28;
+			__ret1.onemptied = v27;
+		}
+		var _g29 = this.get_onended();
+		if(_g29 != null) {
+			var v28 = _g29;
+			__ret1.onended = v28;
+		}
+		var _g30 = this.get_onerror();
+		if(_g30 != null) {
+			var v29 = _g30;
+			__ret1.onerror = v29;
+		}
+		var _g31 = this.get_onfocus();
+		if(_g31 != null) {
+			var v30 = _g31;
+			__ret1.onfocus = v30;
+		}
+		var _g32 = this.get_onfullscreenchange();
+		if(_g32 != null) {
+			var v31 = _g32;
+			__ret1.onfullscreenchange = v31;
+		}
+		var _g33 = this.get_onfullscreenerror();
+		if(_g33 != null) {
+			var v32 = _g33;
+			__ret1.onfullscreenerror = v32;
+		}
+		var _g34 = this.get_ongotpointercapture();
+		if(_g34 != null) {
+			var v33 = _g34;
+			__ret1.ongotpointercapture = v33;
+		}
+		var _g35 = this.get_oninput();
+		if(_g35 != null) {
+			var v34 = _g35;
+			__ret1.oninput = v34;
+		}
+		var _g36 = this.get_oninvalid();
+		if(_g36 != null) {
+			var v35 = _g36;
+			__ret1.oninvalid = v35;
+		}
+		var _g37 = this.get_onkeydown();
+		if(_g37 != null) {
+			var v36 = _g37;
+			__ret1.onkeydown = v36;
+		}
+		var _g38 = this.get_onkeypress();
+		if(_g38 != null) {
+			var v37 = _g38;
+			__ret1.onkeypress = v37;
+		}
+		var _g39 = this.get_onkeyup();
+		if(_g39 != null) {
+			var v38 = _g39;
+			__ret1.onkeyup = v38;
+		}
+		var _g40 = this.get_onload();
+		if(_g40 != null) {
+			var v39 = _g40;
+			__ret1.onload = v39;
+		}
+		var _g41 = this.get_onloadeddata();
+		if(_g41 != null) {
+			var v40 = _g41;
+			__ret1.onloadeddata = v40;
+		}
+		var _g42 = this.get_onloadedmetadata();
+		if(_g42 != null) {
+			var v41 = _g42;
+			__ret1.onloadedmetadata = v41;
+		}
+		var _g43 = this.get_onloadstart();
+		if(_g43 != null) {
+			var v42 = _g43;
+			__ret1.onloadstart = v42;
+		}
+		var _g44 = this.get_onlostpointercapture();
+		if(_g44 != null) {
+			var v43 = _g44;
+			__ret1.onlostpointercapture = v43;
+		}
+		var _g45 = this.get_onmousedown();
+		if(_g45 != null) {
+			var v44 = _g45;
+			__ret1.onmousedown = v44;
+		}
+		var _g46 = this.get_onmouseenter();
+		if(_g46 != null) {
+			var v45 = _g46;
+			__ret1.onmouseenter = v45;
+		}
+		var _g47 = this.get_onmouseleave();
+		if(_g47 != null) {
+			var v46 = _g47;
+			__ret1.onmouseleave = v46;
+		}
+		var _g48 = this.get_onmousemove();
+		if(_g48 != null) {
+			var v47 = _g48;
+			__ret1.onmousemove = v47;
+		}
+		var _g49 = this.get_onmouseout();
+		if(_g49 != null) {
+			var v48 = _g49;
+			__ret1.onmouseout = v48;
+		}
+		var _g50 = this.get_onmouseover();
+		if(_g50 != null) {
+			var v49 = _g50;
+			__ret1.onmouseover = v49;
+		}
+		var _g51 = this.get_onmouseup();
+		if(_g51 != null) {
+			var v50 = _g51;
+			__ret1.onmouseup = v50;
+		}
+		var _g52 = this.get_onpaste();
+		if(_g52 != null) {
+			var v51 = _g52;
+			__ret1.onpaste = v51;
+		}
+		var _g53 = this.get_onpause();
+		if(_g53 != null) {
+			var v52 = _g53;
+			__ret1.onpause = v52;
+		}
+		var _g54 = this.get_onplay();
+		if(_g54 != null) {
+			var v53 = _g54;
+			__ret1.onplay = v53;
+		}
+		var _g55 = this.get_onplaying();
+		if(_g55 != null) {
+			var v54 = _g55;
+			__ret1.onplaying = v54;
+		}
+		var _g56 = this.get_onpointercancel();
+		if(_g56 != null) {
+			var v55 = _g56;
+			__ret1.onpointercancel = v55;
+		}
+		var _g57 = this.get_onpointerdown();
+		if(_g57 != null) {
+			var v56 = _g57;
+			__ret1.onpointerdown = v56;
+		}
+		var _g58 = this.get_onpointerenter();
+		if(_g58 != null) {
+			var v57 = _g58;
+			__ret1.onpointerenter = v57;
+		}
+		var _g59 = this.get_onpointerleave();
+		if(_g59 != null) {
+			var v58 = _g59;
+			__ret1.onpointerleave = v58;
+		}
+		var _g60 = this.get_onpointerlockchange();
+		if(_g60 != null) {
+			var v59 = _g60;
+			__ret1.onpointerlockchange = v59;
+		}
+		var _g61 = this.get_onpointerlockerror();
+		if(_g61 != null) {
+			var v60 = _g61;
+			__ret1.onpointerlockerror = v60;
+		}
+		var _g62 = this.get_onpointermove();
+		if(_g62 != null) {
+			var v61 = _g62;
+			__ret1.onpointermove = v61;
+		}
+		var _g63 = this.get_onpointerout();
+		if(_g63 != null) {
+			var v62 = _g63;
+			__ret1.onpointerout = v62;
+		}
+		var _g64 = this.get_onpointerover();
+		if(_g64 != null) {
+			var v63 = _g64;
+			__ret1.onpointerover = v63;
+		}
+		var _g65 = this.get_onpointerup();
+		if(_g65 != null) {
+			var v64 = _g65;
+			__ret1.onpointerup = v64;
+		}
+		var _g66 = this.get_onprogress();
+		if(_g66 != null) {
+			var v65 = _g66;
+			__ret1.onprogress = v65;
+		}
+		var _g67 = this.get_onratechange();
+		if(_g67 != null) {
+			var v66 = _g67;
+			__ret1.onratechange = v66;
+		}
+		var _g68 = this.get_onreset();
+		if(_g68 != null) {
+			var v67 = _g68;
+			__ret1.onreset = v67;
+		}
+		var _g69 = this.get_onresize();
+		if(_g69 != null) {
+			var v68 = _g69;
+			__ret1.onresize = v68;
+		}
+		var _g70 = this.get_onscroll();
+		if(_g70 != null) {
+			var v69 = _g70;
+			__ret1.onscroll = v69;
+		}
+		var _g71 = this.get_onseeked();
+		if(_g71 != null) {
+			var v70 = _g71;
+			__ret1.onseeked = v70;
+		}
+		var _g72 = this.get_onseeking();
+		if(_g72 != null) {
+			var v71 = _g72;
+			__ret1.onseeking = v71;
+		}
+		var _g73 = this.get_onselect();
+		if(_g73 != null) {
+			var v72 = _g73;
+			__ret1.onselect = v72;
+		}
+		var _g74 = this.get_onshow();
+		if(_g74 != null) {
+			var v73 = _g74;
+			__ret1.onshow = v73;
+		}
+		var _g75 = this.get_onstalled();
+		if(_g75 != null) {
+			var v74 = _g75;
+			__ret1.onstalled = v74;
+		}
+		var _g76 = this.get_onsubmit();
+		if(_g76 != null) {
+			var v75 = _g76;
+			__ret1.onsubmit = v75;
+		}
+		var _g77 = this.get_onsuspend();
+		if(_g77 != null) {
+			var v76 = _g77;
+			__ret1.onsuspend = v76;
+		}
+		var _g78 = this.get_ontimeupdate();
+		if(_g78 != null) {
+			var v77 = _g78;
+			__ret1.ontimeupdate = v77;
+		}
+		var _g79 = this.get_ontouchcancel();
+		if(_g79 != null) {
+			var v78 = _g79;
+			__ret1.ontouchcancel = v78;
+		}
+		var _g80 = this.get_ontouchend();
+		if(_g80 != null) {
+			var v79 = _g80;
+			__ret1.ontouchend = v79;
+		}
+		var _g81 = this.get_ontouchmove();
+		if(_g81 != null) {
+			var v80 = _g81;
+			__ret1.ontouchmove = v80;
+		}
+		var _g82 = this.get_ontouchstart();
+		if(_g82 != null) {
+			var v81 = _g82;
+			__ret1.ontouchstart = v81;
+		}
+		var _g83 = this.get_onvolumechange();
+		if(_g83 != null) {
+			var v82 = _g83;
+			__ret1.onvolumechange = v82;
+		}
+		var _g84 = this.get_onwaiting();
+		if(_g84 != null) {
+			var v83 = _g84;
+			__ret1.onwaiting = v83;
+		}
+		var _g85 = this.get_onwheel();
+		if(_g85 != null) {
+			var v84 = _g85;
+			__ret1.onwheel = v84;
+		}
+		var _g86 = this.get_spellcheck();
+		if(_g86 != null) {
+			var v85 = _g86;
+			__ret1.spellcheck = v85;
+		}
+		var _g87 = this.get_style();
+		if(_g87 != null) {
+			var v86 = _g87;
+			__ret1.style = v86;
+		}
+		var _g88 = this.get_tabIndex();
+		if(_g88 != null) {
+			var v87 = _g88;
+			__ret1.tabIndex = v87;
+		}
+		var _g89 = this.get_title();
+		if(_g89 != null) {
+			var v88 = _g89;
+			__ret1.title = v88;
+		}
+		var attr = __ret1;
 		var __r1 = [];
-		var _g1 = 0;
-		var _g11 = this.get_children();
-		while(_g1 < (_g11 == null ? 0 : _g11.length)) {
-			var _0 = _g11 == null ? null : _g11[_g1];
-			++_g1;
+		var _g90 = 0;
+		var _g110 = this.get_children();
+		while(_g90 < (_g110 == null ? 0 : _g110.length)) {
+			var _0 = _g110 == null ? null : _g110[_g90];
+			++_g90;
 			__r1.push(_0);
 		}
+		var __ret2 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-tab-bar__indicator")};
 		var __r2 = [];
-		__r1.push(vdom_VDom.h("span",{ className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-tab-bar__indicator")},__r2));
-		__r.push(vdom_VDom.h("nav",attr1,__r1));
+		__r1.push(vdom_VDom.h("span",__ret2,__r2));
+		__r.push(vdom_VDom.h("nav",attr,__r1));
 		return __r[0];
 	}
 	,afterInit: function(elem) {
@@ -6999,7 +14721,7 @@ mdc_TextField.prototype = $extend(coconut_ui_View.prototype,{
 	,render: function() {
 		var _gthis = this;
 		var __r = [];
-		var attr = _gthis.get_className();
+		var __ret = _gthis.get_className();
 		var _g = new haxe_ds_StringMap();
 		if(__map_reserved["mdc-text-field"] != null) {
 			_g.setReserved("mdc-text-field",true);
@@ -7036,37 +14758,484 @@ mdc_TextField.prototype = $extend(coconut_ui_View.prototype,{
 		} else {
 			_g.h["mdc-text-field--fullwidth"] = value4;
 		}
-		var attr1 = { className : vdom__$Attr_ClassName_$Impl_$.add(attr,vdom__$Attr_ClassName_$Impl_$.ofMap(_g)), accessKey : this.get_accessKey(), accessKeyLabel : this.get_accessKeyLabel(), attributes : this.get_attributes(), dir : this.get_dir(), draggable : this.get_draggable(), hidden : this.get_hidden(), id : this.get_id(), key : this.get_key(), lang : this.get_lang(), onabort : this.get_onabort(), onblur : this.get_onblur(), oncanplay : this.get_oncanplay(), oncanplaythrough : this.get_oncanplaythrough(), onchange : this.get_onchange(), onclick : this.get_onclick(), oncontextmenu : this.get_oncontextmenu(), oncopy : this.get_oncopy(), oncut : this.get_oncut(), ondblclick : this.get_ondblclick(), ondrag : this.get_ondrag(), ondragend : this.get_ondragend(), ondragenter : this.get_ondragenter(), ondragleave : this.get_ondragleave(), ondragover : this.get_ondragover(), ondragstart : this.get_ondragstart(), ondrop : this.get_ondrop(), ondurationchange : this.get_ondurationchange(), onemptied : this.get_onemptied(), onended : this.get_onended(), onerror : this.get_onerror(), onfocus : this.get_onfocus(), onfullscreenchange : this.get_onfullscreenchange(), onfullscreenerror : this.get_onfullscreenerror(), ongotpointercapture : this.get_ongotpointercapture(), oninput : this.get_oninput(), oninvalid : this.get_oninvalid(), onkeydown : this.get_onkeydown(), onkeypress : this.get_onkeypress(), onkeyup : this.get_onkeyup(), onload : this.get_onload(), onloadeddata : this.get_onloadeddata(), onloadedmetadata : this.get_onloadedmetadata(), onloadstart : this.get_onloadstart(), onlostpointercapture : this.get_onlostpointercapture(), onmousedown : this.get_onmousedown(), onmouseenter : this.get_onmouseenter(), onmouseleave : this.get_onmouseleave(), onmousemove : this.get_onmousemove(), onmouseout : this.get_onmouseout(), onmouseover : this.get_onmouseover(), onmouseup : this.get_onmouseup(), onpaste : this.get_onpaste(), onpause : this.get_onpause(), onplay : this.get_onplay(), onplaying : this.get_onplaying(), onpointercancel : this.get_onpointercancel(), onpointerdown : this.get_onpointerdown(), onpointerenter : this.get_onpointerenter(), onpointerleave : this.get_onpointerleave(), onpointerlockchange : this.get_onpointerlockchange(), onpointerlockerror : this.get_onpointerlockerror(), onpointermove : this.get_onpointermove(), onpointerout : this.get_onpointerout(), onpointerover : this.get_onpointerover(), onpointerup : this.get_onpointerup(), onprogress : this.get_onprogress(), onratechange : this.get_onratechange(), onreset : this.get_onreset(), onresize : this.get_onresize(), onscroll : this.get_onscroll(), onseeked : this.get_onseeked(), onseeking : this.get_onseeking(), onselect : this.get_onselect(), onshow : this.get_onshow(), onstalled : this.get_onstalled(), onsubmit : this.get_onsubmit(), onsuspend : this.get_onsuspend(), ontimeupdate : this.get_ontimeupdate(), ontouchcancel : this.get_ontouchcancel(), ontouchend : this.get_ontouchend(), ontouchmove : this.get_ontouchmove(), ontouchstart : this.get_ontouchstart(), onvolumechange : this.get_onvolumechange(), onwaiting : this.get_onwaiting(), onwheel : this.get_onwheel(), spellcheck : this.get_spellcheck(), style : this.get_style(), tabIndex : this.get_tabIndex(), title : this.get_title()};
+		var __ret1 = { className : vdom__$Attr_ClassName_$Impl_$.add(__ret,vdom__$Attr_ClassName_$Impl_$.ofMap(_g))};
+		var _g1 = this.get_accessKey();
+		if(_g1 != null) {
+			var v = _g1;
+			__ret1.accessKey = v;
+		}
+		var _g2 = this.get_accessKeyLabel();
+		if(_g2 != null) {
+			var v1 = _g2;
+			__ret1.accessKeyLabel = v1;
+		}
+		var _g3 = this.get_attributes();
+		if(_g3 != null) {
+			var v2 = _g3;
+			__ret1.attributes = v2;
+		}
+		var _g4 = this.get_dir();
+		if(_g4 != null) {
+			var v3 = _g4;
+			__ret1.dir = v3;
+		}
+		var _g5 = this.get_draggable();
+		if(_g5 != null) {
+			var v4 = _g5;
+			__ret1.draggable = v4;
+		}
+		var _g6 = this.get_hidden();
+		if(_g6 != null) {
+			var v5 = _g6;
+			__ret1.hidden = v5;
+		}
+		var _g7 = this.get_id();
+		if(_g7 != null) {
+			var v6 = _g7;
+			__ret1.id = v6;
+		}
+		var _g8 = this.get_key();
+		if(_g8 != null) {
+			var v7 = _g8;
+			__ret1.key = v7;
+		}
+		var _g9 = this.get_lang();
+		if(_g9 != null) {
+			var v8 = _g9;
+			__ret1.lang = v8;
+		}
+		var _g10 = this.get_onabort();
+		if(_g10 != null) {
+			var v9 = _g10;
+			__ret1.onabort = v9;
+		}
+		var _g11 = this.get_onblur();
+		if(_g11 != null) {
+			var v10 = _g11;
+			__ret1.onblur = v10;
+		}
+		var _g12 = this.get_oncanplay();
+		if(_g12 != null) {
+			var v11 = _g12;
+			__ret1.oncanplay = v11;
+		}
+		var _g13 = this.get_oncanplaythrough();
+		if(_g13 != null) {
+			var v12 = _g13;
+			__ret1.oncanplaythrough = v12;
+		}
+		var _g14 = this.get_onchange();
+		if(_g14 != null) {
+			var v13 = _g14;
+			__ret1.onchange = v13;
+		}
+		var _g15 = this.get_onclick();
+		if(_g15 != null) {
+			var v14 = _g15;
+			__ret1.onclick = v14;
+		}
+		var _g16 = this.get_oncontextmenu();
+		if(_g16 != null) {
+			var v15 = _g16;
+			__ret1.oncontextmenu = v15;
+		}
+		var _g17 = this.get_oncopy();
+		if(_g17 != null) {
+			var v16 = _g17;
+			__ret1.oncopy = v16;
+		}
+		var _g18 = this.get_oncut();
+		if(_g18 != null) {
+			var v17 = _g18;
+			__ret1.oncut = v17;
+		}
+		var _g19 = this.get_ondblclick();
+		if(_g19 != null) {
+			var v18 = _g19;
+			__ret1.ondblclick = v18;
+		}
+		var _g20 = this.get_ondrag();
+		if(_g20 != null) {
+			var v19 = _g20;
+			__ret1.ondrag = v19;
+		}
+		var _g21 = this.get_ondragend();
+		if(_g21 != null) {
+			var v20 = _g21;
+			__ret1.ondragend = v20;
+		}
+		var _g22 = this.get_ondragenter();
+		if(_g22 != null) {
+			var v21 = _g22;
+			__ret1.ondragenter = v21;
+		}
+		var _g23 = this.get_ondragleave();
+		if(_g23 != null) {
+			var v22 = _g23;
+			__ret1.ondragleave = v22;
+		}
+		var _g24 = this.get_ondragover();
+		if(_g24 != null) {
+			var v23 = _g24;
+			__ret1.ondragover = v23;
+		}
+		var _g25 = this.get_ondragstart();
+		if(_g25 != null) {
+			var v24 = _g25;
+			__ret1.ondragstart = v24;
+		}
+		var _g26 = this.get_ondrop();
+		if(_g26 != null) {
+			var v25 = _g26;
+			__ret1.ondrop = v25;
+		}
+		var _g27 = this.get_ondurationchange();
+		if(_g27 != null) {
+			var v26 = _g27;
+			__ret1.ondurationchange = v26;
+		}
+		var _g28 = this.get_onemptied();
+		if(_g28 != null) {
+			var v27 = _g28;
+			__ret1.onemptied = v27;
+		}
+		var _g29 = this.get_onended();
+		if(_g29 != null) {
+			var v28 = _g29;
+			__ret1.onended = v28;
+		}
+		var _g30 = this.get_onerror();
+		if(_g30 != null) {
+			var v29 = _g30;
+			__ret1.onerror = v29;
+		}
+		var _g31 = this.get_onfocus();
+		if(_g31 != null) {
+			var v30 = _g31;
+			__ret1.onfocus = v30;
+		}
+		var _g32 = this.get_onfullscreenchange();
+		if(_g32 != null) {
+			var v31 = _g32;
+			__ret1.onfullscreenchange = v31;
+		}
+		var _g33 = this.get_onfullscreenerror();
+		if(_g33 != null) {
+			var v32 = _g33;
+			__ret1.onfullscreenerror = v32;
+		}
+		var _g34 = this.get_ongotpointercapture();
+		if(_g34 != null) {
+			var v33 = _g34;
+			__ret1.ongotpointercapture = v33;
+		}
+		var _g35 = this.get_oninput();
+		if(_g35 != null) {
+			var v34 = _g35;
+			__ret1.oninput = v34;
+		}
+		var _g36 = this.get_oninvalid();
+		if(_g36 != null) {
+			var v35 = _g36;
+			__ret1.oninvalid = v35;
+		}
+		var _g37 = this.get_onkeydown();
+		if(_g37 != null) {
+			var v36 = _g37;
+			__ret1.onkeydown = v36;
+		}
+		var _g38 = this.get_onkeypress();
+		if(_g38 != null) {
+			var v37 = _g38;
+			__ret1.onkeypress = v37;
+		}
+		var _g39 = this.get_onkeyup();
+		if(_g39 != null) {
+			var v38 = _g39;
+			__ret1.onkeyup = v38;
+		}
+		var _g40 = this.get_onload();
+		if(_g40 != null) {
+			var v39 = _g40;
+			__ret1.onload = v39;
+		}
+		var _g41 = this.get_onloadeddata();
+		if(_g41 != null) {
+			var v40 = _g41;
+			__ret1.onloadeddata = v40;
+		}
+		var _g42 = this.get_onloadedmetadata();
+		if(_g42 != null) {
+			var v41 = _g42;
+			__ret1.onloadedmetadata = v41;
+		}
+		var _g43 = this.get_onloadstart();
+		if(_g43 != null) {
+			var v42 = _g43;
+			__ret1.onloadstart = v42;
+		}
+		var _g44 = this.get_onlostpointercapture();
+		if(_g44 != null) {
+			var v43 = _g44;
+			__ret1.onlostpointercapture = v43;
+		}
+		var _g45 = this.get_onmousedown();
+		if(_g45 != null) {
+			var v44 = _g45;
+			__ret1.onmousedown = v44;
+		}
+		var _g46 = this.get_onmouseenter();
+		if(_g46 != null) {
+			var v45 = _g46;
+			__ret1.onmouseenter = v45;
+		}
+		var _g47 = this.get_onmouseleave();
+		if(_g47 != null) {
+			var v46 = _g47;
+			__ret1.onmouseleave = v46;
+		}
+		var _g48 = this.get_onmousemove();
+		if(_g48 != null) {
+			var v47 = _g48;
+			__ret1.onmousemove = v47;
+		}
+		var _g49 = this.get_onmouseout();
+		if(_g49 != null) {
+			var v48 = _g49;
+			__ret1.onmouseout = v48;
+		}
+		var _g50 = this.get_onmouseover();
+		if(_g50 != null) {
+			var v49 = _g50;
+			__ret1.onmouseover = v49;
+		}
+		var _g51 = this.get_onmouseup();
+		if(_g51 != null) {
+			var v50 = _g51;
+			__ret1.onmouseup = v50;
+		}
+		var _g52 = this.get_onpaste();
+		if(_g52 != null) {
+			var v51 = _g52;
+			__ret1.onpaste = v51;
+		}
+		var _g53 = this.get_onpause();
+		if(_g53 != null) {
+			var v52 = _g53;
+			__ret1.onpause = v52;
+		}
+		var _g54 = this.get_onplay();
+		if(_g54 != null) {
+			var v53 = _g54;
+			__ret1.onplay = v53;
+		}
+		var _g55 = this.get_onplaying();
+		if(_g55 != null) {
+			var v54 = _g55;
+			__ret1.onplaying = v54;
+		}
+		var _g56 = this.get_onpointercancel();
+		if(_g56 != null) {
+			var v55 = _g56;
+			__ret1.onpointercancel = v55;
+		}
+		var _g57 = this.get_onpointerdown();
+		if(_g57 != null) {
+			var v56 = _g57;
+			__ret1.onpointerdown = v56;
+		}
+		var _g58 = this.get_onpointerenter();
+		if(_g58 != null) {
+			var v57 = _g58;
+			__ret1.onpointerenter = v57;
+		}
+		var _g59 = this.get_onpointerleave();
+		if(_g59 != null) {
+			var v58 = _g59;
+			__ret1.onpointerleave = v58;
+		}
+		var _g60 = this.get_onpointerlockchange();
+		if(_g60 != null) {
+			var v59 = _g60;
+			__ret1.onpointerlockchange = v59;
+		}
+		var _g61 = this.get_onpointerlockerror();
+		if(_g61 != null) {
+			var v60 = _g61;
+			__ret1.onpointerlockerror = v60;
+		}
+		var _g62 = this.get_onpointermove();
+		if(_g62 != null) {
+			var v61 = _g62;
+			__ret1.onpointermove = v61;
+		}
+		var _g63 = this.get_onpointerout();
+		if(_g63 != null) {
+			var v62 = _g63;
+			__ret1.onpointerout = v62;
+		}
+		var _g64 = this.get_onpointerover();
+		if(_g64 != null) {
+			var v63 = _g64;
+			__ret1.onpointerover = v63;
+		}
+		var _g65 = this.get_onpointerup();
+		if(_g65 != null) {
+			var v64 = _g65;
+			__ret1.onpointerup = v64;
+		}
+		var _g66 = this.get_onprogress();
+		if(_g66 != null) {
+			var v65 = _g66;
+			__ret1.onprogress = v65;
+		}
+		var _g67 = this.get_onratechange();
+		if(_g67 != null) {
+			var v66 = _g67;
+			__ret1.onratechange = v66;
+		}
+		var _g68 = this.get_onreset();
+		if(_g68 != null) {
+			var v67 = _g68;
+			__ret1.onreset = v67;
+		}
+		var _g69 = this.get_onresize();
+		if(_g69 != null) {
+			var v68 = _g69;
+			__ret1.onresize = v68;
+		}
+		var _g70 = this.get_onscroll();
+		if(_g70 != null) {
+			var v69 = _g70;
+			__ret1.onscroll = v69;
+		}
+		var _g71 = this.get_onseeked();
+		if(_g71 != null) {
+			var v70 = _g71;
+			__ret1.onseeked = v70;
+		}
+		var _g72 = this.get_onseeking();
+		if(_g72 != null) {
+			var v71 = _g72;
+			__ret1.onseeking = v71;
+		}
+		var _g73 = this.get_onselect();
+		if(_g73 != null) {
+			var v72 = _g73;
+			__ret1.onselect = v72;
+		}
+		var _g74 = this.get_onshow();
+		if(_g74 != null) {
+			var v73 = _g74;
+			__ret1.onshow = v73;
+		}
+		var _g75 = this.get_onstalled();
+		if(_g75 != null) {
+			var v74 = _g75;
+			__ret1.onstalled = v74;
+		}
+		var _g76 = this.get_onsubmit();
+		if(_g76 != null) {
+			var v75 = _g76;
+			__ret1.onsubmit = v75;
+		}
+		var _g77 = this.get_onsuspend();
+		if(_g77 != null) {
+			var v76 = _g77;
+			__ret1.onsuspend = v76;
+		}
+		var _g78 = this.get_ontimeupdate();
+		if(_g78 != null) {
+			var v77 = _g78;
+			__ret1.ontimeupdate = v77;
+		}
+		var _g79 = this.get_ontouchcancel();
+		if(_g79 != null) {
+			var v78 = _g79;
+			__ret1.ontouchcancel = v78;
+		}
+		var _g80 = this.get_ontouchend();
+		if(_g80 != null) {
+			var v79 = _g80;
+			__ret1.ontouchend = v79;
+		}
+		var _g81 = this.get_ontouchmove();
+		if(_g81 != null) {
+			var v80 = _g81;
+			__ret1.ontouchmove = v80;
+		}
+		var _g82 = this.get_ontouchstart();
+		if(_g82 != null) {
+			var v81 = _g82;
+			__ret1.ontouchstart = v81;
+		}
+		var _g83 = this.get_onvolumechange();
+		if(_g83 != null) {
+			var v82 = _g83;
+			__ret1.onvolumechange = v82;
+		}
+		var _g84 = this.get_onwaiting();
+		if(_g84 != null) {
+			var v83 = _g84;
+			__ret1.onwaiting = v83;
+		}
+		var _g85 = this.get_onwheel();
+		if(_g85 != null) {
+			var v84 = _g85;
+			__ret1.onwheel = v84;
+		}
+		var _g86 = this.get_spellcheck();
+		if(_g86 != null) {
+			var v85 = _g86;
+			__ret1.spellcheck = v85;
+		}
+		var _g87 = this.get_style();
+		if(_g87 != null) {
+			var v86 = _g87;
+			__ret1.style = v86;
+		}
+		var _g88 = this.get_tabIndex();
+		if(_g88 != null) {
+			var v87 = _g88;
+			__ret1.tabIndex = v87;
+		}
+		var _g89 = this.get_title();
+		if(_g89 != null) {
+			var v88 = _g89;
+			__ret1.title = v88;
+		}
 		var __r1 = [];
 		if(this.get_icon() != null && this.get_iconPos() != "right") {
-			var attr2 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("material-icons mdc-text-field__icon")};
+			var __ret2 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("material-icons mdc-text-field__icon")};
 			var __r2 = [];
 			__r2.push(this.get_icon());
-			__r1.push(vdom_VDom.h("i",attr2,__r2));
+			__r1.push(vdom_VDom.h("i",__ret2,__r2));
 		}
 		if(this.get_textArea()) {
-			var attr3 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-text-field__input"), id : "tf" + Std.string(_$UInt_UInt_$Impl_$.toFloat(_gthis.textFieldId))};
+			var __ret3 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-text-field__input"), id : "tf" + Std.string(_$UInt_UInt_$Impl_$.toFloat(_gthis.textFieldId))};
 			var __r3 = [];
 			__r3.push(this.get_value());
-			__r1.push(vdom_VDom.h("textarea",attr3,__r3));
+			__r1.push(vdom_VDom.h("textarea",__ret3,__r3));
 		} else {
-			__r1.push(vdom_VDom.h("input",{ type : "text", className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-text-field__input"), id : "tf" + Std.string(_$UInt_UInt_$Impl_$.toFloat(_gthis.textFieldId)), value : _gthis.get_value()}));
+			var __ret4 = { type : "text", className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-text-field__input"), id : "tf" + Std.string(_$UInt_UInt_$Impl_$.toFloat(_gthis.textFieldId)), value : _gthis.get_value()};
+			__r1.push(vdom_VDom.h("input",__ret4));
 		}
 		if(vdom__$VDom_VDom_$Impl_$.label != null) {
-			var attr4 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-text-field__label"), htmlFor : "tf" + Std.string(_$UInt_UInt_$Impl_$.toFloat(_gthis.textFieldId))};
+			var __ret5 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-text-field__label"), htmlFor : "tf" + Std.string(_$UInt_UInt_$Impl_$.toFloat(_gthis.textFieldId))};
 			var __r4 = [];
 			__r4.push(this.get_caption());
-			__r1.push(vdom_VDom.h("label",attr4,__r4));
+			__r1.push(vdom_VDom.h("label",__ret5,__r4));
 		}
 		if(this.get_icon() != null && this.get_iconPos() == "right") {
-			var attr5 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("material-icons mdc-text-field__icon")};
+			var __ret6 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("material-icons mdc-text-field__icon")};
 			var __r5 = [];
 			__r5.push(this.get_icon());
-			__r1.push(vdom_VDom.h("i",attr5,__r5));
+			__r1.push(vdom_VDom.h("i",__ret6,__r5));
 		}
+		var __ret7 = { className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-text-field__bottom-line")};
 		var __r6 = [];
-		__r1.push(vdom_VDom.h("div",{ className : vdom__$Attr_ClassName_$Impl_$.ofString("mdc-text-field__bottom-line")},__r6));
-		__r.push(vdom_VDom.h("div",attr1,__r1));
+		__r1.push(vdom_VDom.h("div",__ret7,__r6));
+		__r.push(vdom_VDom.h("div",__ret1,__r1));
 		return __r[0];
 	}
 	,afterInit: function(elem) {
@@ -10274,7 +18443,7 @@ var observer = new MutationObserver(function(mutations,mo) {
 			++_g1;
 			if(node.nodeType == 1) {
 				var handler = window.mdc.ripple.MDCRipple;
-				var el = js_Boot.__cast(node , Element);
+				var el = node;
 				if(el.classList.contains("mdc-ripple-surface")) {
 					if(Reflect.getProperty(el,"MDCRipple") == null) {
 						var handler1 = Type.createInstance(handler,[el]);
@@ -10299,7 +18468,7 @@ var observer = new MutationObserver(function(mutations,mo) {
 			var node1 = _g21[_g11];
 			++_g11;
 			if(node1.nodeType == 1) {
-				var el1 = js_Boot.__cast(node1 , Element);
+				var el1 = node1;
 				if(el1.classList.contains("mdc-ripple-surface")) {
 					var handler3 = Reflect.getProperty(el1,"MDCRipple");
 					if(handler3 != null) {
