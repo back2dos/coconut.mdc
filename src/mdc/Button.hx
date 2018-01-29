@@ -23,7 +23,6 @@ class Button extends View
     @:attribute var ripple:Bool = true;
     var mdcRipple:MDCRipple = null;
 
-    //TODO: add back attributes  "mdc-button--compact" => compact])} {...attributes}
     function render()
     {
         return @hxx '<button class=${className.add(["mdc-button" => true,
@@ -33,7 +32,7 @@ class Button extends View
                                                          "mdc-button--stroked" => stroked,
                                                          "mdc-button--dense" => dense,
                                                          "mdc-button--compact" => compact])}
-                             onclick=${onclick}>
+                             onclick=${onclick} {...this}>
             <if ${icon != null}>
                 <i class="mdc-button__icon material-icons">${icon}</i>
             </if>
@@ -51,16 +50,4 @@ class Button extends View
         if ( this.mdcRipple != null )
             this.mdcRipple.destroy();
     }
-}
-
-typedef ButtonAttr = {>InputAttr,
-    var label:String;
-    var disabled:Bool;
-    var icon:String;
-    var raised:Bool;
-    var unelevated:Bool;
-    var stroked:Bool;
-    var dense:Bool;
-    var compact:Bool;
-    var ripple:Bool;
 }
