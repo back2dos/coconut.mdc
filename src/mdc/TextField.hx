@@ -10,7 +10,9 @@ import coconut.ui.View;
 
 class TextField extends View
 {
-    var attributes:TextFieldAttr;
+    var attributes:TextFieldAttr = {
+        attributes:{},
+    };
     static var textFieldIdIndex = 0;
     var textFieldId:UInt = textFieldIdIndex++;
 
@@ -19,12 +21,12 @@ class TextField extends View
 
     function render()
     {
-        return @hxx '<div class=${attr.className.add(["mdc-text-field" => true,
+        return @hxx '<div class=${className.add(["mdc-text-field" => true,
                                                       "mdc-text-field--disabled" => disabled,
                                                       "mdc-text-field--with-leading-icon" => icon != null,
                                                       "mdc-text-field--box" => box,
                                                       "mdc-text-field--textarea" => textArea,
-                                                      "mdc-text-field--fullwidth" => fullWidth])} {...attr}>
+                                                      "mdc-text-field--fullwidth" => fullWidth])} {...this}>
                         <if ${icon != null && iconPos != TextFieldIconPos.Right}>
                             <i class="material-icons mdc-text-field__icon">${icon}</i>
                         </if>
@@ -34,7 +36,7 @@ class TextField extends View
                             <input type="text" class="mdc-text-field__input" id=${"tf" + textFieldId} value=${value}/>
                         </if>
                         <if ${label != null}>
-                            <label class="mdc-text-field__label" htmlFor=${"tf" + textFieldId}>${label}</label>
+                            <label class="mdc-text-field__label" htmlFor=${"tf" + textFieldId}>${caption}</label>
                         </if>
                         <if ${icon != null && iconPos == TextFieldIconPos.Right}>
                             <i class="material-icons mdc-text-field__icon">${icon}</i>
@@ -56,7 +58,7 @@ class TextField extends View
 }
 
 typedef TextFieldAttr = {>Attr,
-    @:optional var label(default,never):String;
+    @:optional var caption(default,never):String;
     @:optional var value(default,never):String;
     @:optional var disabled(default,never):Bool;
     @:optional var icon(default,never):String;

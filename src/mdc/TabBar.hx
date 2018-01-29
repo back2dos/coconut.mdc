@@ -7,19 +7,22 @@ import vdom.Attr;
 import vdom.VDom.*;
 import coconut.Ui.hxx;
 import coconut.ui.View;
+import coconut.ui.Children;
 //import coconut.Ui.hxx;
 
 class TabBar extends View
 {
-    var attributes:Attr;
-    var tabs:VNode;
-    @:attribute var mode:TabBarMode = null;
+    var attributes:Attr = {
+      attributes:{},
+    };
+    @:attribute var children:Children;
+    @:attribute var type:TabBarMode = Text;
     @:attribute var selectedTabIndex:Int = null;
-    @:attribute var ontabchange:UInt->Void = null;
+    @:attribute function ontabchange(index:UInt):Void {}
 
     var mdcTabBar:MDCTabBar;
 
-    static public inline function tab(attr:{>AnchorAttr, ?active:Bool, ?icon:String, ?text:String}, ?children:VNode):VNode
+    static public function tab(attr:{>AnchorAttr, ?active:Bool, ?icon:String, ?text:String}, ?children:Children):VNode
         return @hxx '<a class=${attr.className.add(["mdc-tab" => true,
                                                     "mdc-tab--active" => attr.active])} {...attr} >
             <if ${attr.icon != null}>
@@ -28,23 +31,21 @@ class TabBar extends View
             <if ${attr.text != null}>
                 <tabText>${attr.text}</tabText>
             </if>
-            ${children}
+            ${...children}
         </a>';
 
-    static public inline function tabIcon(attr:Attr, children:VNode):VNode
+    static public function tabIcon(attr:Attr, children:VNode):VNode
         return @hxx '<i class=${attr.className.add(["mdc-tab__icon" => true, "material-icons" => true])} {...attr} >${children}</i>';
 
-    static public inline function tabText(attr:Attr, children:VNode):VNode
+    static public function tabText(attr:Attr, children:VNode):VNode
         return @hxx '<span class=${attr.className.add(["mdc-tab__icon-text" => true])} {...attr} >${children}</span>';
 
 
 
     function render()
     {
-
-        var type:String = style != null ? style : TabBarType.Text;
-        return @hxx '<nav class=${className.add(["mdc-tab-bar" => true, style => true])} {...data}>
-            ${tabs}
+        return @hxx '<nav class=${className.add(["mdc-tab-bar" => true, type => true])} {...this}>
+            ${...children}
             <span class="mdc-tab-bar__indicator" ></span>
         </nav>';
     }
@@ -54,9 +55,7 @@ class TabBar extends View
         trace("afterInit");
         this.mdcTabBar = new MDCTabBar(elem);
         mdcTabBar.listen('MDCTabBar:change', function (data:{detail:MDCTabBar}) {
-
-            if (ontabchange != null )
-                ontabchange(mdcTabBar.activeTabIndex);
+            ontabchange(mdcTabBar.activeTabIndex);
         });
     }
 

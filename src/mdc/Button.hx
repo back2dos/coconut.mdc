@@ -9,23 +9,25 @@ import coconut.ui.View;
 
 class Button extends View
 {
-    var attributes:InputAttr;
+    var attributes:InputAttr = {
+        attributes:{}
+    };
     @:attribute var label:String = null;
-    @:attribute var disabled:Bool = null;
+    // @:attribute var disabled:Bool = null;
     @:attribute var icon:String = null;
-    @:attribute var raised:Bool = null;
-    @:attribute var unelevated:Bool = null;
-    @:attribute var stroked:Bool = null;
-    @:attribute var dense:Bool = null;
-    @:attribute var compact:Bool = null;
-    @:attribute var ripple:Bool = null;
+    @:attribute var raised:Bool = false;
+    @:attribute var unelevated:Bool = false;
+    @:attribute var stroked:Bool = false;
+    @:attribute var dense:Bool = false;
+    @:attribute var compact:Bool = false;
+    @:attribute var ripple:Bool = true;
     var mdcRipple:MDCRipple = null;
 
     //TODO: add back attributes  "mdc-button--compact" => compact])} {...attributes}
     function render()
     {
         return @hxx '<button class=${className.add(["mdc-button" => true,
-                                                         "mdc-ripple-surface" => (ripple != null ? ripple : true),
+                                                         "mdc-ripple-surface" => ripple,
                                                          "mdc-button--raised" => raised,
                                                          "mdc-button--unelevated" => unelevated,
                                                          "mdc-button--stroked" => stroked,

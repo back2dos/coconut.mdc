@@ -4,4 +4,3 @@
 -lib coconut.vdom
 -main Playground
 -js bin/playground/index.js
---connect 6000
