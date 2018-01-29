@@ -10,9 +10,7 @@ import coconut.ui.View;
 
 class TextField extends View
 {
-    var attributes:TextFieldAttr = {
-        attributes:{},
-    };
+    var attributes:TextFieldAttr;
     static var textFieldIdIndex = 0;
     var textFieldId:UInt = textFieldIdIndex++;
 

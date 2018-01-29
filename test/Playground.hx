@@ -28,7 +28,7 @@ class TestView extends View
 <div class="demo">
     <h1>Normal Buttons</h1>
     <div>
-        <Button label="Simple" onclick={[] => trace("clicked")} />
+        <Button label="Simple" onclick={trace("clicked")} />
         <Button label="Dense" dense/>
         <Button label="Compact" compact />
         <Button label="Disabled" disabled />
@@ -37,7 +37,7 @@ class TestView extends View
     </div>
     <h1>Raised Buttons</h1>
     <div>
-        <Button label="Simple" raised onclick={[] => trace("clicked")} />
+        <Button label="Simple" raised onclick={trace("clicked")} />
         <Button label="Dense" raised dense/>
         <Button label="Compact" raised compact />
         <Button label="Disabled" raised disabled />

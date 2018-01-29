@@ -12,9 +12,7 @@ import coconut.ui.Children;
 
 class TabBar extends View
 {
-    var attributes:Attr = {
-      attributes:{},
-    };
+    var attributes:Attr;
     @:attribute var children:Children;
     @:attribute var type:TabBarMode = Text;
     @:attribute var selectedTabIndex:Int = null;

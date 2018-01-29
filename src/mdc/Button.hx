@@ -9,9 +9,7 @@ import coconut.ui.View;
 
 class Button extends View
 {
-    var attributes:InputAttr = {
-        attributes:{}
-    };
+    var attributes:InputAttr;
     @:attribute var label:String = null;
     // @:attribute var disabled:Bool = null;
     @:attribute var icon:String = null;

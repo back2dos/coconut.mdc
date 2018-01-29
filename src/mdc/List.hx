@@ -18,9 +18,7 @@ import coconut.ui.Children;
 //TODO: make list items individual Views to have standalone ripple effect
 class List extends View
 {
-	var attributes:Attr = {
-		attributes:{},
-	}
+	var attributes:Attr;
 	@:attribute var dense:Bool = false;
 	@:attribute var twoLine:Bool = false;
 	@:attribute var avatarList:Bool = false;
